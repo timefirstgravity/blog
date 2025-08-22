@@ -4,73 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why Gravity Might Be Time: A Fresh Look at an Old Theory</title>
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-left: 4px solid #3498db;
-            padding-left: 15px;
-        }
-        p {
-            margin-bottom: 16px;
-            text-align: justify;
-        }
-        .math {
-            font-family: 'Times New Roman', serif;
-            font-style: italic;
-            font-size: 1.1em;
-            text-align: center;
-            margin: 20px 0;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-        }
-        ol, ul {
-            margin-bottom: 16px;
-            padding-left: 30px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        strong {
-            color: #2c3e50;
-        }
-        .highlight {
-            background-color: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            border-left: 4px solid #e74c3c;
-        }
-        .papers-section {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 30px 0;
-            border-left: 4px solid #3498db;
-        }
-        .papers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
+        /* Page-specific styles for Zenodo paper links */
         .paper-link {
             background-color: white;
             padding: 15px;
@@ -93,39 +29,37 @@
             font-size: 0.95em;
             line-height: 1.3;
         }
-        .paper-meta {
-            font-size: 0.85em;
-            color: #7f8c8d;
-            margin-bottom: 8px;
-        }
         .paper-description {
             font-size: 0.9em;
             color: #555;
             line-height: 1.4;
         }
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #bdc3c7;
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            h2 {
-                font-size: 1.3em;
-            }
+        .papers-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid #3498db;
         }
     </style>
 </head>
 <body>
-    <h1>Why Gravity Might Be Time: A Fresh Look at an Old Theory</h1>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1>Why Gravity Might Be Time: A Fresh Look at an Old Theory</h1>
 
     <div class="highlight" style="border-left-color:#3498db;">
         <p><strong>TL;DR.</strong> We reorganize Einstein's gravity so <em>time</em> (the lapse <span class="math">N=e^{Φ}</span>) is the primary dial, and space follows from constraints. In spherical symmetry (zero shift), the spatial metric is fixed by <span class="math">g_{rr}=1/g_{tt}</span>; dynamics appear when there's actual energy flux. Cosmology maps cleanly via <span class="math">a=e^{-Φ}</span> and <span class="math">H=-Φ'</span>, reproducing standard FRW with different intuition.</p>
@@ -136,39 +70,93 @@
     <p>This framework recasts gravity not as curved spacetime, but as the geometry of time. Before dismissing this as mere mathematical shuffling, consider what the mathematics actually reveals.</p>
 
     <div class="papers-section">
-        <h2 style="margin-top: 0; color: #2c3e50; border-left: none; padding-left: 0;">Related Publications</h2>
-        <p style="margin-bottom: 20px; font-style: italic;">The following papers develop and explore this temporal geometry framework:</p>
+        <h2 style="margin-top: 0; color: #2c3e50; border-left: none; padding-left: 0;">Papers and Explanations</h2>
+        <p style="margin-bottom: 20px; font-style: italic;">The complete temporal geometry framework - read the papers, explore detailed explanations, and follow step-by-step derivations:</p>
         
         <div class="papers-grid">
-            <a href="https://zenodo.org/records/16878019" class="paper-link" target="_blank">
-                <div class="paper-title">Gravity as Temporal Geometry</div>
-                <div class="paper-meta">Adam Snyder • August 14, 2025 • DOI: 10.5281/zenodo.16878019</div>
-                <div class="paper-description">Reformulates general relativity treating the lapse N=e^Φ as primary, separating "time" (Φ) from "space" (γ) while maintaining classical equivalence to standard GR.</div>
-            </a>
+            <div class="paper-card">
+                <h3>Paper I: Gravity as Temporal Geometry</h3>
+                <div class="paper-description">
+                    Reformulates general relativity treating the lapse N=e^Φ as primary, separating "time" (Φ) from "space" (γ) while maintaining classical equivalence to standard GR.
+                </div>
+                <div class="paper-links">
+                    <a href="https://zenodo.org/records/16878019" target="_blank" class="paper-link-text">Read paper on Zenodo →</a>
+                </div>
+            </div>
             
-            <a href="https://zenodo.org/records/16888504" class="paper-link" target="_blank">
-                <div class="paper-title">Gravity as Temporal Geometry II: Experimental Signatures</div>
-                <div class="paper-meta">Adam Snyder • August 14, 2025 • DOI: 10.5281/zenodo.16888504</div>
-                <div class="paper-description">Explores experimental temporal metrology through energy flux effects on clock-rate drift, focusing on quantum predictions using atom interferometry and optical clocks.</div>
-            </a>
+            <div class="paper-card">
+                <h3>Paper II: Experimental Signatures</h3>
+                <div class="paper-description">
+                    Explores experimental temporal metrology through energy flux effects on clock-rate drift, focusing on quantum predictions using atom interferometry and optical clocks.
+                </div>
+                <div class="paper-links">
+                    <a href="https://zenodo.org/records/16888504" target="_blank" class="paper-link-text">Read paper on Zenodo →</a>
+                </div>
+            </div>
             
-            <a href="https://zenodo.org/records/16884232" class="paper-link" target="_blank">
-                <div class="paper-title">Cosmology as Temporal Geometry: FRW Equivalence</div>
-                <div class="paper-meta">Adam Snyder • August 15, 2025 • DOI: 10.5281/zenodo.16884232</div>
-                <div class="paper-description">Develops cosmological approach using temporal potential Φ, proving equivalence to standard FRW cosmology and demonstrating statistical equivalence to ΛCDM.</div>
-            </a>
+            <div class="paper-card">
+                <h3>Paper III: Cosmology as Temporal Geometry</h3>
+                <div class="paper-description">
+                    Develops cosmological approach using temporal potential Φ, proving equivalence to standard FRW cosmology and demonstrating statistical equivalence to ΛCDM.
+                </div>
+                <div class="paper-links">
+                    <a href="https://zenodo.org/records/16884232" target="_blank" class="paper-link-text">Read paper on Zenodo →</a>
+                </div>
+            </div>
             
-            <a href="https://zenodo.org/records/16891005" class="paper-link" target="_blank">
-                <div class="paper-title">Gravity as Temporal Geometry IV: Origin of Time</div>
-                <div class="paper-meta">Adam Snyder • August 16, 2025 • DOI: 10.5281/zenodo.16891005</div>
-                <div class="paper-description">Proposes the Big Bang as a temporal boundary where time originates through quantum nucleation, offering a calculable beginning of time via temporal vacuum decay.</div>
-            </a>
+            <div class="paper-card">
+                <h3>Paper IV: Origin of Time</h3>
+                <div class="paper-description">
+                    Proposes the Big Bang as a temporal boundary where time originates through quantum nucleation, offering a calculable beginning of time via temporal vacuum decay.
+                </div>
+                <div class="paper-links">
+                    <a href="https://zenodo.org/records/16891005" target="_blank" class="paper-link-text">Read paper on Zenodo →</a>
+                </div>
+            </div>
             
-            <a href="https://zenodo.org/records/16891943" class="paper-link" target="_blank">
-                <div class="paper-title">Gravity as Temporal Geometry IV.2: Testing The Origin Of Time</div>
-                <div class="paper-meta">Adam Snyder • August 18, 2025 • DOI: 10.5281/zenodo.16891943</div>
-                <div class="paper-description">Develops testable predictions for the temporal Big Bang model, including universe curvature, non-Gaussianity, and polarization characteristics as alternatives to inflation.</div>
-            </a>
+            <div class="paper-card">
+                <h3>Paper IV.2: Testing The Origin Of Time</h3>
+                <div class="paper-description">
+                    Develops testable predictions for the temporal Big Bang model, including universe curvature, non-Gaussianity, and polarization characteristics as alternatives to inflation.
+                </div>
+                <div class="paper-links">
+                    <a href="https://zenodo.org/records/16891943" target="_blank" class="paper-link-text">Read paper on Zenodo →</a>
+                </div>
+            </div>
+            
+            <div class="paper-card">
+                <h3>Paper IV.3: The Birth of Time</h3>
+                <div class="paper-description">
+                    Explores the detailed mechanism of temporal nucleation at the Big Bang, developing the quantum field theory of time's emergence and its cosmological implications.
+                </div>
+                <div class="paper-links">
+                    <a href="https://doi.org/10.5281/zenodo.16914590" target="_blank" class="paper-link-text">Read paper on Zenodo →</a>
+                </div>
+            </div>
+            
+            <div class="paper-card">
+                <h3>Paper V: Quantum Mechanics of Time</h3>
+                <div class="paper-description">
+                    Develops the quantum theory of temporal geometry, showing how time fluctuations lead to decoherence and exploring the experimental signatures of quantum gravity through atomic interferometry.
+                </div>
+                <div class="paper-links">
+                    <a href="https://doi.org/10.5281/zenodo.16905912" target="_blank" class="paper-link-text">Read paper on Zenodo →</a>
+                </div>
+            </div>
+            
+            <div class="paper-card">
+                <h3>Paper VI: Singularity-Free Black Holes</h3>
+                <div class="paper-description">
+                    A comprehensive exploration of how temporal geometry naturally resolves the black hole singularity problem, replacing it with a quantum core that preserves unitarity.
+                </div>
+                <div class="paper-links">
+                    <a href="https://doi.org/10.5281/zenodo.16924270" target="_blank" class="paper-link-text">Read paper on Zenodo →</a>
+                </div>
+                <div class="paper-buttons">
+                    <a href="/papers/paper6-black-holes/overview.html" class="btn btn-secondary">Blog Overview</a>
+                    <a href="/papers/paper6-black-holes/step-by-step/index.html" class="btn btn-secondary">Step-by-Step</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -358,6 +346,8 @@
         </details>
     </section>
 
+    </div>
+    
     <div class="footer">
         <p>Published via GitHub Pages</p>
     </div>

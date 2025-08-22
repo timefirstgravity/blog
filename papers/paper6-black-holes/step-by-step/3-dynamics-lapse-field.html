@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper VI: Black Holes - Dynamics and the Role of the Lapse Field</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper6-black-holes/step-by-step/index.html">Paper VI: Step-by-Step</a> › 
+            <span>Chapter 3: Dynamics & Lapse</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Chapters</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-foundation.html" >1. Foundation</a></li>
+                    <li><a href="2-spherical-solution.html" >2. Spherical Solution</a></li>
+                    <li><a href="3-dynamics-lapse-field.html" class="active">3. Dynamics & Lapse</a></li>
+                    <li><a href="4-replacing-singularity.html" >4. Replacing Singularity</a></li>
+                    <li><a href="5-absorbing-core.html" >5. Absorbing Core</a></li>
+                    <li><a href="6-verifying-singularity-gone.html" >6. Verification</a></li>
+                    <li><a href="7-enforced-chosen.html" >7. Enforced vs Chosen</a></li>
+                    <li><a href="8-predictions-testability.html" >8. Predictions</a></li>
+                    <li><a href="9-final-summary.html" >9. Summary</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>3. Dynamics and the Role of the Lapse Field</h1>
+<p>So far, Schwarzschild showed us what spacetime looks like around a
+static spherical mass. But real black holes form from collapse and can
+change mass (by swallowing matter or radiating).</p>
+<p>To describe that properly, we need coordinates that stay
+<strong>regular at the horizon</strong> and an evolution law that
+directly tracks <strong>energy flow</strong>.</p>
+<hr />
+<h2 id="the-lapse-function-n-ephi">3.1 The Lapse Function <span
+class="math inline">\(N = e^{\Phi}\)</span></h2>
+<p>In the <strong>time-first formulation</strong>, the central player is
+the <strong>lapse field</strong> <span class="math inline">\(N\)</span>,
+written as <span class="math inline">\(N = e^{\Phi}\)</span>.</p>
+<ul>
+<li><p>The lapse tells you how proper time <span
+class="math inline">\(d\tau\)</span> relates to coordinate time <span
+class="math inline">\(dt\)</span>:</p>
+<p><span class="math display">\[
+d\tau = N \, dt = e^{\Phi} dt.
+\]</span></p></li>
+<li><p>In ordinary GR, the lapse is treated as a gauge multiplier. In
+time-first GR, it becomes the primary degree of freedom that governs
+temporal flow.</p></li>
+</ul>
+<p>Why this helps:</p>
+<ul>
+<li>Horizons appear when <span class="math inline">\(N \to 0\)</span>
+(as in the Schwarzschild form), but that’s just a <strong>coordinate
+choice</strong>.</li>
+<li>By switching to <strong>Eddington–Finkelstein (EF)</strong> or
+<strong>Painlevé–Gullstrand (PG)</strong> coordinates (which are natural
+in lapse-first form), the lapse remains regular across the horizon.</li>
+<li>Thus, <strong>horizons are gauge artifacts, not
+singularities.</strong></li>
+</ul>
+<hr />
+<h2 id="the-flux-law-dynamic-evolution">3.2 The Flux Law (Dynamic
+Evolution)</h2>
+<p>The mixed Einstein equation (the <span
+class="math inline">\(tr\)</span> component) in spherical symmetry
+simplifies beautifully to:</p>
+<p><span class="math display">\[
+\partial_t \Phi = -4 \pi G \, r \, T_{tr}.
+\]</span></p>
+<p>This says: <strong>the time field <span
+class="math inline">\(\Phi\)</span> only evolves when energy flux
+crosses a spherical shell of radius <span
+class="math inline">\(r\)</span>.</strong></p>
+<p>If we integrate this at a fixed radius <span
+class="math inline">\(R\)</span>, we get:</p>
+<p><span class="math display">\[
+\partial_t \Phi = -\frac{G}{c^4} \, \frac{P(t)}{R},
+\]</span></p>
+<p>where <span class="math inline">\(P(t)\)</span> is the total power
+(energy per unit time) crossing the sphere.</p>
+<ul>
+<li>If nothing crosses, <span class="math inline">\(\Phi\)</span> is
+frozen: the geometry is static.</li>
+<li>If radiation or matter flows in, <span
+class="math inline">\(\Phi\)</span> evolves accordingly.</li>
+</ul>
+<p>This is essentially the <strong>Vaidya law</strong> (GR’s description
+of accreting/evaporating black holes), but here it’s written directly in
+terms of the lapse which makes regularity at the horizon manifest.</p>
+<hr />
+<h2 id="why-this-step-matters">3.3 Why this step matters</h2>
+<ul>
+<li>We’ve clarified that <strong>horizons are not singular</strong>;
+they’re coordinate effects.</li>
+<li>We now have a <strong>local, physical rule</strong>: spacetime
+evolves only when energy flux crosses a surface.</li>
+<li>The true singularity problem remains at <span
+class="math inline">\(r=0\)</span>, but we’re set up to handle it: we
+can ask, “what if the lapse evolution naturally freezes before reaching
+a singular blow-up?”</li>
+</ul>
+<hr />
+<h3 id="glossary-for-step-3">Glossary</h3>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol / Term</th>
+<th>Meaning</th>
+<th>Value</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(N = e^{\Phi}\)</span></td>
+<td>Lapse function (time pacing)</td>
+<td>Variable of the theory</td>
+<td>A “gearbox” telling how fast proper time ticks compared to
+coordinate time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(d\tau\)</span></td>
+<td>Proper time (measured by a clock)</td>
+<td>Depends on <span class="math inline">\(N\)</span></td>
+<td>The ticking of a real wristwatch</td>
+</tr>
+<tr>
+<td>EF / PG coordinates</td>
+<td>Horizon-regular time slicings</td>
+<td>Coordinate choice</td>
+<td>A camera angle that doesn’t glitch at the horizon</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\partial_t \Phi = -4 \pi G r
+T_{tr}\)</span></td>
+<td>Flux law for lapse evolution</td>
+<td>Einstein equation result</td>
+<td>“Only real energy flow changes time’s gears”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(P(t)\)</span></td>
+<td>Power crossing a sphere</td>
+<td>Energy flux input</td>
+<td>Like the brightness of a flashlight passing through a surface</td>
+</tr>
+</tbody>
+</table>
+<p><strong>We now have a dynamic rule that cleanly
+separates fake singularities (horizons) from the real issue (the
+core).</strong></p>
+                <div class="chapter-nav">
+                    <a href="2-spherical-solution.html">← Chapter 2: Spherical Solution</a>
+                    <a href="4-replacing-singularity.html">Chapter 4: Replacing Singularity →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a> | <a href="/papers/paper6-black-holes/overview.html">View Overview</a></p>
+        </div>
+    </div>
+</body>
+</html>

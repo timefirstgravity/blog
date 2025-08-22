@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper VI: Black Holes - Foundation</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper6-black-holes/step-by-step/index.html">Paper VI: Step-by-Step</a> › 
+            <span>Chapter 1: Foundation</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Chapters</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-foundation.html" class="active">1. Foundation</a></li>
+                    <li><a href="2-spherical-solution.html" >2. Spherical Solution</a></li>
+                    <li><a href="3-dynamics-lapse-field.html" >3. Dynamics & Lapse</a></li>
+                    <li><a href="4-replacing-singularity.html" >4. Replacing Singularity</a></li>
+                    <li><a href="5-absorbing-core.html" >5. Absorbing Core</a></li>
+                    <li><a href="6-verifying-singularity-gone.html" >6. Verification</a></li>
+                    <li><a href="7-enforced-chosen.html" >7. Enforced vs Chosen</a></li>
+                    <li><a href="8-predictions-testability.html" >8. Predictions</a></li>
+                    <li><a href="9-final-summary.html" >9. Summary</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<p>Let’s start at the beginning. The most
+basic, undeniable principles. Then let's build carefully toward the
+singularity-free black hole solution.
+<hr />
+<h1 id="step-1-gravitys-foundation-einsteins-equation"><strong>1:
+Gravity’s Foundation. Einstein’s Equation</strong></h1>
+<p>The unshakable bedrock is <strong>Einstein’s field equation</strong>
+of General Relativity (GR):</p>
+<p><span class="math display">\[
+G_{\mu\nu} \;=\; \frac{8\pi G}{c^4}\, T_{\mu\nu}.
+\]</span></p>
+<ul>
+<li>The <strong>left-hand side</strong> encodes the geometry of
+spacetime through the Einstein tensor <span
+class="math inline">\(G_{\mu\nu}\)</span>. It contains derivatives of
+the metric (the mathematical object that tells us how distances and
+times are measured).</li>
+<li>The <strong>right-hand side</strong> encodes the matter and energy
+content through the stress–energy tensor <span
+class="math inline">\(T_{\mu\nu}\)</span>.</li>
+<li><span class="math inline">\(G\)</span> is Newton’s gravitational
+constant, and <span class="math inline">\(c\)</span> is the speed of
+light.</li>
+</ul>
+<p>This equation is <strong>enforced by math + observation</strong>:</p>
+<ul>
+<li>Mathematically, it’s the unique tensor equation that is local,
+second order in derivatives, and conserves energy–momentum (Noether’s
+theorem guarantees that the left side has zero divergence).</li>
+<li>Observationally, it reduces to Newton’s law in the weak-field limit
+and has been tested in solar system dynamics, gravitational lensing, and
+gravitational waves.</li>
+</ul>
+<p>So, <strong>Step 1: The geometry of spacetime is directly determined
+by matter and energy.</strong></p>
+<hr />
+<h3 id="glossary-for-step-1">Glossary</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol / Term</th>
+<th>Meaning</th>
+<th>Value</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(G_{\mu\nu}\)</span></td>
+<td>Einstein tensor (curvature of spacetime)</td>
+<td>Calculated from metric</td>
+<td>Like a “curvature map” of spacetime’s bends</td>
+</tr>
+<tr>
+<td><span class="math inline">\(T_{\mu\nu}\)</span></td>
+<td>Stress–energy tensor (matter + energy content)</td>
+<td>Physical input</td>
+<td>Like a detailed budget of energy, momentum, and pressure</td>
+</tr>
+<tr>
+<td><span class="math inline">\(G\)</span></td>
+<td>Newton’s gravitational constant</td>
+<td><span
+class="math inline">\(6.67\times10^{-11}\,\text{N·m}^2/\text{kg}^2\)</span></td>
+<td>Sets the strength of the “glue” of gravity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(c\)</span></td>
+<td>Speed of light</td>
+<td><span class="math inline">\(3\times 10^8\)</span> m/s</td>
+<td>Cosmic speed limit linking time and space</td>
+</tr>
+<tr>
+<td>Metric <span class="math inline">\(g_{\mu\nu}\)</span></td>
+<td>Rule for measuring intervals in spacetime</td>
+<td>Variable solved by Einstein’s equation</td>
+<td>A ruler + stopwatch woven into one object</td>
+</tr>
+</tbody>
+</table>
+                <div class="chapter-nav">
+                    <a href="index.html">← Table of Contents</a>
+                    <a href="2-spherical-solution.html">Chapter 2: Spherical Solution →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a> | <a href="/papers/paper6-black-holes/overview.html">View Overview</a></p>
+        </div>
+    </div>
+</body>
+</html>

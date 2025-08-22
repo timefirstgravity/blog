@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper VI: Black Holes - The Spherical Solution</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper6-black-holes/step-by-step/index.html">Paper VI: Step-by-Step</a> › 
+            <span>Chapter 2: Spherical Solution</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Chapters</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-foundation.html" >1. Foundation</a></li>
+                    <li><a href="2-spherical-solution.html" class="active">2. Spherical Solution</a></li>
+                    <li><a href="3-dynamics-lapse-field.html" >3. Dynamics & Lapse</a></li>
+                    <li><a href="4-replacing-singularity.html" >4. Replacing Singularity</a></li>
+                    <li><a href="5-absorbing-core.html" >5. Absorbing Core</a></li>
+                    <li><a href="6-verifying-singularity-gone.html" >6. Verification</a></li>
+                    <li><a href="7-enforced-chosen.html" >7. Enforced vs Chosen</a></li>
+                    <li><a href="8-predictions-testability.html" >8. Predictions</a></li>
+                    <li><a href="9-final-summary.html" >9. Summary</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>2. The Spherical Solution</h1>
+<h2>Schwarzschild Geometry</h2>
+<p>Given Einstein’s equation, the next natural question is:
+<strong>“What does spacetime look like outside a perfectly spherical,
+non-rotating mass (like an idealized star or planet)?”</strong></p>
+<p>Mathematically, this is enforced by <strong>symmetry</strong>:</p>
+<ul>
+<li>Spherical symmetry: the spacetime must look the same in all
+directions around the center.</li>
+<li>Static: no time dependence outside (the star just sits there).</li>
+</ul>
+<p>Plugging these assumptions into Einstein’s equations yields the
+<strong>Schwarzschild solution</strong>:</p>
+<p><span class="math display">\[
+ds^2 = -\left(1 - \frac{2GM}{c^2 r}\right)c^2 dt^2 + \left(1 -
+\frac{2GM}{c^2 r}\right)^{-1} dr^2 + r^2 d\Omega^2 .
+\]</span></p>
+<p>where <span class="math inline">\(d\Omega^2 = d\theta^2 +
+\sin^2\theta\, d\phi^2\)</span> is the angular part of a sphere.</p>
+<hr />
+<h3 id="what-this-solution-tells-us">What this solution tells us:</h3>
+<ol type="1">
+<li><p><strong>Outside</strong> the mass, this is the <em>unique</em>
+solution (no choices left once you demand spherical symmetry). → This is
+<strong>enforced by math</strong>.</p></li>
+<li><p>Two “special” radii appear:</p>
+<ul>
+<li><p><strong>Schwarzschild radius</strong></p>
+<p><span class="math display">\[
+r_h = \frac{2GM}{c^2}.
+\]</span></p>
+<p>At this radius, the coefficient of <span
+class="math inline">\(dt^2\)</span> goes to zero, and the coefficient of
+<span class="math inline">\(dr^2\)</span> blows up.</p></li>
+<li><p><strong>Center</strong> <span class="math inline">\(r=0\)</span>.
+At this point, curvature invariants like the Kretschmann scalar</p>
+<p><span class="math display">\[
+K = R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}
+\]</span></p>
+<p>diverge to infinity.</p></li>
+</ul></li>
+<li><p><strong>Interpretation</strong>:</p>
+<ul>
+<li>The blow-up at <span class="math inline">\(r_h\)</span> (the
+horizon) is a <strong>coordinate singularity</strong>: it can be removed
+by using different coordinates (like Eddington–Finkelstein or
+Painlevé–Gullstrand). It’s not physical. → This was a <strong>choice of
+coordinates</strong>.</li>
+<li>The blow-up at <span class="math inline">\(r=0\)</span> is a
+<strong>real singularity</strong>: curvature invariants
+(coordinate-independent) truly go infinite. That’s a <strong>problem of
+GR itself</strong>. → This is <strong>enforced by math</strong>, not
+removable by a trick.</li>
+</ul></li>
+</ol>
+<hr />
+<h3 id="where-we-are-now">Where we are now:</h3>
+<p>We now know that <strong>standard GR predicts unavoidable
+singularities</strong> at the center of a black hole. That’s the
+starting point for the “problem.”</p>
+<p>Our paper’s contribution is: keep the exterior Schwarzschild intact,
+but <strong>replace the singular <span
+class="math inline">\(r=0\)</span> region with a finite, physical
+core.</strong></p>
+<hr />
+<h3 id="glossary-for-step-2">Glossary</h3>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 20%" />
+<col style="width: 9%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol / Term</th>
+<th>Meaning</th>
+<th>Value</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(ds^2\)</span></td>
+<td>Line element (spacetime interval)</td>
+<td>Formula from metric</td>
+<td>How to measure distances + times in curved space</td>
+</tr>
+<tr>
+<td><span class="math inline">\(M\)</span></td>
+<td>Mass of central object</td>
+<td>Physical parameter</td>
+<td>How heavy the central object is</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r_h = 2GM/c^2\)</span></td>
+<td>Schwarzschild radius (horizon)</td>
+<td>Depends on <span class="math inline">\(M\)</span></td>
+<td>A “point of no return” for light</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r=0\)</span></td>
+<td>Center of symmetry</td>
+<td>Critical point</td>
+<td>The “trapdoor” where standard GR fails</td>
+</tr>
+<tr>
+<td><span class="math inline">\(K =
+R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}\)</span></td>
+<td>Kretschmann scalar (curvature invariant)</td>
+<td>Diverges at <span class="math inline">\(r=0\)</span></td>
+<td>A “curvature thermometer” that blows up at singularities</td>
+</tr>
+<tr>
+<td>Coordinate singularity</td>
+<td>Fake infinity caused by bad coordinates</td>
+<td>Horizon case</td>
+<td>Like using longitude at the North Pole it looks singular, but the
+Earth is smooth there</td>
+</tr>
+<tr>
+<td>True singularity</td>
+<td>A blow-up in invariants</td>
+<td>Center case</td>
+<td>The geometry really rips apart</td>
+</tr>
+</tbody>
+</table>
+                <div class="chapter-nav">
+                    <a href="1-foundation.html">← Chapter 1: Foundation</a>
+                    <a href="3-dynamics-lapse-field.html">Chapter 3: Dynamics & Lapse →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a> | <a href="/papers/paper6-black-holes/overview.html">View Overview</a></p>
+        </div>
+    </div>
+</body>
+</html>

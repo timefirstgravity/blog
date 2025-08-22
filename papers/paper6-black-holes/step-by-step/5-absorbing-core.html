@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper VI: Black Holes - Dynamics of the Absorbing Core</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper6-black-holes/step-by-step/index.html">Paper VI: Step-by-Step</a> › 
+            <span>Chapter 5: Absorbing Core</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Chapters</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-foundation.html" >1. Foundation</a></li>
+                    <li><a href="2-spherical-solution.html" >2. Spherical Solution</a></li>
+                    <li><a href="3-dynamics-lapse-field.html" >3. Dynamics & Lapse</a></li>
+                    <li><a href="4-replacing-singularity.html" >4. Replacing Singularity</a></li>
+                    <li><a href="5-absorbing-core.html" class="active">5. Absorbing Core</a></li>
+                    <li><a href="6-verifying-singularity-gone.html" >6. Verification</a></li>
+                    <li><a href="7-enforced-chosen.html" >7. Enforced vs Chosen</a></li>
+                    <li><a href="8-predictions-testability.html" >8. Predictions</a></li>
+                    <li><a href="9-final-summary.html" >9. Summary</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>Step 5. Dynamics of the Absorbing Core</h1>
+<p>Now that the singularity has been replaced by a finite core, we need
+to understand <strong>how that core evolves</strong> when the black hole
+is not static.</p>
+<hr />
+<p>Black holes aren’t static in reality. They can <strong>gain
+mass</strong> (by swallowing stars, gas, radiation) or <strong>lose
+mass</strong> (through Hawking evaporation). So the question is: if the
+total mass <span class="math inline">\(M\)</span> changes, what happens
+to the core radius <span class="math inline">\(r_c\)</span>?</p>
+<hr />
+<h2 id="recall-the-selector-equation">5.1 Recall the Selector
+Equation</h2>
+<p>From Step 4, the core radius is determined by</p>
+<p><span class="math display">\[
+r_c^3 = \frac{3 M c^2}{4 \pi \rho_c}.
+\]</span></p>
+<p>If <span class="math inline">\(M\)</span> changes, then <span
+class="math inline">\(r_c\)</span> must change accordingly.
+Differentiate both sides with respect to time (or advanced time
+coordinate <span class="math inline">\(v\)</span>):</p>
+<p><span class="math display">\[
+3 r_c^2 \frac{dr_c}{dv} = \frac{3 c^2}{4\pi \rho_c} \, \frac{dM}{dv}.
+\]</span></p>
+<p>Simplify:</p>
+<p><span class="math display">\[
+\boxed{\frac{dr_c}{dv} = \frac{\dot M(v) \, c^2}{4\pi \rho_c \, r_c^2}}.
+\]</span></p>
+<hr />
+<h2 id="physical-meaning">5.2 Physical Meaning</h2>
+<ul>
+<li><span class="math inline">\(\dot M(v)\)</span> is the rate of change
+of mass (positive for accretion, negative for evaporation).</li>
+<li>This equation says the core grows or shrinks <strong>only</strong>
+in response to actual flux of matter/energy.</li>
+<li>Nothing exotic needed: the same Einstein equations that gave us
+Schwarzschild now govern the core’s dynamics.</li>
+</ul>
+<hr />
+<h2 id="relation-to-vaidya-spacetime">5.3 Relation to Vaidya
+Spacetime</h2>
+<p>In GR, the <strong>Vaidya solution</strong> describes a black hole
+that changes mass due to ingoing or outgoing radiation.</p>
+<ul>
+<li>In standard form, Vaidya is written with a mass function <span
+class="math inline">\(M(v)\)</span>.</li>
+<li>In the time-first language, this becomes a direct law for the
+<strong>core radius evolution</strong>.</li>
+<li>Importantly, this equation is <strong>horizon-regular</strong>: it
+doesn’t blow up at <span class="math inline">\(r_h\)</span>. That’s
+another way the lapse-first formalism avoids fake singularities.</li>
+</ul>
+<hr />
+<h2 id="big-picture">5.4 Big Picture</h2>
+<p>Now we have:</p>
+<ul>
+<li>A <strong>static matching rule</strong> (Step 4) that sets the core
+size given the mass.</li>
+<li>A <strong>dynamic law</strong> (this step) that evolves the core
+when the mass changes.</li>
+</ul>
+<p>Together, these make the absorbing core a <strong>predictive
+feature</strong>: it responds smoothly to infalling matter or outgoing
+radiation, never diverges, and never needs arbitrary parameters.</p>
+<hr />
+<h3 id="glossary-for-step-5">Glossary</h3>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 32%" />
+<col style="width: 17%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol / Term</th>
+<th>Meaning</th>
+<th>Value</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\dot M(v)\)</span></td>
+<td>Time derivative of mass</td>
+<td>In/out flux of energy</td>
+<td>How fast the black hole is eating or evaporating</td>
+</tr>
+<tr>
+<td><span class="math inline">\(dr_c/dv\)</span></td>
+<td>Time derivative of core radius</td>
+<td>Given by evolution law</td>
+<td>The “breathing” of the core as it absorbs/releases energy</td>
+</tr>
+<tr>
+<td><span class="math inline">\(v\)</span></td>
+<td>Advanced time coordinate (regular at horizon)</td>
+<td>Variable</td>
+<td>A clock that smoothly follows infalling radiation</td>
+</tr>
+<tr>
+<td>Vaidya spacetime</td>
+<td>GR solution for a radiating/absorbing black hole</td>
+<td>Matches with our flux law</td>
+<td>A “dynamic Schwarzschild” tuned by energy flux</td>
+</tr>
+<tr>
+<td>Horizon-regular</td>
+<td>Behavior that stays smooth at <span
+class="math inline">\(r_h\)</span></td>
+<td>Built-in via lapse-first</td>
+<td>Like switching to a camera angle where nothing glitches</td>
+</tr>
+</tbody>
+</table>
+<p>The absorbing core <strong>breathes with mass
+flow</strong>, governed by a clean evolution equation tied to energy
+flux.</p>
+                <div class="chapter-nav">
+                    <a href="4-replacing-singularity.html">← Chapter 4: Replacing Singularity</a>
+                    <a href="6-verifying-singularity-gone.html">Chapter 6: Verification →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a> | <a href="/papers/paper6-black-holes/overview.html">View Overview</a></p>
+        </div>
+    </div>
+</body>
+</html>

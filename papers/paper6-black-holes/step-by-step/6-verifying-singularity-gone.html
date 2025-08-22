@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper VI: Black Holes - Verifying the Singularity is Gone</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper6-black-holes/step-by-step/index.html">Paper VI: Step-by-Step</a> › 
+            <span>Chapter 6: Verification</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Chapters</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-foundation.html" >1. Foundation</a></li>
+                    <li><a href="2-spherical-solution.html" >2. Spherical Solution</a></li>
+                    <li><a href="3-dynamics-lapse-field.html" >3. Dynamics & Lapse</a></li>
+                    <li><a href="4-replacing-singularity.html" >4. Replacing Singularity</a></li>
+                    <li><a href="5-absorbing-core.html" >5. Absorbing Core</a></li>
+                    <li><a href="6-verifying-singularity-gone.html" class="active">6. Verification</a></li>
+                    <li><a href="7-enforced-chosen.html" >7. Enforced vs Chosen</a></li>
+                    <li><a href="8-predictions-testability.html" >8. Predictions</a></li>
+                    <li><a href="9-final-summary.html" >9. Summary</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>6. Verifying the Singularity is Gone</h1>
+<p>Now we can finally check: <strong>have we really resolved the
+singularity problem, or just moved it around?</strong></p>
+<hr />
+<p>Up to now:</p>
+<ul>
+<li>We replaced the central singularity (<span
+class="math inline">\(r=0\)</span>) with a finite core at radius <span
+class="math inline">\(r_c\)</span>.</li>
+<li>We gave the core a de Sitter-like interior (constant energy density
+<span class="math inline">\(\rho_c\)</span>).</li>
+<li>We established how <span class="math inline">\(r_c\)</span> evolves
+when mass flows in/out.</li>
+</ul>
+<p>But to declare the singularity problem solved, we must prove
+<strong>all curvature invariants remain finite</strong> and that the
+geometry is well-behaved.</p>
+<hr />
+<h2 id="curvature-invariants">6.1 Curvature Invariants</h2>
+<p>Two main “thermometers” for singularities are:</p>
+<ol type="1">
+<li><p><strong>Ricci scalar</strong> <span
+class="math inline">\(R\)</span></p>
+<ul>
+<li><p>Measures overall curvature sourced by matter/energy.</p></li>
+<li><p>For the interior:</p>
+<p><span class="math display">\[
+R_{\text{int}} = 32 \pi G \, \rho_c / c^4.
+\]</span></p>
+<p>This is finite, directly set by <span
+class="math inline">\(\rho_c\)</span>.</p></li>
+</ul></li>
+<li><p><strong>Kretschmann scalar</strong> <span class="math inline">\(K
+= R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}\)</span></p>
+<ul>
+<li><p>Measures tidal distortions (like how a body is
+stretched/squeezed).</p></li>
+<li><p>For the exterior Schwarzschild, at the matching surface <span
+class="math inline">\(r_c\)</span>:</p>
+<p><span class="math display">\[
+K_{\text{ext}}(r_c) = \frac{48 G^2 M^2}{c^4 r_c^6}.
+\]</span></p></li>
+<li><p>For the interior de Sitter region:</p>
+<p><span class="math display">\[
+K_{\text{int}} = \tfrac{8}{3}\,\Lambda^2 = \tfrac{512}{3}\pi^2 G^2
+\rho_c^2 / c^8.
+\]</span></p></li>
+</ul></li>
+</ol>
+<p>Both are <strong>finite</strong> at <span
+class="math inline">\(r_c\)</span>, and their values depend on physical
+parameters (<span class="math inline">\(M,\rho_c\)</span>) not on
+diverging infinities.</p>
+<hr />
+<h2 id="geodesic-behavior">6.2 Geodesic Behavior</h2>
+<ul>
+<li><p>Infalling observers follow geodesics (free-fall paths).</p></li>
+<li><p>In Schwarzschild, geodesics continue until they hit the <span
+class="math inline">\(r=0\)</span> singularity, where equations break
+down.</p></li>
+<li><p>In the absorbing-core model:</p>
+<ul>
+<li>Geodesics end smoothly at <span
+class="math inline">\(r=r_c\)</span>.</li>
+<li>Proper time remains finite.</li>
+<li>The “end” is a regular surface (like hitting a wall, not falling
+into a void).</li>
+</ul></li>
+</ul>
+<p>So: <strong>geodesic incompleteness remains</strong> (paths end), but
+crucially they end on a <strong>regular, finite-curvature
+boundary</strong>. This is a well-defined termination, not a physical
+pathology.</p>
+<hr />
+<h2 id="energy-conditions">6.3 Energy Conditions</h2>
+<ul>
+<li>The interior fluid has <span
+class="math inline">\(p=-\rho_c\)</span>, like a cosmological
+constant.</li>
+<li>This <strong>satisfies the null energy condition (NEC)</strong>:
+<span class="math inline">\(T_{\mu\nu}k^\mu k^\nu \geq 0\)</span> for
+any null vector <span class="math inline">\(k^\mu\)</span>.</li>
+<li>Therefore, we don’t need exotic “negative energy” to support the
+core.</li>
+</ul>
+<hr />
+<h2 id="what-we-achieved">6.4 What We Achieved</h2>
+<ul>
+<li><strong>No infinities:</strong> All curvature invariants
+finite.</li>
+<li><strong>No exotic matter:</strong> Core supported by vacuum-like
+energy density.</li>
+<li><strong>Predictive boundary:</strong> Core size determined by <span
+class="math inline">\(M,\rho_c\)</span>.</li>
+<li><strong>Horizon regularity:</strong> Already shown (Step 3).</li>
+</ul>
+<p>Thus, the <strong>true singularity at <span
+class="math inline">\(r=0\)</span> is removed</strong>, replaced by a
+finite absorbing surface at <span
+class="math inline">\(r_c\)</span>.</p>
+<hr />
+<h3 id="glossary-for-step-6">Glossary</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 23%" />
+<col style="width: 18%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol / Term</th>
+<th>Meaning</th>
+<th>Value</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(R\)</span></td>
+<td>Ricci scalar</td>
+<td><span class="math inline">\(32 \pi G \rho_c / c^4\)</span></td>
+<td>A global measure of curvature “pressure”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(K\)</span></td>
+<td>Kretschmann scalar</td>
+<td>Finite at <span class="math inline">\(r_c\)</span></td>
+<td>A “tidal thermometer” of spacetime bending</td>
+</tr>
+<tr>
+<td>Geodesic</td>
+<td>Free-fall trajectory</td>
+<td>Ends at <span class="math inline">\(r_c\)</span></td>
+<td>Like a straight line on a curved globe</td>
+</tr>
+<tr>
+<td>Geodesic incompleteness</td>
+<td>Paths end in finite proper time</td>
+<td>Still present</td>
+<td>Reaching a boundary wall, not falling into infinity</td>
+</tr>
+<tr>
+<td>NEC (Null Energy Condition)</td>
+<td>Basic energy positivity rule</td>
+<td>Satisfied by <span class="math inline">\(p=-\rho_c\)</span></td>
+<td>Ensures no exotic matter “cheating”</td>
+</tr>
+</tbody>
+</table>
+<p>We’ve verified the singularity is
+<strong>genuinely resolved</strong> no infinite curvature, no
+breakdown of GR equations, no exotic tricks.</p>
+                <div class="chapter-nav">
+                    <a href="5-absorbing-core.html">← Chapter 5: Absorbing Core</a>
+                    <a href="7-enforced-chosen.html">Chapter 7: Enforced vs Chosen →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a> | <a href="/papers/paper6-black-holes/overview.html">View Overview</a></p>
+        </div>
+    </div>
+</body>
+</html>

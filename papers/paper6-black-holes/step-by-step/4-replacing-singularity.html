@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper VI: Black Holes - Replacing the Central Singularity</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper6-black-holes/step-by-step/index.html">Paper VI: Step-by-Step</a> › 
+            <span>Chapter 4: Replacing Singularity</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Chapters</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-foundation.html" >1. Foundation</a></li>
+                    <li><a href="2-spherical-solution.html" >2. Spherical Solution</a></li>
+                    <li><a href="3-dynamics-lapse-field.html" >3. Dynamics & Lapse</a></li>
+                    <li><a href="4-replacing-singularity.html" class="active">4. Replacing Singularity</a></li>
+                    <li><a href="5-absorbing-core.html" >5. Absorbing Core</a></li>
+                    <li><a href="6-verifying-singularity-gone.html" >6. Verification</a></li>
+                    <li><a href="7-enforced-chosen.html" >7. Enforced vs Chosen</a></li>
+                    <li><a href="8-predictions-testability.html" >8. Predictions</a></li>
+                    <li><a href="9-final-summary.html" >9. Summary</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>4. Replacing the Central Singularity</h1>
+<p>Now we finally tackle the <strong>real singularity at the
+center</strong>.</p>
+<hr />
+<p>Up to now:</p>
+<ul>
+<li><strong>Horizons</strong>: shown to be coordinate effects (not real
+singularities).</li>
+<li><strong>Cores (<span class="math inline">\(r=0\)</span>)</strong>:
+still a problem, because curvature invariants blow up.</li>
+</ul>
+<p>The fix is to replace the singular point with a <strong>finite,
+regular interior</strong>.</p>
+<hr />
+<h2 id="idea-a-de-sitter-like-core">4.1 Idea: A de Sitter-like Core</h2>
+<p>We hypothesize (this is a <strong>theory choice</strong>) that
+instead of letting spacetime run to infinite curvature, the innermost
+region is filled with a <strong>constant positive energy
+density</strong> <span class="math inline">\(\rho_c\)</span>.</p>
+<p>Mathematically, that interior geometry is <strong>de Sitter
+spacetime</strong>:</p>
+<p><span class="math display">\[
+ds^2_{\text{int}} = -\left(1 - \frac{\Lambda r^2}{3}\right)c^2 d\tau^2 +
+\left(1 - \frac{\Lambda r^2}{3}\right)^{-1} dr^2 + r^2 d\Omega^2 ,
+\]</span></p>
+<p>with</p>
+<p><span class="math display">\[
+\Lambda = \frac{8 \pi G}{c^4} \, \rho_c.
+\]</span></p>
+<ul>
+<li>This spacetime is smooth, finite curvature everywhere, and
+consistent with Einstein’s equations if you have a perfect fluid with
+density <span class="math inline">\(\rho_c\)</span> and pressure <span
+class="math inline">\(p=-\rho_c\)</span>.</li>
+<li>Crucially, <span class="math inline">\(\rho_c\)</span> isn’t chosen
+arbitrarily: we anchor it to the <strong>inflationary energy
+scale</strong> from cosmology.</li>
+</ul>
+<p>So instead of an undefined blow-up, the interior is as “regular” as
+empty space with dark energy.</p>
+<hr />
+<h2 id="matching-interior-and-exterior">4.2 Matching Interior and
+Exterior</h2>
+<p>We glue this de Sitter core to the usual Schwarzschild exterior at
+some radius <span class="math inline">\(r=r_c\)</span>. The rules for
+gluing spacetimes are given by the <strong>Israel junction
+conditions</strong> (a math principle).</p>
+<ul>
+<li>They demand that the metric and its extrinsic curvature are
+continuous across the boundary (no infinite jumps).</li>
+<li>In the simple case without a thin shell of extra matter, these
+conditions enforce a unique relationship:</li>
+</ul>
+<p><span class="math display">\[
+\boxed{r_c^3 = \frac{3 M c^2}{4 \pi \rho_c}}.
+\]</span></p>
+<p>This is the <strong>selector equation</strong>: the core size <span
+class="math inline">\(r_c\)</span> is uniquely determined once you know
+the black hole mass <span class="math inline">\(M\)</span> and the
+universal constant <span class="math inline">\(\rho_c\)</span>.</p>
+<hr />
+<h2 id="what-this-achieves">4.3 What This Achieves</h2>
+<ul>
+<li><strong>Finite curvature:</strong> Invariants like the Ricci scalar
+and Kretschmann scalar remain finite at <span
+class="math inline">\(r=r_c\)</span>. No infinities.</li>
+<li><strong>Predictive, not arbitrary:</strong> You can’t tune <span
+class="math inline">\(r_c\)</span>; it’s dictated by physics (<span
+class="math inline">\(M\)</span>, <span
+class="math inline">\(\rho_c\)</span>).</li>
+<li><strong>Operational picture:</strong> Infalling observers reach the
+core surface at <span class="math inline">\(r_c\)</span> in finite
+proper time, but encounter a smooth termination, not an infinite
+singularity.</li>
+</ul>
+<hr />
+<h3 id="glossary-for-step-4">Glossary for Step 4</h3>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 25%" />
+<col style="width: 19%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol / Term</th>
+<th>Meaning</th>
+<th>Value</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\rho_c\)</span></td>
+<td>Critical energy density of the core</td>
+<td>Anchored to inflation scale</td>
+<td>Like a “vacuum pressure” filling the core</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Lambda\)</span></td>
+<td>Cosmological constant for the core</td>
+<td><span class="math inline">\(8\pi G\rho_c/c^4\)</span></td>
+<td>A curvature “dial” set by <span
+class="math inline">\(\rho_c\)</span></td>
+</tr>
+<tr>
+<td>de Sitter spacetime</td>
+<td>Geometry of constant positive energy</td>
+<td>Smooth interior metric</td>
+<td>Like a perfectly stretched trampoline fabric</td>
+</tr>
+<tr>
+<td>Israel junction conditions</td>
+<td>Math rules for joining spacetimes</td>
+<td>Continuity conditions</td>
+<td>Sewing two fabrics seamlessly without tears</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r_c\)</span></td>
+<td>Core radius where match occurs</td>
+<td><span class="math inline">\((3Mc^2 / 4\pi\rho_c)^{1/3}\)</span></td>
+<td>The “guardrail” that replaces the singular trapdoor</td>
+</tr>
+</tbody>
+</table>
+<p>We’ve replaced the singular center with a
+<strong>finite de Sitter-like core at <span
+class="math inline">\(r_c\)</span></strong>, matched seamlessly to the
+Schwarzschild exterior.</p>
+                <div class="chapter-nav">
+                    <a href="3-dynamics-lapse-field.html">← Chapter 3: Dynamics & Lapse</a>
+                    <a href="5-absorbing-core.html">Chapter 5: Absorbing Core →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a> | <a href="/papers/paper6-black-holes/overview.html">View Overview</a></p>
+        </div>
+    </div>
+</body>
+</html>
