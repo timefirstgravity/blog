@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 8 — Observables & Forecasts | Paper IV.4: Light & The Flow of Time</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a> ›
+      <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">Paper IV.4: Step-by-Step</a> ›
+      <span>Chapter 8</span>
+    </div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="index.html">Table of Contents</a></li>
+          <li><a href="1-foundations-intuition.html">1. Foundations & Intuition</a></li>
+          <li><a href="2-temporal-optics-map.html">2. The Temporal–Optics Map \(n=e^{\Phi}\)</a></li>
+          <li><a href="3-travel-time-shapiro.html">3. Travel Time & Shapiro Delay</a></li>
+          <li><a href="4-deflection-transverse-gradients.html">4. Deflection from Transverse Time-Gradients</a></li>
+          <li><a href="5-achromatic-drift.html">5. Time-Variable Potentials & Achromatic Drift</a></li>
+          <li><a href="6-plasma-vs-temporal.html">6. Discriminant: Plasma vs Temporal</a></li>
+          <li><a href="7-lapse-vs-shift.html">7. Lapse vs Shift: What Lives Where</a></li>
+          <li><a class="active" href="8-observables-forecasts.html">8. Observables & Forecasts</a></li>
+          <li><a href="9-systematics-summary.html">9. Systematics, Checks, & Summary</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 8 — Observables & Forecasts</h1>
+        <p class="lede">
+          Turn equations into signals. Estimate magnitudes. Pick instruments and strategies that can see them.
+        </p>
+
+        <section>
+          <h2>Goal of this chapter</h2>
+          <ul>
+            <li>List the main observables: clock links, pulsar/FRB timing, lensed-quasar delays.</li>
+            <li>Give scaling laws for achromatic drift from source power.</li>
+            <li>Provide practical targets and tactics.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Core scaling laws</h2>
+          <p>Start from the drift law and the flux relation. Use path-length element \(\mathrm{d}\ell\) and radius \(R\).</p>
+          <div class="math">
+            \[
+              \frac{\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\Delta T
+              \simeq -\frac{2}{c} \int \partial_t\Phi\,\mathrm{d}\ell,
+              \qquad
+              \partial_t\Phi(t,R) = -\frac{G}{c^4}\,\frac{P(t)}{R}.
+            \]
+          </div>
+          <p>Combine them to estimate the drift from a segment of length \(L\) near \(R\) with power \(P\).</p>
+          <div class="math">
+            \[
+              \dot{\Delta T}\big|_{\text{seg}}
+              \;\simeq\;
+              \frac{2G}{c^5}\,\frac{P}{R}\,L.
+            \]
+          </div>
+          <p>Express as fractional frequency using \(\dot{\nu}/\nu \approx -\dot{\Delta T}\).</p>
+          <div class="math">
+            \[
+              \frac{\dot{\nu}}{\nu}
+              \;\approx\;
+              -\,\frac{2G}{c^5}\,\frac{P}{R}\,L.
+            \]
+          </div>
+          <p>A convenient per-year form follows by multiplying by one year \(T_{\mathrm{yr}}\).</p>
+          <div class="math">
+            \[
+              \Delta(\Delta T)\;[\mathrm{s/yr}]\;\simeq\; 
+              \left(2.19\times10^{-14}\right)\,
+              \lambda_{\mathrm{Edd}}\,
+              \frac{M}{M_\odot}\,
+              \frac{L}{R}.
+            \]
+          </div>
+          <p>Here \(\lambda_{\mathrm{Edd}}\) scales power to the Eddington luminosity and \(M/M_\odot\) is source mass in solar units. The factor matches the paper's benchmarks.</p>
+        </section>
+
+        <section>
+          <h2>Observable channels</h2>
+
+          <h3>1) Redshift drift with optical clock links</h3>
+          <p>Link optical clocks over a long baseline. Track phase continuously. The achromatic signal is the common-mode drift.</p>
+          <div class="math">
+            \[
+              \left|\frac{\dot{\nu}}{\nu}\right|
+              \;\approx\;
+              \left|\dot{\Delta T}\right|.
+            \]
+          </div>
+          <ul>
+            <li><strong>Targets.</strong> Nearby massive engines with changing power. Long lines of sight skimming potential gradients.</li>
+            <li><strong>Specs.</strong> Stability at \(10^{-18}\) to \(10^{-19}\) over hours to days. Phase-stable time transfer.</li>
+            <li><strong>Checks.</strong> Closed-loop comparisons. Swap endpoints. Expect the same achromatic drift.</li>
+          </ul>
+
+          <h3>2) Pulsar and FRB timing (multi-band)</h3>
+          <p>Fit a chromatic plus achromatic model to simultaneous bands.</p>
+          <div class="math">
+            \[
+              \epsilon_{\mathrm{dis}}(\nu) = A\,\nu^{-2} + B.
+            \]
+          </div>
+          <ul>
+            <li><strong>Targets.</strong> Bright, stable pulsars. Repeaters with high S/N bursts.</li>
+            <li><strong>Specs.</strong> Synchronized bands. Accurate DM modeling. Weight by per-band uncertainties.</li>
+            <li><strong>Checks.</strong> \(A\to 0\) at high frequencies. \(B\) constant across bands.</li>
+          </ul>
+
+          <h3>3) Lensed-quasar time-delay monitoring</h3>
+          <p>Monitor inter-image delays over long baselines. Evolving potentials along the paths produce achromatic drifts.</p>
+          <ul>
+            <li><strong>Targets.</strong> Well-modeled strong lenses with seasonal sampling.</li>
+            <li><strong>Specs.</strong> Sub-day cadence. Stable photometry. Long time spans.</li>
+            <li><strong>Checks.</strong> Cross-image comparisons. Plasma variability is chromatic; temporal drift is flat.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Back-of-the-envelope forecasts</h2>
+
+          <h3>Massive source near Eddington</h3>
+          <p>Assume \(\lambda_{\mathrm{Edd}}\approx 1\), \(M=10^8 M_\odot\), and \(L/R\approx 1\).</p>
+          <div class="math">
+            \[
+              \Delta(\Delta T)\;\sim\; 
+              2.19\times10^{-14}\times 10^8
+              \;\approx\; 2.2\times10^{-6}\ \mathrm{s/yr}.
+            \]
+          </div>
+          <p>That is a few microseconds per year. It sits within reach of precise, long-baseline phase tracking.</p>
+
+          <h3>Galactic compact object</h3>
+          <p>Let \(M=10 M_\odot\), \(\lambda_{\mathrm{Edd}}=0.1\), and \(L/R=0.3\).</p>
+          <div class="math">
+            \[
+              \Delta(\Delta T)\;\sim\; 
+              2.19\times10^{-14}\times 10 \times 0.1 \times 0.3
+              \;\approx\; 6.6\times10^{-16}\ \mathrm{s/yr}.
+            \]
+          </div>
+          <p>This is challenging. It motivates stacking, longer integrations, and multi-epoch comparisons.</p>
+        </section>
+
+        <section>
+          <h2>Targets and tactics</h2>
+          <ul>
+            <li><strong>Clock networks.</strong> Build continental-baseline links. Tie optical combs to fiber and satellite transfer. Compare against stable references.</li>
+            <li><strong>Pulsar timing.</strong> Use wideband receivers. Fit \(A\) and \(B\) together. Repeat on time slices.</li>
+            <li><strong>Lensed quasars.</strong> Maintain cadence and calibration. Compare bands to reject chromatic contamination.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Assumptions and limits</h2>
+          <ul>
+            <li>Quasi-static geometry along the path: \(\bigl|\partial_t\Phi/\Phi\bigr|\,T_{\mathrm{path}} \ll 1\).</li>
+            <li>Thin or slowly varying lenses: \(\epsilon_{\mathrm{lens}} \equiv L_{\mathrm{lens}}/(c\,\tau_{\mathrm{var}}) \ll 1\).</li>
+            <li>Achromatic tests assume the plasma term follows \(\nu^{-2}\) in the observed bands.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What you have now</h2>
+          <p>Concrete observables for three channels. A scaling law from power to drift. Benchmarks that guide instrument requirements.</p>
+        </section>
+
+        <div class="step-footer">
+          <a href="7-lapse-vs-shift.html" class="btn">‹ Back</a>
+          <a href="9-systematics-summary.html" class="btn btn-primary">Next: Systematics, Checks, & Summary</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

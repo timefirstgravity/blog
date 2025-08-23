@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 4 — Deflection from Transverse Time-Gradients | Paper IV.4: Light & The Flow of Time</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a> ›
+      <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">Paper IV.4: Step-by-Step</a> ›
+      <span>Chapter 4</span>
+    </div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="index.html">Table of Contents</a></li>
+          <li><a href="1-foundations-intuition.html">1. Foundations & Intuition</a></li>
+          <li><a href="2-temporal-optics-map.html">2. The Temporal–Optics Map \(n=e^{\Phi}\)</a></li>
+          <li><a href="3-travel-time-shapiro.html">3. Travel Time & Shapiro Delay</a></li>
+          <li><a class="active" href="4-deflection-transverse-gradients.html">4. Deflection from Transverse Time-Gradients</a></li>
+          <li><a href="5-achromatic-drift.html">5. Time-Variable Potentials & Achromatic Drift</a></li>
+          <li><a href="6-plasma-vs-temporal.html">6. Discriminant: Plasma vs Temporal</a></li>
+          <li><a href="7-lapse-vs-shift.html">7. Lapse vs Shift: What Lives Where</a></li>
+          <li><a href="8-observables-forecasts.html">8. Observables & Forecasts</a></li>
+          <li><a href="9-systematics-summary.html">9. Systematics, Checks, & Summary</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 4 — Deflection from Transverse Time-Gradients</h1>
+        <p class="lede">
+          Rays bend where the rate of time changes across the path. The bending tracks transverse gradients of \(\Phi\).
+        </p>
+
+        <section>
+          <h2>Goal of this chapter</h2>
+          <ul>
+            <li>Write the bending angle in terms of transverse gradients of \(\Phi\).</li>
+            <li>Show agreement with the classic point-mass result.</li>
+            <li>Connect to thin-lens notation used in weak lensing.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Set-up</h2>
+          <p>Work in the Born approximation. The ray is nearly straight. Use an unperturbed path coordinate \(z\) and a transverse impact parameter \(b\). Define the transverse gradient as \(\nabla_{\!\\perp}\), orthogonal to the line of sight \(\hat{\mathbf n}\).</p>
+          <div class="math">
+            \[
+              \nabla_{\!\\perp} \;\equiv\; \bigl(\mathbf I - \hat{\mathbf n}\hat{\mathbf n}^{\\top}\bigr)\nabla.
+            \]
+          </div>
+        </section>
+
+        <section>
+          <h2>Bending from the temporal–optics map</h2>
+          <p>Fermat’s principle for a slowly varying index gives a small deflection proportional to the cross-path index gradient integrated along the line of sight.</p>
+
+          <div class="highlight info">
+            <p><strong>Conventions.</strong> The paper shows both \(n=e^{\Phi}\) and \(n_{\gamma}=e^{-2\Phi}\). Use the form that keeps factors correct for your section. They are related by \(n_{\gamma}=n^{-2}\).</p>
+          </div>
+
+          <h3>Form 1 — using \(n_{\gamma}=e^{-2\Phi}\) (matches the paper’s lensing figures)</h3>
+          <div class="math">
+            \[
+              \boldsymbol{\alpha}(\hat{\mathbf n})
+              \;\simeq\; \int \nabla_{\!\\perp}\ln n_{\gamma}\,\mathrm{d}z
+              \;=\; -\,2\int \nabla_{\!\\perp}\Phi\,\mathrm{d}z.
+            \]
+          </div>
+
+          <h3>Form 2 — using \(n=e^{\Phi}\)</h3>
+          <p>In this convention the same leading-order physics appears as</p>
+          <div class="math">
+            \[
+              \boldsymbol{\alpha}(\hat{\mathbf n})
+              \;\simeq\; 2\int \nabla_{\!\\perp}\Phi\,\mathrm{d}\ell,
+            \]
+          </div>
+          <p>where the factor of 2 matches the \(\ln n_{\gamma}\) expression above. Use one convention per calculation and keep track of factors.</p>
+        </section>
+
+        <section>
+          <h2>Worked example: point mass</h2>
+          <p>Take \(\Phi(r)\approx -\,GM/(c^2 r)\) with \(r=\sqrt{b^2+z^2}\). The transverse gradient is \(\nabla_{\!\\perp}\Phi = \partial\Phi/\partial b = (GM/c^2)\, b/r^3\).</p>
+          <div class="math">
+            \[
+              \int_{-\infty}^{+\infty} \frac{b\,\mathrm{d}z}{(b^2+z^2)^{3/2}}
+              \;=\; \frac{2}{b}.
+            \]
+          </div>
+          <p>Insert this into the \(n_{\gamma}\) form.</p>
+          <div class="math">
+            \[
+              \alpha(b) \;\simeq\; -\,2\int \nabla_{\!\\perp}\Phi\,\mathrm{d}z
+              \;=\; -\,2\left(\frac{GM}{c^2}\right)\frac{2}{b}.
+            \]
+          </div>
+          <p>The direction is toward the mass. The magnitude matches the classic result:</p>
+          <div class="math">
+            \[
+              |\alpha(b)| \;=\; \frac{4GM}{c^2 b}.
+            \]
+          </div>
+          <p>This agrees with the standard weak-field GR prediction.</p>
+        </section>
+
+        <section>
+          <h2>Thin-lens language</h2>
+          <p>Project the potential along the line of sight. Define a 2D lensing potential \(\psi\) on the sky. Use angular coordinates \(\boldsymbol{\theta}\) with distance factors absorbed in \(\psi\).</p>
+          <div class="math">
+            \[
+              \psi(\boldsymbol{\theta}) \;\propto\; \int \Phi\,\mathrm{d}z,
+              \qquad
+              \boldsymbol{\alpha}(\boldsymbol{\theta}) \;=\; \nabla_{\!\\boldsymbol{\theta}}\,\psi(\boldsymbol{\theta}).
+            \]
+          </div>
+          <p>Convergence and shear follow as derivatives of \(\psi\).</p>
+          <div class="math">
+            \[
+              \kappa \;=\; \tfrac{1}{2}\nabla_{\!\\boldsymbol{\theta}}^2 \psi,
+              \qquad
+              \gamma_1,\gamma_2 \;\text{ from second derivatives of }\psi.
+            \]
+          </div>
+          <p>This matches weak-lensing notation. It links the temporal potential to standard 2D lens maps.</p>
+        </section>
+
+        <section>
+          <h2>Validity and small parameters</h2>
+          <ul>
+            <li>Weak field: \(|\Phi|\ll 1\).</li>
+            <li>Small angles: the Born approximation holds.</li>
+            <li>Quasi-static lens: \(\bigl|\partial_t\Phi/\Phi\bigr|\,T_{\mathrm{path}} \ll 1\).</li>
+            <li>Thin lens (optional): \(L_{\mathrm{lens}}/(c\,\tau_{\mathrm{var}})\ll 1\).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Sanity checks</h2>
+          <ul>
+            <li>Point mass gives \(|\alpha|=4GM/(c^2 b)\).</li>
+            <li>Double the impact parameter. The deflection halves.</li>
+            <li>Set \(\Phi\to 0\). Rays remain straight.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Common pitfalls</h2>
+          <ul>
+            <li>Mixing \(n=e^{\Phi}\) and \(n_{\gamma}=e^{-2\Phi}\) mid-derivation. Convert with \(n_{\gamma}=n^{-2}\).</li>
+            <li>Dropping the factor of 2 when switching between \(\nabla_{\!\\perp}\ln n_{\gamma}\) and \(\nabla_{\!\\perp}\Phi\).</li>
+            <li>Using a curved path in the integral while assuming the Born approximation.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What you have now</h2>
+          <p>A bending formula tied to cross-path time-gradients. A point-mass check that recovers \(\,4GM/(c^2 b)\,\). A bridge to thin-lens notation.</p>
+        </section>
+
+        <div class="step-footer">
+          <a href="3-travel-time-shapiro.html" class="btn">‹ Back</a>
+          <a href="5-achromatic-drift.html" class="btn btn-primary">Next: Time-Variable Potentials & Achromatic Drift</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

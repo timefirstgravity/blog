@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper IV.4: Light & The Flow of Time - Overview</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <span>Paper IV.4: Light & The Flow of Time</span> › 
+            <span>Overview</span>
+        </div>
+
+        <div class="view-toggle">
+            <a href="/papers/paper4-4-flow-of-time/overview.html" class="active">Overview</a>
+            <a href="/papers/paper4-4-flow-of-time/step-by-step/index.html">Step-by-Step</a>
+        </div>
+
+        <h1>Gravity as Temporal Geometry IV.4: Light & The Flow of Time</h1>
+
+        <div class="highlight info">
+            <p><strong>Key Idea:</strong> Time sets the pace. Light keeps the beat. When the local rate of time changes, light behaves as if it travels through a medium with index <span class="math">\(n(\mathbf{x}) = e^{\Phi(\mathbf{x})}\)</span>. This view turns gravity into temporal optics. It explains known effects. It also predicts new, color-independent timing drifts that modern clock networks can seek.</p>
+        </div>
+        
+        <div class="highlight">
+            <p><strong>Key equations.</strong>
+            <ul class="tight">
+                <li><span class="label">Temporal–optics map:</span>
+                    <span class="math">\(n(\mathbf{x},t) = e^{\Phi(\mathbf{x},t)}\)</span>,
+                    <span class="math">\(\;\Delta T \simeq \frac{1}{c}\int \big(e^{\Phi}-1\big)\,\mathrm{d}\ell\)</span>.
+                </li>
+                <li><span class="label">Achromatic drift:</span>
+                    <span class="math">\(\frac{\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\Delta T \simeq -\,\frac{2}{c}\int \partial_t\Phi\,\mathrm{d}\ell\)</span>.
+                </li>
+                <li><span class="label">Deflection from time-gradients:</span>
+                    <span class="math">\(\boldsymbol{\alpha}(\hat{\mathbf n}) \simeq \int \nabla_{\!\perp}\Phi\,\mathrm{d}\ell\)</span>.
+                </li>
+                <li><span class="label">Discriminant for data:</span>
+                    <span class="math">\(\epsilon_{\mathrm{dis}}(\nu)=A\,\nu^{-2}+B\)</span>.
+                    Plasma → <span class="math">\(A\neq0, B\approx0\)</span>. Temporal → <span class="math">\(A\approx0, B\neq0\)</span>.
+                </li>
+            </ul>
+        </div>
+        
+        <h2>What This Paper Adds</h2>
+        <p>We connect the lapse field <span class="math">\(\Phi\)</span> to measurable optical effects. We derive a unified law for deflection, Shapiro timing, and drift. We identify observables that separate temporal geometry from plasma dispersion.</p>
+        
+        <h2>From Time to Light</h2>
+        <p>Imagine space as a landscape and time as the pace of a runner crossing it. The runner speeds up when the pace quickens and slows when it relaxes. Light acts like that runner. It follows the local flow of time.</p>
+        <div class="math">\[n(\mathbf{x}) = e^{\Phi(\mathbf{x})}\]</div>
+        <p>Here <span class="math">\(\Phi\)</span> is the temporal potential. When <span class="math">\(\Phi\)</span> varies, light bends and lingers as if the landscape were made of glass with changing thickness. This mapping is simple to state. It is powerful in practice.</p>
+        <p>The result matches standard tests in calm regions. It also highlights new signals when time itself evolves along the path.</p>
+        
+        <h2>The Temporal-Optics Law</h2>
+        <p>Travel time is path length divided by speed in the medium. Here the medium is time.</p>
+        <div class="math">\[\Delta T \simeq \frac{1}{c}\int \big(n-1\big)\, \mathrm{d}\ell \;=\; \frac{1}{c}\int \big(e^{\Phi}-1\big)\, \mathrm{d}\ell.\]</div>
+        <p>If the medium changes while light is en route, the arrival time drifts. Think of walking on a moving walkway that slowly changes speed.</p>
+        <div class="math">\[\frac{\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\Delta T \simeq -\,\frac{2}{c}\int \partial_t \Phi \,\mathrm{d}\ell.\]</div>
+        <p>These equations recover deflection and Shapiro delay when things are steady. They predict achromatic drifts when the pace of time varies along the way.</p>
+        
+        <h2>What Lives Where</h2>
+        <ul>
+            <li><strong>Lapse:</strong> <span class="math">\(\Phi\)</span> sets how fast clocks tick. It controls achromatic time dilation and drift.</li>
+            <li><strong>Shift:</strong> Rotation and gravitational waves live in the shift sector. Think of a turntable that carries you around. Sagnac links and gyros respond to this motion.</li>
+        </ul>
+        
+        <h2>Achromatic Discriminant</h2>
+        <p>Use a rainbow test. Gravity's timing effect is flat in color. Plasma delays depend on color.</p>
+        <div class="math">\[\Delta t_{\mathrm{plasma}} \propto \mathrm{DM}\,\nu^{-2} \quad (\omega \gg \omega_p).\]</div>
+        <p>Observe at two or more bands at the same time. A flat slope points to temporal geometry. A <span class="math">\(\nu^{-2}\)</span> slope points to electrons along the path.</p>
+        <details>
+            <summary>Show the data model</summary>
+            <div class="math">\[\epsilon_{\mathrm{dis}}(\nu)=A\,\nu^{-2}+B.\]</div>
+            <p>Fit both terms. The flat part is the temporal candidate.</p>
+        </details>
+        
+        <h2>Core Equations Used in Forecasts</h2>
+        <p>Energy flowing outward changes the local pace of time. The relation is direct in SI units:</p>
+        <div class="math">\[\partial_t \Phi(t,R) = -\,\frac{G}{c^4}\,\frac{P(t)}{R}, \quad \text{where } P(t) \text{ is the outward power at radius } R.\]</div>
+        <p>This sets the scale for signals. It links engines in the sky to drifts in our clocks.</p>
+        
+        <h2>Observables and Tests</h2>
+        <ol>
+            <li><strong>Redshift drift with clocks:</strong> Link optical clocks over continental baselines. Track phase. Seek a common, color-independent drift.</li>
+            <li><strong>Pulsar timing:</strong> Time the same pulses at multiple frequencies. Fit for a flat component and a <span class="math">\(\nu^{-2}\)</span> component. Separate temporal signals from plasma.</li>
+            <li><strong>Shift-sector checks:</strong> Use Sagnac links and ring-laser gyros. Detect rotation and near-zone frame dragging near massive bodies.</li>
+        </ol>
+        
+        <h2>Systematics and Challenges</h2>
+        <p>Signals are small. Care builds confidence.</p>
+        <ul>
+            <li><strong>Time transfer:</strong> Stabilize fibers and satellite links. Calibrate often.</li>
+            <li><strong>Path delays:</strong> Model troposphere and ionosphere. Use local weather and TEC maps.</li>
+            <li><strong>Plasma residuals:</strong> Fit and remove dispersion with multi-band data.</li>
+            <li><strong>Local gravity:</strong> Account for tides, groundwater, and nearby masses.</li>
+            <li><strong>Instrument drift:</strong> Cross-check with closed loops and clock swaps.</li>
+        </ul>
+        <p>Null tests help. Close a loop and expect zero. Change color and expect the plasma term to move while the temporal term stays fixed.</p>
+        
+        <h2>How This Differs From Prior Work</h2>
+        <p>Classic treatments start with the shape of space. We start with the flow of time. The refractive picture reproduces known results where tested. It also turns clocks and links into direct probes of geometry. That opens new experiments.</p>
+        
+        <h2>Mathematical Structure</h2>
+        <p>We start from the lapse-first metric and derive the optical limit. We keep the notation consistent across inhomogeneous and homogeneous cases. The derivation remains gauge-aware. The separation between lapse and shift is explicit.</p>
+        
+        <h2>Routes Forward</h2>
+        <ul>
+            <li><strong>Route A:</strong> Conservative tests. Recover standard results in calm cases. Measure achromatic drift when sources evolve.</li>
+            <li><strong>Route B:</strong> Build an effective theory for <span class="math">\(\Phi\)</span>. Ask what kind of "temporal vacuum" fits the data.</li>
+            <li><strong>Route C:</strong> Unify clocks and gauge. Use networks of clocks, Sagnac links, and gyros to read the lapse and shift directly.</li>
+        </ul>
+        
+        <h2>Why It Matters</h2>
+        <p>This program makes gravity tangible in the lab. It turns time into an optical medium that we can measure. It gives clear signatures that survive messy environments. It points to instruments we can build now.</p>
+        
+        <h2>Summary</h2>
+        <p>We present a clear map from the temporal potential to what we can observe. The rule <span class="math">\(n = e^{\Phi}\)</span> organizes deflection, Shapiro timing, and drift. Achromatic tests separate gravity from plasma. Clock networks, pulsar timing, and gyro links provide a path to discovery.</p>
+        
+        <div class="highlight">
+            <p><strong>Want the full derivation and benchmarks?</strong> See the <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">step-by-step walkthrough</a> with equations, assumptions, and numerical estimates.</p>
+        </div>
+        
+        <section>
+            <h2>Key equations at a glance</h2>
+            <ul class="tight">
+                <li><span class="label">Map:</span> <span class="math">\(n=e^{\Phi}\)</span>,
+                    <span class="math">\(\Delta T \simeq \frac{1}{c}\int (e^{\Phi}-1)\,\mathrm{d}\ell\)</span>.
+                </li>
+                <li><span class="label">Drift:</span> <span class="math">\(\frac{\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\Delta T \simeq -\frac{2}{c}\int \partial_t\Phi\,\mathrm{d}\ell\)</span>.</li>
+                <li><span class="label">Deflection:</span> <span class="math">\(\boldsymbol{\alpha} \simeq \int \nabla_{\!\perp}\Phi\,\mathrm{d}\ell\)</span>.</li>
+                <li><span class="label">Discriminant:</span> <span class="math">\(\epsilon_{\mathrm{dis}}(\nu)=A\,\nu^{-2}+B\)</span>.</li>
+            </ul>
+        </section>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

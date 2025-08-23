@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 5 — Time-Variable Potentials & Achromatic Drift | Paper IV.4: Light & The Flow of Time</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a> ›
+      <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">Paper IV.4: Step-by-Step</a> ›
+      <span>Chapter 5</span>
+    </div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="index.html">Table of Contents</a></li>
+          <li><a href="1-foundations-intuition.html">1. Foundations & Intuition</a></li>
+          <li><a href="2-temporal-optics-map.html">2. The Temporal–Optics Map \(n=e^{\Phi}\)</a></li>
+          <li><a href="3-travel-time-shapiro.html">3. Travel Time & Shapiro Delay</a></li>
+          <li><a href="4-deflection-transverse-gradients.html">4. Deflection from Transverse Time-Gradients</a></li>
+          <li><a class="active" href="5-achromatic-drift.html">5. Time-Variable Potentials & Achromatic Drift</a></li>
+          <li><a href="6-plasma-vs-temporal.html">6. Discriminant: Plasma vs Temporal</a></li>
+          <li><a href="7-lapse-vs-shift.html">7. Lapse vs Shift: What Lives Where</a></li>
+          <li><a href="8-observables-forecasts.html">8. Observables & Forecasts</a></li>
+          <li><a href="9-systematics-summary.html">9. Systematics, Checks, & Summary</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 5 — Time-Variable Potentials & Achromatic Drift</h1>
+        <p class="lede">
+          When the lapse changes during propagation, the arrival time drifts. The signal is achromatic.
+        </p>
+
+        <section>
+          <h2>Goal of this chapter</h2>
+          <ul>
+            <li>Write the drift of arrival time when \(\partial_t\Phi\neq 0\).</li>
+            <li>Connect the drift to energy flow with the spherical flux law.</li>
+            <li>Show simple estimates and conditions for validity.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Drift from an evolving lapse</h2>
+          <p>Start from the travel-time functional and differentiate with respect to the observer’s time.</p>
+          <div class="math">
+            \[
+              \frac{\,\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\,\Delta T
+              \;\simeq\;
+              -\,\frac{2}{c}\,\int_{\text{path}} \partial_t \Phi(t,\mathbf{x})\,\mathrm{d}\ell.
+            \]
+          </div>
+          <p>Sign convention: a growing \(\Phi\) along the path makes arrivals earlier. The result does not depend on radio/optical color.</p>
+          <div class="highlight info">
+            <p><strong>Why achromatic?</strong> \(\Delta T\) depends on the time field along the path. Color enters through plasma dispersion, not through gravity. We use this contrast in Chapter 6.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Link to energy flow (spherical flux law)</h2>
+          <p>Relate \(\partial_t\Phi\) to outward power \(P(t)\) at radius \(R\). Use the SI form.</p>
+          <div class="math">
+            \[
+              \partial_t \Phi(t,R)
+              \;=\;
+              -\,\frac{G}{c^4}\,\frac{P(t)}{R}.
+            \]
+          </div>
+          <p>Insert this into the drift integral.</p>
+          <div class="math">
+            \[
+              \frac{\,\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\,\Delta T
+              \;\simeq\;
+              \frac{2G}{c^{5}}\,
+              \int_{\text{path}} \frac{P(t)}{R}\,\mathrm{d}\ell.
+            \]
+          </div>
+          <p>Positive outward power produces a positive drift. The scale follows the luminosity and geometry.</p>
+        </section>
+
+        <section>
+          <h2>From drift to a clock signal</h2>
+          <p>For pulse trains or phase-locked links, the instantaneous fractional frequency shift is the negative time derivative of the delay.</p>
+          <div class="math">
+            \[
+              \frac{\dot{\nu}}{\nu}
+              \;\approx\;
+              -\,\frac{\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\,\Delta T.
+            \]
+          </div>
+          <p>This is the form used in forecasts for clock networks and pulsar timing.</p>
+        </section>
+
+        <section>
+          <h2>Simple estimates</h2>
+          <p>Assume a segment of length \(L\) near radius \(R\) where \(P(t)\) is approximately constant.</p>
+          <div class="math">
+            \[
+              \left.\frac{\,\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\,\Delta T\right|_{\text{seg}}
+              \;\simeq\;
+              \frac{2G}{c^{5}}\;\frac{P}{R}\;L.
+            \]
+          </div>
+          <p>For multiple segments, add contributions along the path. Geometry enters through \(L/R\) factors.</p>
+          <p>Numerical benchmarks appear in Chapter 8.</p>
+        </section>
+
+        <section>
+          <h2>Validity and small parameters</h2>
+          <ul>
+            <li>Quasi-static along the path:
+              \( \bigl|\partial_t\Phi/\Phi\bigr|\,T_{\mathrm{path}}\ll 1 \).
+            </li>
+            <li>Slow geometry change:
+              \( \epsilon_{\mathrm{lens}}\equiv L_{\mathrm{lens}}/(c\,\tau_{\mathrm{var}})\ll 1 \).
+            </li>
+            <li>Eikonal limit: background varies slowly across a wavelength.</li>
+            <li>Use a single index convention per calculation:
+              \(n=e^{\Phi}\) or \(n_{\gamma}=e^{-2\Phi}=n^{-2}\).
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Worked mini-examples</h2>
+
+          <h3>Thin emitting shell</h3>
+          <p>Take a luminous shell of thickness \(L\) at radius \(R\) with power \(P\).</p>
+          <div class="math">
+            \[
+              \dot{\Delta T}
+              \;\simeq\;
+              \frac{2G}{c^{5}}\;\frac{P}{R}\;L.
+            \]
+          </div>
+
+          <h3>Central engine plus quiescent halo</h3>
+          <p>Split the path into a compact zone of size \(L_1\) near \(R_1\) and a quiet zone \(L_2\) near \(R_2\) with \(P_2\!\ll P_1\).</p>
+          <div class="math">
+            \[
+              \dot{\Delta T}
+              \;\simeq\;
+              \frac{2G}{c^{5}}\left(\frac{P_1}{R_1}L_1 + \frac{P_2}{R_2}L_2\right)
+              \;\approx\;
+              \frac{2G}{c^{5}}\;\frac{P_1}{R_1}L_1.
+            \]
+          </div>
+          <p>The compact zone dominates.</p>
+        </section>
+
+        <section>
+          <h2>Sanity checks</h2>
+          <ul>
+            <li>\(\partial_t\Phi\to 0 \Rightarrow \dot{\Delta T}\to 0\).</li>
+            <li>Set \(P\to 0\). The flux form gives \(\dot{\Delta T}\to 0\).</li>
+            <li>Increase distance \(R\). The drift falls like \(1/R\).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Common pitfalls</h2>
+          <ul>
+            <li>Mixing \(\mathrm{d}\ell\) and \(dz\) without stating the path model.</li>
+            <li>Switching between \(n=e^{\Phi}\) and \(n_{\gamma}=e^{-2\Phi}\) mid-derivation.</li>
+            <li>Dropping small-parameter checks for \(\bigl|\partial_t\Phi/\Phi\bigr|\,T_{\mathrm{path}}\).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What you have now</h2>
+          <p>A clean achromatic drift law. A direct link to source power via the flux relation. Simple scaling estimates that match the forecasts in Chapter 8.</p>
+        </section>
+
+        <div class="step-footer">
+          <a href="4-deflection-transverse-gradients.html" class="btn">‹ Back</a>
+          <a href="6-plasma-vs-temporal.html" class="btn btn-primary">Next: Discriminant — Plasma vs Temporal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

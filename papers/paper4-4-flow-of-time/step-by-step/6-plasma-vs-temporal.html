@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 6 — Discriminant: Plasma vs Temporal | Paper IV.4: Light & The Flow of Time</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a> ›
+      <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">Paper IV.4: Step-by-Step</a> ›
+      <span>Chapter 6</span>
+    </div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="index.html">Table of Contents</a></li>
+          <li><a href="1-foundations-intuition.html">1. Foundations & Intuition</a></li>
+          <li><a href="2-temporal-optics-map.html">2. The Temporal–Optics Map \(n=e^{\Phi}\)</a></li>
+          <li><a href="3-travel-time-shapiro.html">3. Travel Time & Shapiro Delay</a></li>
+          <li><a href="4-deflection-transverse-gradients.html">4. Deflection from Transverse Time-Gradients</a></li>
+          <li><a href="5-achromatic-drift.html">5. Time-Variable Potentials & Achromatic Drift</a></li>
+          <li><a class="active" href="6-plasma-vs-temporal.html">6. Discriminant: Plasma vs Temporal</a></li>
+          <li><a href="7-lapse-vs-shift.html">7. Lapse vs Shift: What Lives Where</a></li>
+          <li><a href="8-observables-forecasts.html">8. Observables & Forecasts</a></li>
+          <li><a href="9-systematics-summary.html">9. Systematics, Checks, & Summary</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 6 — Discriminant: Plasma vs Temporal</h1>
+        <p class="lede">
+          Gravity is achromatic. Cold-plasma dispersion is chromatic. Fit both at once and let the data decide.
+        </p>
+
+        <section>
+          <h2>Goal of this chapter</h2>
+          <ul>
+            <li>Write a two-component timing model that separates plasma and temporal signals.</li>
+            <li>Give a minimal estimator for two bands. Give a weighted fit for many bands.</li>
+            <li>List checks that guard against confounders.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>The discriminant model</h2>
+          <p>Model a timing residual or fractional delay as a sum of a chromatic plasma term and a flat temporal term.</p>
+          <div class="math">
+            \[
+              \epsilon_{\mathrm{dis}}(\nu)
+              \;=\;
+              A\,\nu^{-2} \;+\; B.
+            \]
+          </div>
+          <p>Interpretation: \(A\) tracks dispersion measure or plasma-like effects. \(B\) tracks an achromatic signal from the lapse.</p>
+          <div class="highlight info">
+            <p><strong>Scope.</strong> The \(\nu^{-2}\) law holds in the high-frequency limit \((\omega \gg \omega_p)\) for cold, unmagnetized plasma. It is the standard timing regime.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Two-band closed-form estimator</h2>
+          <p>Suppose you observe at two simultaneous bands \(\nu_1\) and \(\nu_2\). Let the measured residuals be \(r_1\) and \(r_2\).</p>
+          <div class="math">
+            \[
+              r_1 \;=\; A\,\nu_1^{-2} + B,
+              \qquad
+              r_2 \;=\; A\,\nu_2^{-2} + B.
+            \]
+          </div>
+          <p>Solve for \(A\) and \(B\).</p>
+          <div class="math">
+            \[
+              A \;=\; \frac{r_1 - r_2}{\nu_1^{-2} - \nu_2^{-2}},
+              \qquad
+              B \;=\; r_1 - A\,\nu_1^{-2}.
+            \]
+          </div>
+          <p>Report \(B\) as the temporal candidate. Quote errors from your per-band uncertainties.</p>
+        </section>
+
+        <section>
+          <h2>Many-band weighted fit</h2>
+          <p>Use a linear model with basis functions \(x_1(\nu)=\nu^{-2}\) and \(x_2(\nu)=1\). Minimize weighted residuals.</p>
+          <div class="math">
+            \[
+              \min_{A,B}\;\sum_i w_i\,\bigl[r_i - (A\,\nu_i^{-2}+B)\bigr]^2,
+              \qquad
+              w_i \equiv \sigma_i^{-2}.
+            \]
+          </div>
+          <p>Include a constant offset per instrument if bands are not perfectly synchronized. Keep observations simultaneous when possible.</p>
+
+          <details>
+            <summary>Optional math peek: normal equations</summary>
+            <div class="math">
+              \[
+                \begin{pmatrix}
+                  \sum w_i \nu_i^{-4} & \sum w_i \nu_i^{-2} \\
+                  \sum w_i \nu_i^{-2} & \sum w_i
+                \end{pmatrix}
+                \begin{pmatrix} A \\ B \end{pmatrix}
+                =
+                \begin{pmatrix}
+                  \sum w_i \nu_i^{-2} r_i \\
+                  \sum w_i r_i
+                \end{pmatrix}.
+              \]
+            </div>
+            <p>Solve the \(2\times2\) system for \(A\) and \(B\). Errors follow from the inverse matrix.</p>
+          </details>
+        </section>
+
+        <section>
+          <h2>Edge cases and extensions</h2>
+          <ul>
+            <li><strong>Very high frequencies.</strong> If \(\nu\gg\nu_p\), the plasma term is tiny. Expect \(A\to 0\) within errors.</li>
+            <li><strong>Magnetized plasma.</strong> Faraday rotation changes polarization, not the achromatic timing. A residual \(\propto \nu^{-3}\) or \(\nu^{-4}\) indicates higher-order plasma terms. Extend the model if needed.</li>
+            <li><strong>Scattering tails.</strong> Multi-path in the ISM can add a chromatic tail. It scales with \(\nu\) differently from \(\nu^{-2}\). Fit an extra basis if required.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Recipe for analysis</h2>
+          <ol>
+            <li>Collect simultaneous multi-band timing or phase data. Calibrate time transfer first.</li>
+            <li>Detrend slow instrumental drift with band-shared polynomials if needed.</li>
+            <li>Fit \(\epsilon_{\mathrm{dis}}(\nu)=A\nu^{-2}+B\) using weights from per-band errors.</li>
+            <li>Test \(A=0\) and \(B=0\) separately. The temporal candidate is \(B\neq 0\) with \(A\) consistent with zero.</li>
+            <li>Repeat on time segments to check stability. Expect \(B\) to track lapse-driven drift; see Chapter 5.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Sanity checks</h2>
+          <ul>
+            <li>Swap bands \(\nu_1\) and \(\nu_2\). The two-band \(B\) is unchanged.</li>
+            <li>Inject a known \(\nu^{-2}\) term in simulations. The fit recovers \(A\) and leaves \(B\) near zero.</li>
+            <li>Observe at optical and radio together. Plasma dominates radio. The achromatic part should agree across both.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Common pitfalls</h2>
+          <ul>
+            <li>Non-simultaneous bands. Temporal drift leaks into the plasma fit. Prefer simultaneous data.</li>
+            <li>Mixed conventions. Keep units and signs consistent across bands and instruments.</li>
+            <li>Underestimated errors. Use realistic \(\sigma_i\) to avoid false positives in \(B\).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What you have now</h2>
+          <p>A two-term model that separates chromatic plasma from achromatic temporal signals. A closed-form two-band estimator. A robust many-band fit with clear diagnostics.</p>
+        </section>
+
+        <div class="step-footer">
+          <a href="5-achromatic-drift.html" class="btn">‹ Back</a>
+          <a href="7-lapse-vs-shift.html" class="btn btn-primary">Next: Lapse vs Shift — What Lives Where</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

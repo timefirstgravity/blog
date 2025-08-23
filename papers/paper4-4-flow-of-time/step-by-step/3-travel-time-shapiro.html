@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 3 — Travel Time & Shapiro Delay | Paper IV.4: Light & The Flow of Time</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a> ›
+      <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">Paper IV.4: Step-by-Step</a> ›
+      <span>Chapter 3</span>
+    </div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="index.html">Table of Contents</a></li>
+          <li><a href="1-foundations-intuition.html">1. Foundations & Intuition</a></li>
+          <li><a href="2-temporal-optics-map.html">2. The Temporal–Optics Map \(n=e^{\Phi}\)</a></li>
+          <li><a class="active" href="3-travel-time-shapiro.html">3. Travel Time & Shapiro Delay</a></li>
+          <li><a href="4-deflection-transverse-gradients.html">4. Deflection from Transverse Time-Gradients</a></li>
+          <li><a href="5-achromatic-drift.html">5. Time-Variable Potentials & Achromatic Drift</a></li>
+          <li><a href="6-plasma-vs-temporal.html">6. Discriminant: Plasma vs Temporal</a></li>
+          <li><a href="7-lapse-vs-shift.html">7. Lapse vs Shift: What Lives Where</a></li>
+          <li><a href="8-observables-forecasts.html">8. Observables & Forecasts</a></li>
+          <li><a href="9-systematics-summary.html">9. Systematics, Checks, & Summary</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 3 — Travel Time & Shapiro Delay</h1>
+        <p class="lede">
+          We turn the temporal–optics map into a travel-time integral. We recover the classic Shapiro delay in the static, weak-field limit.
+        </p>
+
+        <section>
+          <h2>Goal of this chapter</h2>
+          <ul>
+            <li>Write the travel-time functional in terms of \(n=e^{\Phi}\).</li>
+            <li>Define the excess time \(\Delta T\) relative to vacuum.</li>
+            <li>Recover the standard Shapiro form for a static point mass.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Travel time from the index</h2>
+          <p>Fermat’s principle gives travel time as index times path length over \(c\).</p>
+          <div class="math">
+            \[
+              T \;=\; \frac{1}{c}\int n(\mathbf{x})\,\mathrm{d}\ell,
+              \qquad
+              \Delta T \;\equiv\; T \;-\; \frac{1}{c}\int \mathrm{d}\ell.
+            \]
+          </div>
+          <p>With the temporal–optics map, the excess time is</p>
+          <div class="math">
+            \[
+              \Delta T \;\simeq\; \frac{1}{c}\int \big(e^{\Phi}-1\big)\,\mathrm{d}\ell.
+            \]
+          </div>
+          <p>In weak fields, expand \(e^{\Phi}\approx 1+\Phi\).</p>
+          <div class="math">
+            \[
+              \Delta T \;\approx\; \frac{1}{c}\int \Phi\,\mathrm{d}\ell.
+            \]
+          </div>
+        </section>
+
+        <section>
+          <h2>Static, spherically symmetric example</h2>
+          <p>Take a point mass \(M\). Use the weak-field potential \(\Phi(\mathbf{x}) \approx -\,\frac{GM}{c^2 r}\). Assume a straight path with impact parameter \(b\). Integrate along the unperturbed line-of-sight coordinate \(z\).</p>
+          <div class="math">
+            \[
+              r(z) \;=\; \sqrt{b^2+z^2},
+              \qquad
+              \Delta T \;\approx\; \frac{1}{c}\int_{z_S}^{z_R} \Phi\big(r(z)\big)\,\mathrm{d}\ell
+              \;\approx\; -\,\frac{GM}{c^3}\int_{z_S}^{z_R} \frac{\mathrm{d}z}{\sqrt{b^2+z^2}}.
+            \]
+          </div>
+          <p>Evaluate the line integral between the finite endpoints \(z_S\) and \(z_R\).</p>
+          <div class="math">
+            \[
+              \int \frac{\mathrm{d}z}{\sqrt{b^2+z^2}}
+              \;=\; \ln\!\Big|\,z+\sqrt{b^2+z^2}\,\Big|\;+\;\text{const}.
+            \]
+          </div>
+          <p>Collect terms in the usual geometric form. You recover the logarithmic Shapiro delay.</p>
+          <div class="math">
+            \[
+              \Delta T_{\mathrm{Shapiro}}
+              \;=\; \frac{2GM}{c^3}\,
+              \ln\!\left(\frac{r_S+r_R+D}{r_S+r_R-D}\right),
+            \]
+          </div>
+          <p>Here \(r_S\) and \(r_R\) are source and receiver distances from the mass. \(D\) is their separation along the path. This matches the standard result in the static limit.</p>
+        </section>
+
+        <section>
+          <h2>Consistency with the paper</h2>
+          <p>The paper also presents the equivalent form with \(n_{\gamma}=e^{-2\Phi}\). In that convention \(\Delta T\simeq -\,\frac{2}{c}\int \Phi\,\mathrm{d}\ell\) at leading order. Both routes give the same Shapiro law once you keep track of factors in the optical limit.</p>
+        </section>
+
+        <section>
+          <h2>Assumptions and limits</h2>
+          <ul>
+            <li>Weak field: \(|\Phi|\ll 1\).</li>
+            <li>Static potential along the path.</li>
+            <li>Straight-line (Born) approximation for the path integral.</li>
+            <li>No plasma dispersion in this chapter.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Sanity checks</h2>
+          <ul>
+            <li>\(\Phi\to 0 \Rightarrow \Delta T \to 0\).</li>
+            <li>Increase \(M\) and \(\Delta T\) grows logarithmically through the path geometry.</li>
+            <li>Move the path farther from the mass. The delay weakens as \(b\) grows.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Common pitfalls</h2>
+          <ul>
+            <li>Mixing \(n=e^{\Phi}\) and \(n_{\gamma}=e^{-2\Phi}\) without converting.</li>
+            <li>Forgetting that the log form comes from finite endpoints. Infinite limits hide geometry in a divergent constant.</li>
+            <li>Using a curved ray while also assuming the straight-line integral. Be consistent with the Born approximation.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What you have now</h2>
+          <p>A clean travel-time functional. The weak-field expansion. The standard Shapiro delay as the static limit of temporal optics.</p>
+        </section>
+
+        <div class="step-footer">
+          <a href="2-temporal-optics-map.html" class="btn">‹ Back</a>
+          <a href="4-deflection-transverse-gradients.html" class="btn btn-primary">Next: Deflection from Transverse Time-Gradients</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

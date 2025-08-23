@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 9 — Systematics, Checks, & Summary | Paper IV.4: Light & The Flow of Time</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a> ›
+      <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">Paper IV.4: Step-by-Step</a> ›
+      <span>Chapter 9</span>
+    </div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="index.html">Table of Contents</a></li>
+          <li><a href="1-foundations-intuition.html">1. Foundations & Intuition</a></li>
+          <li><a href="2-temporal-optics-map.html">2. The Temporal–Optics Map \(n=e^{\Phi}\)</a></li>
+          <li><a href="3-travel-time-shapiro.html">3. Travel Time & Shapiro Delay</a></li>
+          <li><a href="4-deflection-transverse-gradients.html">4. Deflection from Transverse Time-Gradients</a></li>
+          <li><a href="5-achromatic-drift.html">5. Time-Variable Potentials & Achromatic Drift</a></li>
+          <li><a href="6-plasma-vs-temporal.html">6. Discriminant: Plasma vs Temporal</a></li>
+          <li><a href="7-lapse-vs-shift.html">7. Lapse vs Shift: What Lives Where</a></li>
+          <li><a href="8-observables-forecasts.html">8. Observables & Forecasts</a></li>
+          <li><a class="active" href="9-systematics-summary.html">9. Systematics, Checks, & Summary</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 9 — Systematics, Checks, & Summary</h1>
+        <p class="lede">
+          Signals are small. Care, redundancy, and clear models keep them real.
+        </p>
+
+        <section>
+          <h2>Goal of this chapter</h2>
+          <ul>
+            <li>List dominant systematics and practical mitigations.</li>
+            <li>Provide null tests that isolate temporal signals.</li>
+            <li>Summarize the full argument from map to measurements.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Main systematics to control</h2>
+          <ul>
+            <li><strong>Time transfer stability.</strong> Phase noise on fiber or satellite links can mimic slow drift. Use active stabilization and frequent calibration.</li>
+            <li><strong>Troposphere and ionosphere.</strong> Path delays vary with weather and TEC. Use local sensors and models. Prefer simultaneous multi-band data for radio.</li>
+            <li><strong>Residual plasma.</strong> Dispersion is chromatic. Fit \(\epsilon_{\mathrm{dis}}(\nu)=A\nu^{-2}+B\). Track \(A\) in time. Expect \(A\to 0\) at high \(\nu\).</li>
+            <li><strong>Local gravity environment.</strong> Tides, groundwater, and nearby masses shift the local potential. Model and subtract. Compare sites.</li>
+            <li><strong>Instrument drift.</strong> Laser and comb aging. Detector baselines. Use closed loops and reference swaps to bound drift.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Null tests and cross-checks</h2>
+          <ul>
+            <li><strong>Color swap.</strong> Change observing frequency. A temporal signal stays flat in \(\nu\). Plasma terms move with \(\nu^{-2}\).</li>
+            <li><strong>Loop reversal.</strong> For Sagnac tests, reverse loop orientation. The sign flips for \(\beta\) signals. Lapse contributions do not flip.</li>
+            <li><strong>Endpoint swap.</strong> Swap which clock is the reference. The achromatic drift persists with the same sign after conversion.</li>
+            <li><strong>Closed triangle.</strong> Compare phases on links AB, BC, and CA. The sum isolates shift circulation and cancels many site-local errors.</li>
+            <li><strong>Band differencing.</strong> For radio timing, form \(r(\nu_1)-r(\nu_2)\). The flat term cancels. The \(\nu^{-2}\) term survives.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Simple error budgeting</h2>
+          <p>Combine independent errors in quadrature. Use band weights for fits.</p>
+          <div class="math">
+            \[
+              \sigma_B^2 \;=\; \sigma_{\text{transfer}}^2 + \sigma_{\text{plasma,res}}^2 + \sigma_{\text{inst}}^2 + \sigma_{\text{model}}^2.
+            \]
+          </div>
+          <p>For a many-band fit of \(\epsilon_{\mathrm{dis}}(\nu)=A\nu^{-2}+B\), use \(w_i=\sigma_i^{-2}\).</p>
+          <div class="math">
+            \[
+              \begin{pmatrix}
+                \sum w_i \nu_i^{-4} & \sum w_i \nu_i^{-2} \\
+                \sum w_i \nu_i^{-2} & \sum w_i
+              \end{pmatrix}
+              \begin{pmatrix} A \\ B \end{pmatrix}
+              =
+              \begin{pmatrix}
+                \sum w_i \nu_i^{-2} r_i \\
+                \sum w_i r_i
+              \end{pmatrix}.
+            \]
+          </div>
+          <p>Report \(B\) with \(\sigma_B\). Quote \(A\) to show plasma control.</p>
+        </section>
+
+        <section>
+          <h2>Decision tree for analysis</h2>
+          <ol>
+            <li><strong>Is the residual chromatic.</strong> Fit \(A\) and \(B\). If \(A\neq 0\) and varies with time, improve plasma modeling. If \(A\approx 0\), go to step 2.</li>
+            <li><strong>Is the achromatic part stable across bands and instruments.</strong> If \(B\) agrees, proceed. If not, check calibration and offsets.</li>
+            <li><strong>Do Sagnac or gyro channels show shift-sector activity.</strong> If yes, separate \(\beta\) contributions with loop reversal and geometry. If no, the signal is likely in \(\Phi\).</li>
+            <li><strong>Do closed-loop and endpoint-swap tests pass.</strong> If yes, promote the candidate. If no, revisit systematics and models.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>What the paper accomplished</h2>
+          <ul>
+            <li><strong>Map.</strong> A clean identification of the optical index with the lapse: \(n=e^{\Phi}\). The equivalent \(n_{\gamma}=e^{-2\Phi}\) form is consistent.</li>
+            <li><strong>Travel time.</strong> \(\Delta T \simeq \frac{1}{c}\int (e^{\Phi}-1)\,\mathrm{d}\ell\). The static limit reproduces Shapiro timing.</li>
+            <li><strong>Deflection.</strong> Bending tracks transverse gradients of \(\Phi\): \(\boldsymbol{\alpha}\simeq \int \nabla_{\!\perp}\Phi\,\mathrm{d}\ell\).</li>
+            <li><strong>Drift.</strong> Time-variable potentials give an achromatic drift: \(\frac{\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\Delta T \simeq -\frac{2}{c}\int \partial_t\Phi\,\mathrm{d}\ell\).</li>
+            <li><strong>Flux link.</strong> The spherical flux law ties \(\partial_t\Phi\) to power: \(\partial_t\Phi=-\frac{G}{c^4}\frac{P}{R}\).</li>
+            <li><strong>Discriminant.</strong> A two-term model separates plasma from temporal signals: \(\epsilon_{\mathrm{dis}}(\nu)=A\nu^{-2}+B\).</li>
+            <li><strong>Observables.</strong> Clock links, pulsar and FRB timing, and lensed-quasar delays provide test beds with clear checks.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Practical checklist for experiments</h2>
+          <ul>
+            <li>Stabilize time transfer. Log calibration states. Track environmental sensors.</li>
+            <li>Acquire simultaneous multi-band data when possible. Store raw band timestamps.</li>
+            <li>Fit \(A\) and \(B\) together. Segment in time to test stability.</li>
+            <li>Run loop reversal and endpoint swap at planned intervals.</li>
+            <li>Publish error budgets and null-test outcomes with the measurements.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Summary</h2>
+          <p>The flow of time acts like a medium for light. That single idea organizes deflection, delay, and drift. It also gives clean, achromatic tests. The equations are simple. The checks are practical. The signals are small but measurable with careful links and timing.</p>
+        </section>
+
+        <section>
+          <h2>Key equations on one screen</h2>
+          <div class="math">
+            \[
+              n=e^{\Phi}, \qquad
+              \Delta T \simeq \frac{1}{c}\int (e^{\Phi}-1)\,\mathrm{d}\ell, \qquad
+              \boldsymbol{\alpha} \simeq \int \nabla_{\!\perp}\Phi\,\mathrm{d}\ell.
+            \]
+          </div>
+          <div class="math">
+            \[
+              \frac{\mathrm{d}}{\mathrm{d}t_{\mathrm{obs}}}\Delta T \simeq -\frac{2}{c}\int \partial_t\Phi\,\mathrm{d}\ell,
+              \qquad
+              \partial_t\Phi = -\frac{G}{c^4}\frac{P}{R}.
+            \]
+          </div>
+          <div class="math">
+            \[
+              \epsilon_{\mathrm{dis}}(\nu)=A\nu^{-2}+B.
+            \]
+          </div>
+        </section>
+
+        <div class="step-footer">
+          <a href="8-observables-forecasts.html" class="btn">‹ Back</a>
+          <a href="index.html" class="btn btn-primary">Back to Table of Contents</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 7 — Lapse vs Shift: What Lives Where | Paper IV.4: Light & The Flow of Time</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a> ›
+      <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">Paper IV.4: Step-by-Step</a> ›
+      <span>Chapter 7</span>
+    </div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="index.html">Table of Contents</a></li>
+          <li><a href="1-foundations-intuition.html">1. Foundations & Intuition</a></li>
+          <li><a href="2-temporal-optics-map.html">2. The Temporal–Optics Map \(n=e^{\Phi}\)</a></li>
+          <li><a href="3-travel-time-shapiro.html">3. Travel Time & Shapiro Delay</a></li>
+          <li><a href="4-deflection-transverse-gradients.html">4. Deflection from Transverse Time-Gradients</a></li>
+          <li><a href="5-achromatic-drift.html">5. Time-Variable Potentials & Achromatic Drift</a></li>
+          <li><a href="6-plasma-vs-temporal.html">6. Discriminant: Plasma vs Temporal</a></li>
+          <li><a class="active" href="7-lapse-vs-shift.html">7. Lapse vs Shift: What Lives Where</a></li>
+          <li><a href="8-observables-forecasts.html">8. Observables & Forecasts</a></li>
+          <li><a href="9-systematics-summary.html">9. Systematics, Checks, & Summary</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 7 — Lapse vs Shift: What Lives Where</h1>
+        <p class="lede">
+          The lapse \(\Phi\) controls how fast clocks tick. The shift \(\beta_i\) encodes motion of frames. Clocks read \(\Phi\). Sagnac and gyros read \(\beta\).
+        </p>
+
+        <section>
+          <h2>Goal of this chapter</h2>
+          <ul>
+            <li>Write the metric with lapse and shift.</li>
+            <li>Show which observables read each sector.</li>
+            <li>Give null tests that separate the two cleanly.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Metric with lapse and shift</h2>
+          <p>We keep the lapse-first scaling and allow a nonzero shift. The spatial metric is \(\gamma_{ij}\).</p>
+          <div class="math">
+            \[
+              ds^2
+              \;=\;
+              -e^{2\Phi}\,dt^2
+              \;+\;
+              e^{-2\Phi}\,\gamma_{ij}\,\big(dx^i+\beta^i dt\big)\big(dx^j+\beta^j dt\big).
+            \]
+          </div>
+          <p>Set \(\beta^i=0\) to recover the earlier chapters. Keep \(\beta^i\neq 0\) to model rotation and frame transport.</p>
+          <div class="highlight info">
+            <p><strong>Convention note.</strong> For optics we sometimes use \(n=e^{\Phi}\) or \(n_{\gamma}=e^{-2\Phi}\). Both are compatible with the shift form above when you work in the optical limit.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>What lives where</h2>
+          <ul>
+            <li><strong>Lapse \(\Phi\):</strong> Achromatic dilation and drift. Read out with synchronized clocks and phase links.</li>
+            <li><strong>Shift \(\beta_i\):</strong> Rotation and near-zone gravitomagnetism. Read out with Sagnac loops and gyros.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Sagnac timing from the shift</h2>
+          <p>A closed optical loop measures the circulation of the shift along the loop \(C\).</p>
+          <div class="math">
+            \[
+              \Delta T_{\mathrm{Sagnac}}
+              \;\simeq\;
+              \frac{2}{c^2}\oint_{C} \boldsymbol{\beta}\cdot d\boldsymbol{\ell}.
+            \]
+          </div>
+          <p>Reverse the loop orientation. The sign flips. The lapse contribution does not. This is a null test.</p>
+          <p>For a rigid loop of area \(A\) with effective rotation rate \(\Omega_{\mathrm{eff}}\), the Sagnac frequency split is</p>
+          <div class="math">
+            \[
+              \Delta f_{\mathrm{Sagnac}}
+              \;=\;
+              \frac{4A}{\lambda P}\,\Omega_{\mathrm{eff}}.
+            \]
+          </div>
+          <p>Here \(\lambda\) is the wavelength and \(P\) is the loop perimeter. \(\Omega_{\mathrm{eff}}\) includes mechanical rotation and any gravitomagnetic term.</p>
+        </section>
+
+        <section>
+          <h2>Near-zone frame dragging (Lense–Thirring)</h2>
+          <p>Near a rotating mass with angular momentum \(\mathbf{J}\), gyroscopes precess. The leading magnitude at distance \(r\) is</p>
+          <div class="math">
+            \[
+              \Omega_{\mathrm{LT}}
+              \;\approx\;
+              \frac{2GJ}{c^2 r^3}.
+            \]
+          </div>
+          <p>The full vector form depends on geometry. The effect belongs to the shift sector. It does not mimic the achromatic timing drift from \(\Phi\).</p>
+        </section>
+
+        <section>
+          <h2>Operational split: how to read each sector</h2>
+          <ul>
+            <li><strong>Read \(\Phi\) (lapse):</strong> Compare clocks across a baseline. Track a common, color-independent drift \(\big(d\Delta T/dt_{\mathrm{obs}}\big)\). Use Chapter 5.</li>
+            <li><strong>Read \(\beta\) (shift):</strong> Measure loop time asymmetry or ring-laser frequency split. Flip loop orientation as a check.</li>
+            <li><strong>Combine:</strong> Run both at once. The clock link provides the lapse. The loop provides the shift. Cross-compare for self-consistency.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Null tests that separate signals</h2>
+          <ul>
+            <li><strong>Color swap.</strong> Change \(\nu\). The lapse signal stays fixed. Plasma terms move with \(\nu^{-2}\).</li>
+            <li><strong>Loop reversal.</strong> Reverse \(C\). The Sagnac sign flips. Any lapse-driven time offset does not.</li>
+            <li><strong>Closed triangle.</strong> Compare A→B, B→C, C→A phases. The sum isolates the shift circulation.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Sanity checks</h2>
+          <ul>
+            <li>\(\beta=0 \Rightarrow \Delta T_{\mathrm{Sagnac}}=0\).</li>
+            <li>\(\Phi=\text{const} \Rightarrow\) no drift, no bending.</li>
+            <li>Increase loop area \(A\). The Sagnac split grows linearly with \(A\).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Common pitfalls</h2>
+          <ul>
+            <li>Mixing lapse and shift responses in one observable. Use separate channels.</li>
+            <li>Dropping the orientation flip test for Sagnac. Always check the sign.</li>
+            <li>Ignoring platform rotation and Earth tides. Calibrate with local sensors.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What you have now</h2>
+          <p>A clear separation of sectors. Clocks probe \(\Phi\). Sagnac and gyros probe \(\beta\). Simple null tests keep the channels independent.</p>
+        </section>
+
+        <div class="step-footer">
+          <a href="6-plasma-vs-temporal.html" class="btn">‹ Back</a>
+          <a href="8-observables-forecasts.html" class="btn btn-primary">Next: Observables & Forecasts</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

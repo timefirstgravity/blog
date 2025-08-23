@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 1 — Foundations & Intuition | Paper IV.4: Light & The Flow of Time</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a> ›
+      <a href="/papers/paper4-4-light-flow-of-time/step-by-step/index.html">Paper IV.4: Step-by-Step</a> ›
+      <span>Chapter 1</span>
+    </div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="index.html">Table of Contents</a></li>
+          <li><a class="active" href="1-foundations-intuition.html">1. Foundations & Intuition</a></li>
+          <li><a href="2-temporal-optics-map.html">2. The Temporal–Optics Map \(n=e^{\Phi}\)</a></li>
+          <li><a href="3-travel-time-shapiro.html">3. Travel Time & Shapiro Delay</a></li>
+          <li><a href="4-deflection-transverse-gradients.html">4. Deflection from Transverse Time-Gradients</a></li>
+          <li><a href="5-achromatic-drift.html">5. Time-Variable Potentials & Achromatic Drift</a></li>
+          <li><a href="6-plasma-vs-temporal.html">6. Discriminant: Plasma vs Temporal</a></li>
+          <li><a href="7-lapse-vs-shift.html">7. Lapse vs Shift: What Lives Where</a></li>
+          <li><a href="8-observables-forecasts.html">8. Observables & Forecasts</a></li>
+          <li><a href="9-systematics-summary.html">9. Systematics, Checks, & Summary</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 1 — Foundations & Intuition</h1>
+        <p class="lede">
+          Time sets the pace. Light keeps the beat. When the pace changes, paths and arrival times change too.
+        </p>
+
+        <section>
+          <h2>Goal of this chapter</h2>
+          <ul>
+            <li>State the lapse-first picture and the role of \(\Phi\).</li>
+            <li>Explain why light behaves like a ray in a medium.</li>
+            <li>Preview the key relations we prove later.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>The set-up</h2>
+          <p>We write the metric in lapse-first form. The lapse controls clock rate. The spatial part carries geometry.</p>
+          <div class="math">
+            \[ds^2 = -e^{2\Phi(t,\mathbf{x})}\,dt^2 + e^{-2\Phi(t,\mathbf{x})}\,\gamma_{ij}(t,\mathbf{x})\,dx^i dx^j.\]
+          </div>
+          <p>Think of \(\Phi\) as the local tempo of time. Bigger \(\Phi\) means faster ticks in coordinate time \(t\). Proper time is \(d\tau = e^{\Phi} dt\).</p>
+
+          <div class="highlight info">
+            <p><strong>Convention note.</strong> In this guide we present the refractive map as \(n=e^{\Phi}\). Some parts of the paper use \(n_\gamma=e^{-2\Phi}\). Both describe the same physics once you track factors in the optical limit. We flag the choice at the start of each chapter.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Why a refractive index?</h2>
+          <p>Light follows paths that make travel time stationary. This is Fermat’s principle. If time flows unevenly, light acts as if the medium is uneven.</p>
+          <p>Picture a runner on moving walkways. The ground speeds up and slows down. The quickest route is not a straight line anymore.</p>
+
+          <details>
+            <summary>Optional math peek</summary>
+            <p>In the eikonal limit we write the line element and factor out the lapse. The optical metric produces the same ray equations as a medium with index \(n\).</p>
+            <div class="math">
+              \[n(\mathbf{x},t) = e^{\Phi(\mathbf{x},t)}.\]
+            </div>
+            <p>Chapter 2 derives this carefully and sets the limits of validity.</p>
+          </details>
+        </section>
+
+        <section>
+          <h2>What lives where</h2>
+          <ul>
+            <li><strong>Lapse \(\Phi\):</strong> Governs achromatic time dilation and drift. This is the temporal signal.</li>
+            <li><strong>Shift \(\beta_i\):</strong> Carries rotation and waves. Sagnac links and gyros respond to it.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Three pictures to hold</h2>
+          <ol>
+            <li><strong>Glass picture.</strong> Space behaves like glass with thickness set by time’s pace. Thicker glass slows light. Variations bend rays.</li>
+            <li><strong>Clock picture.</strong> Clocks define the medium. Where clocks tick faster, the optical index is higher or lower depending on convention. Paths respond to that field.</li>
+            <li><strong>Network picture.</strong> A network of clocks and links can read the field. Achromatic signals point to \(\Phi\). Chromatic signals point to plasma.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Quick checks</h2>
+          <ul>
+            <li><strong>Flat space.</strong> \(\Phi=0\) gives \(n=1\). Rays are straight. Travel time is \(\ell/c\).</li>
+            <li><strong>Weak field near a mass.</strong> \(\Phi\ll1\). Then \(n \approx 1+\Phi\). Paths bend toward stronger \(\Phi\).</li>
+            <li><strong>Slow evolution.</strong> If \(\partial_t\Phi\) is tiny, there is little drift. We quantify this in Chapter 5.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What you need to proceed</h2>
+          <ul>
+            <li>Comfort with basic calculus and line integrals.</li>
+            <li>Familiarity with Fermat’s principle helps. We explain the needed parts.</li>
+            <li>No tensor gymnastics here. The heavy lifting stays in the paper.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Where we are heading</h2>
+          <p>Chapter 2 writes the temporal–optics map and its limits. Chapter 3 turns it into travel time and the Shapiro result. Chapter 4 ties bending to transverse gradients. Chapter 5 introduces time-variable drift. Later chapters separate temporal signals from plasma and identify tests.</p>
+        </section>
+
+        <div class="step-footer">
+          <a href="index.html" class="btn">‹ Back</a>
+          <a href="2-temporal-optics-map.html" class="btn btn-primary">Next: Temporal–Optics Map</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>
