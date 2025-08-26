@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper I: Step 9 - Modified flux law</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper1-gravity-temporal/step-by-step/index.html">Paper I: Step-by-Step</a> › 
+            <span>Step 9</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. Define "time" as a field</a></li>
+                    <li><a href="2-step.html">2. Spatial simplicity</a></li>
+                    <li><a href="3-step.html">3. Energy density</a></li>
+                    <li><a href="4-step.html">4. The flux law</a></li>
+                    <li><a href="5-step.html">5. Conservation</a></li>
+                    <li><a href="6-step.html">6. Time potential</a></li>
+                    <li><a href="7-step.html">7. Scale Unification</a></li>
+                    <li><a href="8-step.html">8. Resolution limit</a></li>
+                    <li><a href="9-step.html" class="active">9. Modified flux law</a></li>
+                    <li><a href="10-step.html">10. Vacuum flux</a></li>
+                    <li><a href="11-step.html">11. Negative energy</a></li>
+                    <li><a href="12-step.html">12. Cosmological density</a></li>
+                    <li><a href="13-step.html">13. Newtonian gravity</a></li>
+                    <li><a href="14-step.html">14. Planetary motion</a></li>
+                    <li><a href="15-step.html">15. Spherical solution</a></li>
+                    <li><a href="16-step.html">16. Black holes</a></li>
+                    <li><a href="17-step.html">17. Cosmological expansion</a></li>
+                    <li><a href="18-step.html">18. Schrödinger equation</a></li>
+                    <li><a href="19-step.html">19. Wavefunction</a></li>
+                    <li><a href="20-step.html">20. Born rule</a></li>
+                    <li><a href="21-step.html">21. QM from gravity</a></li>
+                    <li><a href="22-step.html">22. Measurement</a></li>
+                    <li><a href="23-step.html">23. Superposition lifetime</a></li>
+                    <li><a href="24-step.html">24. Graviton problem</a></li>
+                    <li><a href="25-step.html">25. Causal structure</a></li>
+                    <li><a href="26-step.html">26. Testing predictions</a></li>
+                    <li><a href="27-step.html">27. No new graviton</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>Step 9. First radial constraint: how radial stress shapes the rulers</h1>
+<p><span class="math display">\[
+\boxed{\;\frac{2}{r}\,\partial_r\Phi \;+\; \frac{1}{r^2} \;-\;
+\frac{1}{A\,r^2}
+\;=\; 8\pi\,T_{rr}\;}
+\qquad\text{with}\quad A=e^{2\Phi}.
+\]</span></p>
+<p>This is the <span
+class="math inline">\(rr\)</span>-Einstein equation for the spherical,
+time-first metric. It tells you how the <strong>radial gradient of the
+time potential</strong> (left) is balanced by <strong>matter’s radial
+normal stress</strong> <span class="math inline">\(T_{rr}\)</span>
+(right). Geometrically, the combination <span
+class="math inline">\(\frac{1}{r^2}-\frac{1}{A r^2}\)</span> measures
+how the circumference–radius relation is distorted by <span
+class="math inline">\(A\)</span>; the term <span
+class="math inline">\(\tfrac{2}{r}\partial_r\Phi\)</span> is the slope
+of the time field felt by the radial ruler. Together they must equal the
+stress loading the spherical shell.</p>
+<p>A handier, equivalent ODE for <span
+class="math inline">\(A(r)\)</span> (using <span
+class="math inline">\(\partial_r A=2A\,\partial_r\Phi\)</span>) is</p>
+<p><span class="math display">\[
+\boxed{\; \partial_r A \;=\; 8\pi\,A\,r\,T_{rr} \;-\; \frac{A-1}{r}\;}
+\]</span></p>
+<p>This says: in vacuum (<span class="math inline">\(T_{rr}=0\)</span>),
+the geometric “relaxation” term <span
+class="math inline">\(-\frac{A-1}{r}\)</span> drives <span
+class="math inline">\(A\)</span> toward <span
+class="math inline">\(1+\frac{C}{r}\)</span>, which is exactly the
+Schwarzschild profile (with <span class="math inline">\(C=-2M\)</span>).
+Positive radial pressure (<span
+class="math inline">\(T_{rr}&gt;0\)</span>) pushes <span
+class="math inline">\(A\)</span> down faster with <span
+class="math inline">\(r\)</span> (tightening the radial ruler), while
+radial tension does the opposite.</p>
+<p>Helpful intuition:</p>
+<ul>
+<li><strong>Vacuum check:</strong> <span class="math inline">\(T_{rr}=0
+\Rightarrow \partial_r A=-(A-1)/r\)</span> ⇒ <span
+class="math inline">\(A=1+\frac{C}{r}\)</span> (Schwarzschild).</li>
+<li><strong>Matter effect:</strong> <span
+class="math inline">\(+T_{rr}\)</span> adds curvature that must be
+supported by the time-slope <span
+class="math inline">\(\partial_r\Phi\)</span> and the conical distortion
+term.</li>
+</ul>
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 12%" />
+<col style="width: 34%" />
+<col style="width: 16%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(T_{rr}\)</span></td>
+<td>radial normal stress</td>
+<td>matter’s radial pressure/tension in the <span
+class="math inline">\(r\)</span>-direction</td>
+<td>energy density (pressure)</td>
+<td>“Thumb pushing on the spherical shell”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\partial_r\Phi\)</span></td>
+<td>radial time-slope</td>
+<td>how the clock-rate field changes with radius</td>
+<td>1/length</td>
+<td>“Tilt of the time landscape along <span
+class="math inline">\(r\)</span>”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A(r)\)</span></td>
+<td>redshift factor</td>
+<td><span class="math inline">\(A=e^{2\Phi}\)</span>, sets <span
+class="math inline">\(g_{tt}=-A,\ g_{rr}=A^{-1}\)</span></td>
+<td>dimensionless</td>
+<td>“Light-cone tilt dial”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\partial_r A\)</span></td>
+<td>radial change of <span class="math inline">\(A\)</span></td>
+<td>first-order ODE controlled by stress and geometry</td>
+<td>1/length</td>
+<td>“How fast the dial turns as you move out”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>areal radius</td>
+<td>spheres have area <span class="math inline">\(4\pi r^2\)</span></td>
+<td>length</td>
+<td>“Radius painted on the shell”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A-1\)</span> term</td>
+<td>geometric relaxation</td>
+<td>tendency toward flat space when stress=0</td>
+<td>dimensionless</td>
+<td>“Spring pulling rulers back to flatness”</td>
+</tr>
+</tbody>
+</table>
+                <div class="chapter-nav">
+                    <a href="8-step.html">← Step 8: Resolution limit</a>
+                    <a href="10-step.html">Step 10: Vacuum flux →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

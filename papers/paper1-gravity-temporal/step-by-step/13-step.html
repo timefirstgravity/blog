@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper I: Step 13 - Newtonian gravity</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper1-gravity-temporal/step-by-step/index.html">Paper I: Step-by-Step</a> › 
+            <span>Step 13</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. Define "time" as a field</a></li>
+                    <li><a href="2-step.html">2. Spatial simplicity</a></li>
+                    <li><a href="3-step.html">3. Energy density</a></li>
+                    <li><a href="4-step.html">4. The flux law</a></li>
+                    <li><a href="5-step.html">5. Conservation</a></li>
+                    <li><a href="6-step.html">6. Time potential</a></li>
+                    <li><a href="7-step.html">7. Scale Unification</a></li>
+                    <li><a href="8-step.html">8. Resolution limit</a></li>
+                    <li><a href="9-step.html">9. Modified flux law</a></li>
+                    <li><a href="10-step.html">10. Vacuum flux</a></li>
+                    <li><a href="11-step.html">11. Negative energy</a></li>
+                    <li><a href="12-step.html">12. Cosmological density</a></li>
+                    <li><a href="13-step.html" class="active">13. Newtonian gravity</a></li>
+                    <li><a href="14-step.html">14. Planetary motion</a></li>
+                    <li><a href="15-step.html">15. Spherical solution</a></li>
+                    <li><a href="16-step.html">16. Black holes</a></li>
+                    <li><a href="17-step.html">17. Cosmological expansion</a></li>
+                    <li><a href="18-step.html">18. Schrödinger equation</a></li>
+                    <li><a href="19-step.html">19. Wavefunction</a></li>
+                    <li><a href="20-step.html">20. Born rule</a></li>
+                    <li><a href="21-step.html">21. QM from gravity</a></li>
+                    <li><a href="22-step.html">22. Measurement</a></li>
+                    <li><a href="23-step.html">23. Superposition lifetime</a></li>
+                    <li><a href="24-step.html">24. Graviton problem</a></li>
+                    <li><a href="25-step.html">25. Causal structure</a></li>
+                    <li><a href="26-step.html">26. Testing predictions</a></li>
+                    <li><a href="27-step.html">27. No new graviton</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>Step 13. Switch to light-friendly coordinates for infall (Vaidya/EF)</h1>
+<h2><span class="math inline">\(T_{vv}=\dfrac{1}{4\pi r^2}\,\dfrac{dm}{dv}\)</span></h2>
+<p>When mass/energy is falling inward as
+<strong>radiation</strong> (lightlike “null dust”), the nicest
+coordinates follow the ingoing light fronts themselves. Use
+<strong>advanced (ingoing) Eddington–Finkelstein time</strong> <span
+class="math inline">\(v\)</span>: each constant-<span
+class="math inline">\(v\)</span> surface is an inward-moving light
+wavefront. In these coordinates the collapsing/accreting spacetime
+is</p>
+<p><span class="math display">\[
+ds^2 \;=\; -\Big(1-\frac{2\,m(v)}{r}\Big)\,dv^2 \;+\; 2\,dv\,dr \;+\;
+r^2 d\Omega^2,
+\]</span></p>
+<p>so the redshift factor is <span
+class="math inline">\(A(v,r)=1-\dfrac{2m(v)}{r}\)</span>. Einstein’s
+equations reduce the dynamics to a <strong>mass-balance
+law</strong>:</p>
+<p><span class="math display">\[
+\boxed{\;T_{vv}(v,r)=\frac{1}{4\pi r^2}\,\frac{dm}{dv}\;}
+\]</span></p>
+<p>i.e., the energy flux density carried by the ingoing radiation is the
+<strong>luminosity <span class="math inline">\(dm/dv\)</span></strong>
+spread over the sphere’s area <span class="math inline">\(4\pi
+r^2\)</span>. Positive flux (<span class="math inline">\(T_{vv}\ge
+0\)</span>) makes the mass parameter <span
+class="math inline">\(m(v)\)</span> <strong>non-decreasing</strong>. The
+object gains mass as radiation falls in. These coordinates are also
+<strong>horizon-friendly</strong>: they stay regular where Schwarzschild
+<span class="math inline">\(t\)</span> would misbehave, so they
+naturally describe ongoing accretion/collapse.</p>
+<p>Next step we’ll relate this EF picture back to our time-first flux
+law by translating <span class="math inline">\(T_{vv}\)</span> into
+<span class="math inline">\(T_{tr}\)</span></p>
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 17%" />
+<col style="width: 30%" />
+<col style="width: 19%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(v\)</span></td>
+<td>advanced (ingoing) EF time</td>
+<td>labels inward-moving light wavefronts</td>
+<td>time</td>
+<td>“Timestamp stamped on each raindrop sheet”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m(v)\)</span></td>
+<td>Vaidya mass function</td>
+<td>mass enclosed as of lightfront <span
+class="math inline">\(v\)</span></td>
+<td>mass (or length with <span
+class="math inline">\(G=c=1\)</span>)</td>
+<td>“Reservoir level rising with the storm”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(T_{vv}\)</span></td>
+<td>ingoing null-flux density</td>
+<td>energy per area per <span class="math inline">\(dv\)</span> carried
+by radiation</td>
+<td>energy/(area·time)</td>
+<td>“Power per square meter of downpour”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A(v,r)\)</span></td>
+<td>redshift factor</td>
+<td><span class="math inline">\(A=1-\dfrac{2m(v)}{r}\)</span> in
+Vaidya</td>
+<td>dimensionless</td>
+<td>“Light-cone tilt knob during rain”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>areal radius</td>
+<td>sphere area <span class="math inline">\(4\pi r^2\)</span></td>
+<td>length</td>
+<td>“Radius painted on the umbrella”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(dm/dv\)</span></td>
+<td>accretion luminosity</td>
+<td>rate mass grows per EF time</td>
+<td>mass/time</td>
+<td>“How fast the reservoir fills”</td>
+</tr>
+</tbody>
+</table>
+                <div class="chapter-nav">
+                    <a href="12-step.html">← Step 12: Cosmological density</a>
+                    <a href="14-step.html">Step 14: Planetary motion →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

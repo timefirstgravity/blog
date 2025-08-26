@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper I: Step 15 - Spherical solution</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper1-gravity-temporal/step-by-step/index.html">Paper I: Step-by-Step</a> › 
+            <span>Step 15</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. Define "time" as a field</a></li>
+                    <li><a href="2-step.html">2. Spatial simplicity</a></li>
+                    <li><a href="3-step.html">3. Energy density</a></li>
+                    <li><a href="4-step.html">4. The flux law</a></li>
+                    <li><a href="5-step.html">5. Conservation</a></li>
+                    <li><a href="6-step.html">6. Time potential</a></li>
+                    <li><a href="7-step.html">7. Scale Unification</a></li>
+                    <li><a href="8-step.html">8. Resolution limit</a></li>
+                    <li><a href="9-step.html">9. Modified flux law</a></li>
+                    <li><a href="10-step.html">10. Vacuum flux</a></li>
+                    <li><a href="11-step.html">11. Negative energy</a></li>
+                    <li><a href="12-step.html">12. Cosmological density</a></li>
+                    <li><a href="13-step.html">13. Newtonian gravity</a></li>
+                    <li><a href="14-step.html">14. Planetary motion</a></li>
+                    <li><a href="15-step.html" class="active">15. Spherical solution</a></li>
+                    <li><a href="16-step.html">16. Black holes</a></li>
+                    <li><a href="17-step.html">17. Cosmological expansion</a></li>
+                    <li><a href="18-step.html">18. Schrödinger equation</a></li>
+                    <li><a href="19-step.html">19. Wavefunction</a></li>
+                    <li><a href="20-step.html">20. Born rule</a></li>
+                    <li><a href="21-step.html">21. QM from gravity</a></li>
+                    <li><a href="22-step.html">22. Measurement</a></li>
+                    <li><a href="23-step.html">23. Superposition lifetime</a></li>
+                    <li><a href="24-step.html">24. Graviton problem</a></li>
+                    <li><a href="25-step.html">25. Causal structure</a></li>
+                    <li><a href="26-step.html">26. Testing predictions</a></li>
+                    <li><a href="27-step.html">27. No new graviton</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>Step 15. Re-slice to flat spatial slices (Painlevé–Gullstrand) and introduce shift</h1>
+<p>Our diagonal chart had zero shift and curved
+radial rulers: <span class="math inline">\(ds^2=-A\,dt^2+A^{-1}dr^2+r^2
+d\Omega^2\)</span> with <span
+class="math inline">\(A=e^{2\Phi}\)</span>. Sometimes it’s nicer to make
+each constant-time slice <strong>Euclidean</strong> (flat rulers) and
+let the “flow” of space show up as a <strong>shift</strong>. Do a time
+change</p>
+<p><span class="math display">\[
+T \;=\; t + f(r),\qquad dT = dt + f&#39;(r)\,dr,
+\]</span></p>
+<p>and choose <span class="math inline">\(f&#39;(r)\)</span> so that the
+<span class="math inline">\(T=\text{const}\)</span> spatial metric is
+<span class="math inline">\(dr^2+r^2 d\Omega^2\)</span>. This fixes</p>
+<p><span class="math display">\[
+\boxed{\,f&#39;(r) \;=\; \pm \frac{\sqrt{\,1-A(r)\,}}{A(r)}\, }.
+\]</span></p>
+<p>With this choice the metric becomes the (ingoing/outgoing)
+<strong>Painlevé–Gullstrand (PG)</strong> form:</p>
+<p><span class="math display">\[
+\boxed{\,ds^2 \;=\; -A\,dT^2 \;\pm\;2\sqrt{\,1-A\,}\,dT\,dr \;+\; dr^2
+\;+\; r^2 d\Omega^2\, }.
+\]</span></p>
+<p>Read as a <span class="math inline">\(3{+}1\)</span> decomposition,
+PG slices have <strong>flat spatial metric</strong> <span
+class="math inline">\(\gamma_{rr}=1\)</span>, <strong>unit
+lapse</strong> <span class="math inline">\(N=1\)</span>, and a
+<strong>radial shift</strong></p>
+<p><span class="math display">\[
+\boxed{\,N^r \;=\; \pm \sqrt{\,1-A(r)\,}\, }.
+\]</span></p>
+<p>Interpretation: clocks are synchronized (<span
+class="math inline">\(N=1\)</span>), rulers are flat, and gravity
+appears as a <strong>radial flow of space</strong> with speed <span
+class="math inline">\(|N^r|=\sqrt{1-A}\)</span>. For Schwarzschild <span
+class="math inline">\(A=1-2M/r\)</span>, this is <span
+class="math inline">\(|N^r|=\sqrt{2M/r}\)</span> the Newtonian escape
+speed. At the horizon (<span class="math inline">\(A=0\)</span>) the
+flow speed reaches light speed, which is why these coordinates remain
+regular there: the “river of space” simply carries everything inward
+across the horizon.</p>
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 12%" />
+<col style="width: 22%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 7%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(T\)</span></td>
+<td>PG time</td>
+<td>time coordinate with flat slices</td>
+<td><span class="math inline">\(T=t+f(r)\)</span></td>
+<td>“Everyone’s wristwatches synced”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(f&#39;(r)\)</span></td>
+<td>slice-tilt profile</td>
+<td>how much we tilt time vs radius</td>
+<td><span class="math inline">\(\pm \sqrt{1-A}/A\)</span></td>
+<td>“Dial that tips the slicing”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(A(r)\)</span></td>
+<td>redshift factor</td>
+<td>from time-first potential <span
+class="math inline">\(A=e^{2\Phi}\)</span></td>
+<td>dimensionless</td>
+<td>“Light-cone tilt knob”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(N\)</span></td>
+<td>lapse (PG)</td>
+<td>clock conversion on slices</td>
+<td><span class="math inline">\(N=1\)</span></td>
+<td>“All clocks tick in unison”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(N^r\)</span></td>
+<td>radial shift</td>
+<td>grid’s radial drift speed</td>
+<td><span class="math inline">\(\pm \sqrt{1-A}\)</span> (speed)</td>
+<td>“River of space flowing radially”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\gamma_{rr}\)</span></td>
+<td>radial spatial metric</td>
+<td>ruler on <span class="math inline">\(T=\)</span>const slices</td>
+<td><span class="math inline">\(\gamma_{rr}=1\)</span></td>
+<td>“Straight, uncurved ruler”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(v(r)\)</span></td>
+<td>flow speed (alias)</td>
+<td>magnitude of the shift</td>
+<td>(v=</td>
+<td>N^r</td>
+<td>=)</td>
+<td>“Current speed of the river”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>areal radius</td>
+<td>sphere area <span class="math inline">\(4\pi r^2\)</span></td>
+<td>length</td>
+<td>“Radius painted on the shells”</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+                <div class="chapter-nav">
+                    <a href="14-step.html">← Step 14: Planetary motion</a>
+                    <a href="16-step.html">Step 16: Black holes →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

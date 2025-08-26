@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper I: Step 12 - Cosmological density</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper1-gravity-temporal/step-by-step/index.html">Paper I: Step-by-Step</a> › 
+            <span>Step 12</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. Define "time" as a field</a></li>
+                    <li><a href="2-step.html">2. Spatial simplicity</a></li>
+                    <li><a href="3-step.html">3. Energy density</a></li>
+                    <li><a href="4-step.html">4. The flux law</a></li>
+                    <li><a href="5-step.html">5. Conservation</a></li>
+                    <li><a href="6-step.html">6. Time potential</a></li>
+                    <li><a href="7-step.html">7. Scale Unification</a></li>
+                    <li><a href="8-step.html">8. Resolution limit</a></li>
+                    <li><a href="9-step.html">9. Modified flux law</a></li>
+                    <li><a href="10-step.html">10. Vacuum flux</a></li>
+                    <li><a href="11-step.html">11. Negative energy</a></li>
+                    <li><a href="12-step.html" class="active">12. Cosmological density</a></li>
+                    <li><a href="13-step.html">13. Newtonian gravity</a></li>
+                    <li><a href="14-step.html">14. Planetary motion</a></li>
+                    <li><a href="15-step.html">15. Spherical solution</a></li>
+                    <li><a href="16-step.html">16. Black holes</a></li>
+                    <li><a href="17-step.html">17. Cosmological expansion</a></li>
+                    <li><a href="18-step.html">18. Schrödinger equation</a></li>
+                    <li><a href="19-step.html">19. Wavefunction</a></li>
+                    <li><a href="20-step.html">20. Born rule</a></li>
+                    <li><a href="21-step.html">21. QM from gravity</a></li>
+                    <li><a href="22-step.html">22. Measurement</a></li>
+                    <li><a href="23-step.html">23. Superposition lifetime</a></li>
+                    <li><a href="24-step.html">24. Graviton problem</a></li>
+                    <li><a href="25-step.html">25. Causal structure</a></li>
+                    <li><a href="26-step.html">26. Testing predictions</a></li>
+                    <li><a href="27-step.html">27. No new graviton</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>Step 12. Write the vacuum solution explicitly and sanity-check it</h1>
+<p>Outside a spherical source we just found <span
+class="math inline">\(A(r)=e^{2\Phi(r)}=1-\dfrac{r_s}{r}\)</span> with
+<span class="math inline">\(r_s=\dfrac{2GM}{c^2}\)</span>. So</p>
+<p><span class="math display">\[
+\Phi(r)=\tfrac12\ln\!\Big(1-\frac{r_s}{r}\Big),\qquad
+g_{tt}=-(1-\tfrac{r_s}{r}),\qquad
+g_{rr}=(1-\tfrac{r_s}{r})^{-1}.
+\]</span></p>
+<p>Immediate physical readouts:</p>
+<ul>
+<li><p><strong>Clock rate:</strong> <span
+class="math inline">\(d\tau=\sqrt{1-\tfrac{r_s}{r}}\;dt\)</span> (clocks
+tick slower deeper in the well).</p></li>
+<li><p><strong>Newtonian limit:</strong> for <span
+class="math inline">\(r\gg r_s\)</span>,</p>
+<p><span class="math display">\[
+\Phi(r)=\tfrac12\ln(1-x)\approx -\tfrac12 x = -\,\frac{GM}{rc^2},
+\]</span></p>
+<p>i.e., <span class="math inline">\(\Phi\)</span> reduces to the
+Newtonian potential divided by <span
+class="math inline">\(c^2\)</span>.</p></li>
+<li><p><strong>Gravitational redshift:</strong> <span
+class="math inline">\(1+z=\dfrac{1}{\sqrt{1-r_s/r}}\approx
+1+\dfrac{GM}{rc^2}\)</span>.</p></li>
+<li><p><strong>Shapiro delay intuition:</strong> the stretched radial
+ruler <span class="math inline">\(g_{rr}=(1-r_s/r)^{-1}\)</span> plus
+slowed clocks <span class="math inline">\(g_{tt}\)</span> together
+lengthen light travel time past a mass.</p></li>
+</ul>
+<p>These are the standard “sanity checks”: the exact Schwarzschild
+outside, Newtonian limit at large <span
+class="math inline">\(r\)</span>, and the textbook redshift/propagation
+effects. All read directly from <span
+class="math inline">\(\Phi\)</span>.</p>
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 15%" />
+<col style="width: 26%" />
+<col style="width: 23%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(r_s\)</span></td>
+<td>Schwarzschild radius</td>
+<td>mass scale setting the horizon</td>
+<td><span class="math inline">\(r_s=2GM/c^2\)</span> (length)</td>
+<td>“Edge marker” of the well</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A(r)\)</span></td>
+<td>redshift factor</td>
+<td>packs <span class="math inline">\(g_{tt}=-A,\
+g_{rr}=A^{-1}\)</span></td>
+<td><span class="math inline">\(A=1-\tfrac{r_s}{r}\)</span></td>
+<td>“Light-cone tilt dial”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi(r)\)</span></td>
+<td>time potential</td>
+<td>log-lapse</td>
+<td><span
+class="math inline">\(\tfrac12\ln(1-\tfrac{r_s}{r})\)</span></td>
+<td>“Altitude of time” shaping clocks</td>
+</tr>
+<tr>
+<td><span class="math inline">\(d\tau/dt\)</span></td>
+<td>clock slowdown</td>
+<td>proper vs coordinate time</td>
+<td><span class="math inline">\(\sqrt{1-\tfrac{r_s}{r}}\)</span></td>
+<td>“Clock in thicker syrup”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(z\)</span></td>
+<td>grav. redshift</td>
+<td>photon frequency shift to infinity</td>
+<td><span
+class="math inline">\(1+z=(1-\tfrac{r_s}{r})^{-1/2}\)</span></td>
+<td>“Climbing out of a pit costs pitch”</td>
+</tr>
+</tbody>
+</table>
+                <div class="chapter-nav">
+                    <a href="11-step.html">← Step 11: Negative energy</a>
+                    <a href="13-step.html">Step 13: Newtonian gravity →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

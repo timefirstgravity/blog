@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper I: Step 17 - Cosmological expansion</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper1-gravity-temporal/step-by-step/index.html">Paper I: Step-by-Step</a> › 
+            <span>Step 17</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. Define "time" as a field</a></li>
+                    <li><a href="2-step.html">2. Spatial simplicity</a></li>
+                    <li><a href="3-step.html">3. Energy density</a></li>
+                    <li><a href="4-step.html">4. The flux law</a></li>
+                    <li><a href="5-step.html">5. Conservation</a></li>
+                    <li><a href="6-step.html">6. Time potential</a></li>
+                    <li><a href="7-step.html">7. Scale Unification</a></li>
+                    <li><a href="8-step.html">8. Resolution limit</a></li>
+                    <li><a href="9-step.html">9. Modified flux law</a></li>
+                    <li><a href="10-step.html">10. Vacuum flux</a></li>
+                    <li><a href="11-step.html">11. Negative energy</a></li>
+                    <li><a href="12-step.html">12. Cosmological density</a></li>
+                    <li><a href="13-step.html">13. Newtonian gravity</a></li>
+                    <li><a href="14-step.html">14. Planetary motion</a></li>
+                    <li><a href="15-step.html">15. Spherical solution</a></li>
+                    <li><a href="16-step.html">16. Black holes</a></li>
+                    <li><a href="17-step.html" class="active">17. Cosmological expansion</a></li>
+                    <li><a href="18-step.html">18. Schrödinger equation</a></li>
+                    <li><a href="19-step.html">19. Wavefunction</a></li>
+                    <li><a href="20-step.html">20. Born rule</a></li>
+                    <li><a href="21-step.html">21. QM from gravity</a></li>
+                    <li><a href="22-step.html">22. Measurement</a></li>
+                    <li><a href="23-step.html">23. Superposition lifetime</a></li>
+                    <li><a href="24-step.html">24. Graviton problem</a></li>
+                    <li><a href="25-step.html">25. Causal structure</a></li>
+                    <li><a href="26-step.html">26. Testing predictions</a></li>
+                    <li><a href="27-step.html">27. No new graviton</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>Step 17. Recover the first Friedmann equation from “time-first”</h1>
+<p>With the homogeneous/isotropic metric (Step 16) and our
+identifications <span class="math inline">\(a=e^{-\Phi}\)</span> and
+<span class="math inline">\(H=\dot a/a=-\dot\Phi\)</span> (dot = <span
+class="math inline">\(d/d\tau\)</span>), the Einstein <span
+class="math inline">\(tt\)</span>–equation (equivalently the Hamiltonian
+constraint) collapses to</p>
+<p><span class="math display">\[
+\boxed{ \; H^{2} \;+\; \frac{k}{a^{2}} \;=\; \frac{8\pi}{3}\,\rho \; }
+\qquad (G=c=1)
+\]</span></p>
+<p>This says the universe’s expansion rate squared is set by its energy
+density <span class="math inline">\(\rho\)</span>, up to the curvature
+“tax” <span class="math inline">\(k/a^{2}\)</span>. In time-first
+language: once you specify the time potential <span
+class="math inline">\(\Phi(\tau)\)</span>, you’ve fixed <span
+class="math inline">\(H=-\dot\Phi\)</span> and <span
+class="math inline">\(a=e^{-\Phi}\)</span>, so the equation simply
+<strong>balances the slope of time</strong> against the <strong>stuff in
+the universe</strong> and any <strong>curvature of the spatial
+slice</strong>.</p>
+<p>Quick intuitions:</p>
+<ul>
+<li><strong>Matter tells time how to slope:</strong> higher <span
+class="math inline">\(\rho\)</span> → larger <span
+class="math inline">\(H\)</span> → <span
+class="math inline">\(\Phi\)</span> must fall faster (<span
+class="math inline">\(\dot\Phi\)</span> more negative) to keep <span
+class="math inline">\(H=-\dot\Phi\)</span>.</li>
+<li><strong>Curvature behaves like a fluid:</strong> the term <span
+class="math inline">\(k/a^{2}\)</span> redshifts like <span
+class="math inline">\(a^{-2}\)</span>, sitting between matter (<span
+class="math inline">\(\propto a^{-3}\)</span>) and radiation (<span
+class="math inline">\(\propto a^{-4}\)</span>) in how it thins out.</li>
+</ul>
+<blockquote>
+<p>If you prefer standard constants, replace the right-hand side by
+<span class="math inline">\((8\pi G/3)\rho\)</span> and the curvature
+term by <span class="math inline">\(k c^{2}/a^{2}\)</span>.</p>
+</blockquote>
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 14%" />
+<col style="width: 24%" />
+<col style="width: 23%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(H\)</span></td>
+<td>Hubble rate</td>
+<td>fractional expansion rate</td>
+<td><span class="math inline">\(H=\dot a/a=-\dot\Phi\)</span>
+(1/time)</td>
+<td>“Universe’s breathing rate”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(a(\tau)\)</span></td>
+<td>scale factor</td>
+<td>spatial ruler on slices</td>
+<td><span class="math inline">\(a=e^{-\Phi}\)</span>
+(dimensionless)</td>
+<td>“Rubber-sheet stretch”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi(\tau)\)</span></td>
+<td>time potential</td>
+<td>sets lapse &amp; size via <span
+class="math inline">\(a=e^{-\Phi}\)</span></td>
+<td>dimensionless</td>
+<td>“Altitude of time” controlling expansion</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k\)</span></td>
+<td>curvature index</td>
+<td><span class="math inline">\(+1,0,-1\)</span> for
+closed/flat/open</td>
+<td>dimensionless; appears as <span
+class="math inline">\(k/a^{2}\)</span></td>
+<td>“Built-in bend of the grid”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\rho\)</span></td>
+<td>energy density</td>
+<td>total density (matter+radiation+etc.)</td>
+<td>energy/volume</td>
+<td>“Mass–energy filling the room”</td>
+</tr>
+<tr>
+<td>dot <span class="math inline">\((\dot{ })\)</span></td>
+<td>proper-time derivative</td>
+<td><span class="math inline">\(d/d\tau\)</span> along comoving
+clocks</td>
+<td>1/time × (units of variable)</td>
+<td>“Rate a comoving watch sees”</td>
+</tr>
+</tbody>
+</table>
+                <div class="chapter-nav">
+                    <a href="16-step.html">← Step 16: Black holes</a>
+                    <a href="18-step.html">Step 18: Schrödinger equation →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

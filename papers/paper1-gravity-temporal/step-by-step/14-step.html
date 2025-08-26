@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper I: Step 14 - Planetary motion</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper1-gravity-temporal/step-by-step/index.html">Paper I: Step-by-Step</a> › 
+            <span>Step 14</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. Define "time" as a field</a></li>
+                    <li><a href="2-step.html">2. Spatial simplicity</a></li>
+                    <li><a href="3-step.html">3. Energy density</a></li>
+                    <li><a href="4-step.html">4. The flux law</a></li>
+                    <li><a href="5-step.html">5. Conservation</a></li>
+                    <li><a href="6-step.html">6. Time potential</a></li>
+                    <li><a href="7-step.html">7. Scale Unification</a></li>
+                    <li><a href="8-step.html">8. Resolution limit</a></li>
+                    <li><a href="9-step.html">9. Modified flux law</a></li>
+                    <li><a href="10-step.html">10. Vacuum flux</a></li>
+                    <li><a href="11-step.html">11. Negative energy</a></li>
+                    <li><a href="12-step.html">12. Cosmological density</a></li>
+                    <li><a href="13-step.html">13. Newtonian gravity</a></li>
+                    <li><a href="14-step.html" class="active">14. Planetary motion</a></li>
+                    <li><a href="15-step.html">15. Spherical solution</a></li>
+                    <li><a href="16-step.html">16. Black holes</a></li>
+                    <li><a href="17-step.html">17. Cosmological expansion</a></li>
+                    <li><a href="18-step.html">18. Schrödinger equation</a></li>
+                    <li><a href="19-step.html">19. Wavefunction</a></li>
+                    <li><a href="20-step.html">20. Born rule</a></li>
+                    <li><a href="21-step.html">21. QM from gravity</a></li>
+                    <li><a href="22-step.html">22. Measurement</a></li>
+                    <li><a href="23-step.html">23. Superposition lifetime</a></li>
+                    <li><a href="24-step.html">24. Graviton problem</a></li>
+                    <li><a href="25-step.html">25. Causal structure</a></li>
+                    <li><a href="26-step.html">26. Testing predictions</a></li>
+                    <li><a href="27-step.html">27. No new graviton</a></li>
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1>Step 14. Translate null-flux into our diagonal gauge</h1>
+<h2><span class="math inline">\(T_{tr}=\dfrac{T_{vv}}{A}\)</span></h2>
+<p>Vaidya used ingoing null time <span
+class="math inline">\(v\)</span> (great for following light). Our
+time-first work is in the diagonal <span
+class="math inline">\((t,r)\)</span> chart with <span
+class="math inline">\(ds^2=-A\,dt^2+A^{-1}dr^2+r^2d\Omega^2\)</span>. To
+compare the two, relate coordinates: ingoing EF time satisfies</p>
+<p><span class="math display">\[
+v \;=\; t + r_\ast, \qquad \frac{dr_\ast}{dr}=\frac{1}{A}.
+\]</span></p>
+<p>So the Jacobian pieces are <span class="math inline">\(\partial
+v/\partial t=1\)</span> and <span class="math inline">\(\partial
+v/\partial r=1/A\)</span>. Stress–energy is a covariant tensor, so</p>
+<p><span class="math display">\[
+T_{tr} \;=\; T_{\alpha\beta}\,\frac{\partial x^\alpha}{\partial
+t}\,\frac{\partial x^\beta}{\partial r}.
+\]</span></p>
+<p>For null dust, only <span class="math inline">\(T_{vv}\neq
+0\)</span>, hence</p>
+<p><span class="math display">\[
+\boxed{\,T_{tr} \;=\; T_{vv}\,\frac{\partial v}{\partial
+t}\,\frac{\partial v}{\partial r}
+\;=\; \frac{T_{vv}}{A}\, .}
+\]</span></p>
+<p>Plug this into the flux law (Step 8), <span
+class="math inline">\(\partial_t\Phi=-4\pi r\,T_{tr}\)</span>, to
+get</p>
+<p><span class="math display">\[
+\partial_t\Phi \;=\; -\,\frac{4\pi r}{A}\,T_{vv}.
+\]</span></p>
+<p>Using Vaidya’s mass-balance <span
+class="math inline">\(T_{vv}=\frac{1}{4\pi r^2}\frac{dm}{dv}\)</span>
+(Step 13) gives</p>
+<p><span class="math display">\[
+\partial_t\Phi \;=\; -\,\frac{1}{A\,r}\,\frac{dm}{dv},
+\]</span></p>
+<p>making it explicit that the <strong>same physical inflow</strong>
+that raises <span class="math inline">\(m(v)\)</span> in EF time is
+exactly what drives the <strong>time potential</strong> <span
+class="math inline">\(\Phi\)</span> to evolve in our diagonal gauge. The
+“dictionary factor” <span class="math inline">\(1/A\)</span> is just the
+coordinate tilt between <span class="math inline">\(v\)</span> and <span
+class="math inline">\((t,r)\)</span>.</p>
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 14%" />
+<col style="width: 26%" />
+<col style="width: 25%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(v\)</span></td>
+<td>advanced EF time</td>
+<td>labels ingoing light fronts</td>
+<td>time</td>
+<td>“Timestamp on each rain sheet”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(t\)</span></td>
+<td>diagonal time</td>
+<td>our time-first chart’s time label</td>
+<td>time</td>
+<td>“Flipbook page in our gauge”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r_\ast\)</span></td>
+<td>tortoise radius</td>
+<td>stretches <span class="math inline">\(r\)</span> so light moves at
+45°</td>
+<td><span class="math inline">\(dr_\ast/dr=1/A\)</span></td>
+<td>“Log-stretched radial ruler”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A\)</span></td>
+<td>redshift factor</td>
+<td>packs lapse &amp; radial stretch</td>
+<td><span class="math inline">\(A=e^{2\Phi}\)</span></td>
+<td>“Light-cone tilt knob”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(T_{vv}\)</span></td>
+<td>null-flux density</td>
+<td>energy carried by ingoing radiation</td>
+<td><span class="math inline">\(=\frac{1}{4\pi
+r^2}\frac{dm}{dv}\)</span></td>
+<td>“Power per area of the downpour”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(T_{tr}\)</span></td>
+<td>radial flux (diag.)</td>
+<td>flux seen in <span class="math inline">\((t,r)\)</span> gauge</td>
+<td><span class="math inline">\(T_{tr}=T_{vv}/A\)</span></td>
+<td>“Same rain, viewed through our window”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>time potential</td>
+<td>drives lapse <span class="math inline">\(N=e^{\Phi}\)</span> and
+<span class="math inline">\(A\)</span></td>
+<td><span class="math inline">\(\partial_t\Phi=-4\pi
+r\,T_{tr}\)</span></td>
+<td>“Altitude of time responding to flow”</td>
+</tr>
+</tbody>
+</table>
+                <div class="chapter-nav">
+                    <a href="13-step.html">← Step 13: Newtonian gravity</a>
+                    <a href="15-step.html">Step 15: Spherical solution →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>
