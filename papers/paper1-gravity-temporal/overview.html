@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper I: Gravity as Temporal Geometry Overview</title>
+  <link rel="stylesheet" href="/css/main.css">
+  
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> › 
+  <span>Paper I: Foundations</span> › 
+  <span>Overview</span>
+</div>
+
+    <div class="view-toggle">
+      <a href="#" class="active">Overview</a>
+      <a href="#">Step-by-Step</a>
+    </div>
+    
+<h1>Gravity as Temporal Geometry (Φ‑first GR)</h1>
+
+<div class="highlight info">
+  <p><strong>Big idea:</strong> Treat the lapse \(N=e^{\Phi}\) as primary and let space follow time via the constraints. In this view, <em>only energy flux can change time curvature</em>, cosmology becomes a one‑function story, and all classic GR results drop out with less machinery.</p>
+</div>
+
+<h2>Why look at GR through time?</h2>
+<p>Einstein’s equations don’t privilege time or space, but our measurements do: clocks and light‑travel times are what we actually observe. The lapse‑first (time‑first) formulation leans into that: we write the metric so a single scalar \(\Phi\) controls the flow of proper time, and the radial piece of space is slaved to it. This flips the intuition—<strong>mass bends time; space adjusts to keep the constraints</strong>—while remaining exactly equivalent to GR.</p>
+
+<h2>The metric in one line</h2>
+<div class="math">\[
+ds^2 = -e^{2\Phi(t,r)} dt^2 + e^{-2\Phi(t,r)} dr^2 + r^2 d\Omega^2,\qquad A\equiv e^{2\Phi}.
+\]</div>
+<p>With this diagonal, areal‑radius gauge, the Einstein equations simplify dramatically. Two consequences drive nearly everything that follows:</p>
+<ul>
+  <li><strong>Vacuum enforces staticity (Birkhoff, in this gauge):</strong> the mixed equation gives \(G_{tr}\propto \partial_t\Phi\). In vacuum \(T_{tr}=0\Rightarrow\partial_t\Phi=0\). Schwarzschild follows from a <em>single separable ODE</em>.</li>
+  <li><strong>With matter, flux drives time:</strong> the same equation becomes a flux law tying time evolution to radial energy flow.</li>
+</ul>
+
+<div class="highlight">
+  <p><strong>Flux law (heart of the framework):</strong></p>
+  <div class="math">\[
+  \boxed{\;\partial_t\Phi = -4\pi G\,r\,T_{tr}\;} \quad
+  \text{or, at radius }R:\quad
+  \boxed{\;\partial_t\Phi(t,R) = -\dfrac{G}{c^4}\,\dfrac{P(t)}{R}\;}
+  \]</div>
+  <p>Only <em>actual energy flux</em> can evolve the temporal potential. No flux, no evolution.</p>
+</div>
+
+<h2>Schwarzschild in one step</h2>
+<p>Setting \(\partial_t\Phi=0\) (vacuum), the remaining components integrate to</p>
+<div class="math">\[
+e^{2\Phi(r)} = 1 - \frac{2GM}{r},\qquad g_{rr} = \big(1-2GM/r\big)^{-1}.
+\]</div>
+<p>All classic tests: redshift, light bending, Shapiro delay, precession, then follow from \(\Phi(r)\) alone; the spatial factor simply mirrors it via \(g_{rr}=e^{-2\Phi}\).</p>
+
+<h2>Vaidya, but lapse‑first</h2>
+<p>When null radiation falls in, the standard Eddington–Finkelstein/Vaidya picture tracks a mass function \(m(v)\). In lapse‑first variables we keep the metric diagonal and let \(A(t,r)=1-2GM(t,r)/r\). The flux law gives</p>
+<div class="math">\[
+\partial_t A = -8\pi G\, r\,A\,T_{tr},\quad
+\text{so positive ingoing flux increases } M(t,r).
+\]</div>
+<p>Changing to advanced time \(v\) reproduces Vaidya exactly; the physics is identical, the bookkeeping is cleaner.</p>
+
+<h2>“Space follows time” ≠ “no shift”</h2>
+<p>The diagonal gauge is for clarity, not dogma. A static re‑time gives the Painlevé–Gullstrand “flowing space” form, and advanced/retarded times give the EF/Vaidya form. The content is the same single function \(A=e^{2\Phi}\); you can move it between lapse and shift at will.</p>
+
+<div class="highlight info">
+  <p><strong>Rotation lives in the shift.</strong> In the weak‑field, quasi‑stationary limit the fields split like electromagnetism:
+  \(
+\nabla^2\Phi=4\pi G\rho\) and \(
+\nabla^2\boldsymbol\omega=-16\pi G\mathbf J\). Frame dragging is the curl of the shift (gravitomagnetism), not a time‑derivative of \(\Phi\).</p>
+</div>
+
+<h2>Cosmology from a single function</h2>
+<p>Homogeneous/isotropic spacetimes collapse to a one‑function story. Define proper (cosmic) time by \(d\tau=e^{\Phi}dt\) and the scale factor by \(a(\tau)=e^{-\Phi}\). Then</p>
+<div class="math">\[
+H \equiv \frac{\dot a}{a} = -\dot\Phi,\qquad
+H^2+\frac{k}{a^2}=\frac{8\pi G}{3}\,\rho,\qquad
+\dot H=-4\pi G(\rho+p)+\frac{k}{a^2}.
+\]</div>
+<p>This reproduces standard FRW exactly while making the ontology explicit: <em>expansion is time diverging</em>.</p>
+
+<h2>ADM in lapse‑first clothing (no extra graviton)</h2>
+<p>Promoting \(N=e^{\Phi}\) does <em>not</em> add a propagating scalar. In the 3+1 (ADM) split, \(N\) and the shift \(\omega_i\) are Lagrange multipliers enforcing the Hamiltonian/momentum constraints; after linearization only the two TT tensor modes propagate. Same physics, clearer ledger.</p>
+
+<h2>What’s unusual (and useful) in this lens</h2>
+<ul>
+  <li><strong>One‑field control:</strong> In spherical symmetry, a single scalar \(\Phi\) encodes time curvature; space follows as \(g_{rr}=e^{-2\Phi}\).</li>
+  <li><strong>Flux‑first dynamics:</strong> \(\partial_t\Phi\) responds <em>only</em> to energy flux. This pins down which physical processes can really drive “time evolution.”</li>
+  <li><strong>FRW as a definition:</strong> Setting \(a=e^{-\Phi}\) and \(d\tau=e^{\Phi}dt\) turns the Friedmann equations into identities for \(\Phi(\tau)\).</li>
+  <li><strong>Gauge honesty:</strong> Horizons are gauge effects in lapse‑first variables; the only true pathology to cure is the central singularity (addressed in later papers).</li>
+  <li><strong>Cleaner bridges:</strong> Vaidya (null flux), PG (flat slices), EF (horizon‑regular) all become simple re‑timings of the same \(A=e^{2\Phi}\).</li>
+</ul>
+
+<h2>Five‑minute derivation tour</h2>
+<ol>
+  <li><strong>Start from the ansatz</strong> \(ds^2=-A dt^2 + A^{-1}dr^2+r^2d\Omega^2\) with \(A=e^{2\Phi}\).</li>
+  <li><strong>Compute \(G_{\mu\nu}\)</strong> and note the mixed piece: \(G_{tr}=-(2/r)\,\partial_t\Phi\).</li>
+  <li><strong>Vacuum</strong> \(T_{tr}=0\Rightarrow\partial_t\Phi=0\); the radial equations separate to give Schwarzschild.</li>
+  <li><strong>With flux</strong> you get the boxed law \(\partial_t\Phi=-4\pi G r T_{tr}\) and the time‑first Vaidya picture.</li>
+  <li><strong>Cosmology</strong> with \(\Phi=\Phi(t)\) maps to FRW by \(d\tau=e^{\Phi}dt,\ a=e^{-\Phi}\).</li>
+</ol>
+
+<h2>Does anything change observationally?</h2>
+<p>No in the regimes we can test today. You recover all classic predictions of GR. What changes is the <em>bookkeeping</em> and (we think) the clarity: time carries the dynamical load, space follows from constraints. That clarity pays dividends in collapse, cosmology, and eventually quantum questions.</p>
+
+<div class="highlight success">
+  <p><strong>Bottom line:</strong> Same GR, different lens. Lapse‑first variables turn many multi‑equation derivations into one‑liners and make the causal driver, energy flux, explicit. If you like thinking with clocks, this math is for you.</p>
+</div>
+
+    <div class="footer">
+      <p>Generated on 2025-08-26 · <a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>
