@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper X: Quantum Measurement via Flux Partition Overview</title>
+  <link rel="stylesheet" href="/css/main.css">
+  
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> › 
+  <span>Paper X: Quantum Measurement</span> › 
+  <span>Overview</span>
+</div>
+
+    <div class="view-toggle">
+      <a href="#" class="active">Overview</a>
+    </div>
+    
+<h1>Quantum Measurement via Flux Partition and Redundancy</h1>
+
+<div class="highlight info">
+  <p><strong>The breakthrough:</strong> Quantum measurement emerges from two separable mechanisms: <em>flux partition into orthogonal channels yields Born rule weights</em>, while <em>redundant environments select which basis gets measured</em>. No additional axioms needed. Just conservation, decoherence, and information theory working together.</p>
+</div>
+
+<h2>Why tackle measurement differently?</h2>
+<p>The measurement problem haunts quantum mechanics: why do we see definite outcomes with Born rule probabilities in specific bases? Standard approaches either postulate the Born rule or assume preferred bases. This framework derives both from physical mechanisms: <strong>flux conservation determines weights, environmental redundancy determines basis</strong>. The result is testable, falsifiable, and mechanistic.</p>
+
+<h2>Two mechanisms, two questions</h2>
+<div class="math">\[
+\boxed{\text{Flux Partition} \rightarrow \text{Born Weights}} \qquad 
+\boxed{\text{Environmental Redundancy} \rightarrow \text{Basis Selection}}
+\]</div>
+<p>By separating these questions, we can solve each with well-understood physics rather than invoking new axioms.</p>
+
+<div class="highlight">
+  <p><strong>Mechanism 1: Flux partition yields weights</strong></p>
+  <p>Conservation of probability current \(\partial_t \rho + \nabla \cdot \mathbf{j} = 0\) means flux into orthogonal detection channels directly gives:</p>
+  <div class="math">\[
+  \text{Weight}_i = \int\int \mathbf{j} \cdot d\mathbf{S} \, dt = |c_i|^2
+  \]</div>
+  <p>Born rule emerges from current conservation, not postulation.</p>
+</div>
+
+<h2>Environmental redundancy selects basis</h2>
+<p>The measurement basis isn't arbitrary. It's selected by environmental dynamics. We define a <strong>pointer functional</strong> that quantifies measurement quality:</p>
+<div class="math">\[
+P[\{\Pi_i\}] = \frac{S \times I \times R}{1 + B}
+\]</div>
+<ul>
+  <li><strong>S (Stability):</strong> Suppression of off-diagonal terms</li>
+  <li><strong>I (Predictability):</strong> Mutual information between system and record</li>
+  <li><strong>R (Redundancy):</strong> Fraction of environment fragments recording the same information</li>
+  <li><strong>B (Backaction):</strong> Disturbance to the system</li>
+</ul>
+<p>The basis that maximizes \(P\) becomes the measurement basis. No assumption required.</p>
+
+<h2>Stern-Gerlang model (concrete test)</h2>
+<p>We model a spin-1/2 particle in a Stern-Gerlach apparatus with controlled decoherence:</p>
+<div class="math">\[
+H = \frac{p^2}{2m} \otimes I_2 + F x \otimes \sigma_z
+\]</div>
+<p>The environment consists of Gaussian collisions that scramble momentum while preserving local position information:</p>
+<div class="math">\[
+\rho \rightarrow (1-\kappa)\rho + \kappa \mathbb{E}_q[U(q)\rho U(q)^\dagger]
+\]</div>
+<p>where \(U(q) = \exp(iq X)\) and \(q \sim \mathcal{N}(0, \sigma_q^2)\).</p>
+
+<h2>Phase boundary: when does position win?</h2>
+<p>Scanning collision rate \(\lambda\), fragment number \(n_{\text{frag}}\), and evolution time \(T\), we find a sharp transition:</p>
+<ul>
+  <li><strong>Low scattering:</strong> \(\theta^* \approx \pi/2\) → momentum basis preferred</li>
+  <li><strong>High scattering:</strong> \(\theta^* \rightarrow 0\) → position basis preferred</li>
+</ul>
+<p>The critical collision rate follows a scaling law:</p>
+<div class="math">\[
+\lambda_c \approx A \frac{F^\alpha}{T^\beta n_{\text{frag}}^\gamma}
+\]</div>
+
+<div class="highlight">
+  <p><strong>Concrete prediction:</strong> At \((\lambda, n_{\text{frag}}, T, \sigma_q) = (5, 30, 8, 1.5)\) with \(F = 0.6\), the functional selects <strong>position basis</strong> with distinguishability ratio \(D_{\text{pos}}/D_{\text{mom}} \approx 1.5\).</p>
+</div>
+
+<h2>Verification: statistics tell the story</h2>
+<p>At the crossover point, measurement statistics confirm basis selection:</p>
+<ul>
+  <li><strong>Position histograms:</strong> Bimodal with peaks at \(\mu_L \approx -2.48\), \(\mu_R \approx +2.50\)</li>
+  <li><strong>Momentum histograms:</strong> Unimodal/flat distribution</li>
+  <li><strong>Memory kernels:</strong> \(\tau_c(\text{pos}) \approx 0.156\), \(\tau_c(\text{mom}) \approx 0.018\)</li>
+</ul>
+<p>The position basis provides 50% better discrimination, exactly as the pointer functional predicts.</p>
+
+<h2>"How is this different from decoherence?"</h2>
+<p>Decoherence explains why coherence disappears, but not which basis survives or why outcomes have specific probabilities. Our approach adds the missing pieces:</p>
+
+<div class="highlight info">
+  <p><strong>Three-layer explanation:</strong></p>
+  <ul>
+    <li><strong>Decoherence:</strong> Suppresses off-diagonal terms (why interference disappears)</li>
+    <li><strong>Redundancy:</strong> Selects which diagonal basis gets recorded (which basis survives)</li>
+    <li><strong>Flux partition:</strong> Determines outcome probabilities (why Born rule emerges)</li>
+  </ul>
+</div>
+
+<h2>Experimental predictions</h2>
+<p>The framework makes concrete, testable predictions:</p>
+<ol>
+  <li><strong>Phase boundary:</strong> \(\theta^*(\lambda, n_{\text{frag}}, T; F, \sigma_q)\) follows scaling laws</li>
+  <li><strong>Peak separation:</strong> \(\Delta x \propto F T^2\) (classical Stern-Gerlach)</li>
+  <li><strong>Broadening:</strong> \(\sigma \propto \sqrt{\lambda T}\) (collision-driven diffusion)</li>
+  <li><strong>Memory kernels:</strong> Basis-dependent correlation times \(\tau_c(\text{pos}) \neq \tau_c(\text{mom})\)</li>
+</ol>
+
+<h2>Experimental platforms</h2>
+<p>Several platforms can test these predictions:</p>
+<ul>
+  <li><strong>Cavity/circuit QED:</strong> Tunable decay rates control environmental coupling</li>
+  <li><strong>Atom interferometry:</strong> Background gas provides controlled collisional decoherence</li>
+  <li><strong>Superconducting qubits:</strong> Engineered noise environments with variable redundancy</li>
+</ul>
+
+<h2>Falsifiability (the crucial test)</h2>
+<p>If the pointer functional \(P\) fails to select the basis that maximizes redundancy and distinguishability in controlled experiments, the mechanism is wrong. This makes the theory genuinely falsifiable, unlike interpretational approaches.</p>
+
+<h2>Algorithmic implementation</h2>
+<p>The framework provides a concrete algorithm for predicting measurement outcomes:</p>
+<ol>
+  <li><strong>Evolve system-environment dynamics</strong> (Schrödinger equation)</li>
+  <li><strong>Fragment environment</strong> into overlapping pieces</li>
+  <li><strong>Compute pointer functional</strong> over trial bases</li>
+  <li><strong>Select optimal basis</strong> (maximize \(P\))</li>
+  <li><strong>Calculate flux partition</strong> into channels</li>
+  <li><strong>Predict probabilities</strong> from flux weights</li>
+</ol>
+
+<h2>Conceptual impact</h2>
+<p>This approach transforms measurement from mysterious collapse into mechanistic process:</p>
+<ul>
+  <li><strong>Local:</strong> No action-at-a-distance or global wavefunction collapse</li>
+  <li><strong>Mechanistic:</strong> Specific physical processes drive each aspect</li>
+  <li><strong>Testable:</strong> Clear experimental predictions and failure modes</li>
+  <li><strong>Universal:</strong> Same mechanism applies across different quantum systems</li>
+</ul>
+
+<h2>Connection to temporal geometry</h2>
+<p>Like other papers in this series, measurement emerges from flux conservation. Here, probability current rather than energy flux. The same mathematical structure that drives gravitational time evolution also governs quantum measurement dynamics.</p>
+
+<div class="highlight success">
+  <p><strong>Bottom line:</strong> Quantum measurement isn't mysterious. It's flux partition plus environmental redundancy. Born weights emerge from current conservation, measurement basis from information-theoretic optimization. The result is testable, falsifiable, and mechanistic. No additional axioms required.</p>
+</div>
+
+    <div class="footer">
+      <p><a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>
