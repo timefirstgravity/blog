@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 4 - Flux-clock duality</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 4</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html" class="active">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1 id="step-4.-from-phase-to-visibility-the-general-kernel-vf">Step 4.
+From phase to <strong>visibility</strong>: the general kernel <span
+class="math inline">\(V[f]\)</span></h1>
+<p>Take a two-path interferometer and mark which arm you’re on with a simple
+<em>path indicator</em> <span class="math inline">\(f(t)\)</span>: <span
+class="math inline">\(+1\)</span> on arm A, <span
+class="math inline">\(-1\)</span> on arm B. The lapse fluctuation <span
+class="math inline">\(\delta\Phi(t)\)</span> writes differential phase
+between the two arms, so the total phase <em>difference</em> is just the
+weighted integral</p>
+<p><span class="math display">\[
+\Delta\theta \;=\; \omega\!\int f(t)\,\delta\Phi(t)\,dt .
+\]</span></p>
+<p>If <span class="math inline">\(\delta\Phi\)</span> is (zero-mean)
+Gaussian noise with two-time correlator <span
+class="math inline">\(C_\Phi(t,t&#39;)=\langle\delta\Phi(t)\delta\Phi(t&#39;)\rangle\)</span>,
+then the ensemble-averaged fringe visibility obeys the standard
+phase-diffusion result</p>
+<p><span class="math display">\[
+V \;=\; \exp\!\left[-\tfrac12\,\omega^2\!\iint
+f(t)\,C_\Phi(t,t&#39;)\,f(t&#39;)\,dt\,dt&#39;\right].
+\]</span></p>
+<p>This is the <strong>visibility kernel</strong>: it tells you exactly
+how a proposed pulse/timing sequence <span
+class="math inline">\(f(t)\)</span> turns lapse fluctuations into a
+measurable loss of interference contrast. It also makes the scaling
+explicit: <span class="math inline">\(-\ln V \propto \omega^2\)</span> —
+higher internal frequency <span class="math inline">\(\omega\)</span>
+means stronger coupling to <span
+class="math inline">\(\Phi\)</span>.</p>
+<blockquote>
+<p>Intuition: <span class="math inline">\(f(t)\)</span> is a stencil for
+“when the two arms feel different clock rates.” Only those time slices
+contribute. If both arms are identical at some instant (<span
+class="math inline">\(f=0\)</span> effectively), that instant doesn’t
+degrade visibility.</p>
+</blockquote>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 33%" />
+<col style="width: 25%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(f(t)\)</span></td>
+<td>Path indicator</td>
+<td>+1 on arm A, −1 on arm B; encodes timing/pulses</td>
+<td>Ramsey or Mach–Zehnder plateaus</td>
+<td>“Which road you’re on”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta\theta\)</span></td>
+<td>Differential phase</td>
+<td>Phase written by <span class="math inline">\(\delta\Phi\)</span>
+between arms (rad)</td>
+<td><span class="math inline">\(\Delta\theta=\omega\!\int
+f\,\delta\Phi\,dt\)</span></td>
+<td>“Needle separation on two dials”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>Visibility</td>
+<td>Fringe contrast <span class="math inline">\(\in[0,1]\)</span>
+(dimensionless)</td>
+<td><span class="math inline">\(V=\exp[-\tfrac12\omega^2\!\iint f C_\Phi
+f]\)</span></td>
+<td>“Sharpness of stripes”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(C_\Phi(t,t&#39;)\)</span></td>
+<td>Lapse correlator</td>
+<td><span
+class="math inline">\(\langle\delta\Phi(t)\delta\Phi(t&#39;)\rangle\)</span>
+(dimensionless)</td>
+<td>Stationary case used next</td>
+<td>“How time-ripples echo across moments”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\omega\)</span></td>
+<td>Clock frequency</td>
+<td><span class="math inline">\(E/\hbar\)</span> or line splitting <span
+class="math inline">\(\Delta E/\hbar\)</span> (rad·s<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Optical: <span
+class="math inline">\(2\pi\times10^{15}\,\text{Hz}\)</span></td>
+<td>“Metronome speed”</td>
+</tr>
+</tbody>
+</table>
+<p>Next up: <strong>Step 5 — Spectral form &amp; filters:</strong> turn
+<span class="math inline">\(C_\Phi\)</span> into a one-sided spectrum
+<span class="math inline">\(S_\Phi(\Omega)\)</span>, introduce the
+filter <span class="math inline">\(|F(\Omega)|^2\)</span> for a given
+sequence <span class="math inline">\(f(t)\)</span>, and read off
+practical dephasing rates and bounds.</p>
+
+                <div class="chapter-nav">
+                    <a href="3.html">← Step 3</a>
+                    <a href="5.html">Step 5 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

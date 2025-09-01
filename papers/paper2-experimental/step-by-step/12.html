@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 12 - Stellar systems</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 12</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html" class="active">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1 id="step-12.-registered-workflow-publishing-checklist">Step 12.
+Registered workflow &amp; publishing checklist</h1>
+<p><strong>Plain English:</strong> this step is about discipline. Before
+touching data, you <em>freeze</em> your plan (pre-register it), and
+after the run you <em>publish</em> enough artifacts for anyone to re-run
+your analysis bit-for-bit. Here’s the minimal, “no-wiggle-room”
+checklist the paper advocates.</p>
+<h2 id="a.-pre-register-freeze-before-analysis">A. Pre-register (freeze
+before analysis)</h2>
+<ul>
+<li><p><strong>Hypotheses &amp; channel</strong></p>
+<ul>
+<li>Lever A (flux→drift): <span
+class="math inline">\(H_0:\lambda=0\)</span>; <span
+class="math inline">\(H_1:\lambda=G/(c^4 r)\)</span> with
+<strong>correct sign</strong> and <strong>zero-lag</strong>.</li>
+<li>Lever B (visibility): bound <span
+class="math inline">\(S_\Phi\)</span> via both
+<strong>Markovian</strong> and <strong>filter-weighted</strong>
+estimators.</li>
+</ul></li>
+<li><p><strong>Geometry &amp; timing</strong></p>
+<ul>
+<li>Definition of <span class="math inline">\(r\)</span>
+(areal/straight-line), clock separation <span class="math inline">\(\ll
+r\)</span>, sampling rates, record lengths, trigger windows (e.g., SNEWS
+±6 h).</li>
+</ul></li>
+<li><p><strong>Instrument config</strong></p>
+<ul>
+<li>Clock lines, servo bandwidths, time-transfer method
+(GPSCV/TWSTFT/fiber), detector configs.</li>
+</ul></li>
+<li><p><strong>Data conditioning</strong></p>
+<ul>
+<li>Detrend, band/line notches, resampling, PSD method (e.g., Welch
+params), whitener freeze.</li>
+</ul></li>
+<li><p><strong>Analysis templates</strong></p>
+<ul>
+<li>Lever A: template <span class="math inline">\(h(t)=-G L(t)/(c^4
+r)\)</span>; estimator (GLS/matched filter), <em>sign-lock</em> and
+<em>1/r</em> scaling tests.</li>
+<li>Lever B: measured <span class="math inline">\(f(t)\)</span> and
+derived <span class="math inline">\(F(\Omega)\)</span>; visibility
+integral <span class="math inline">\(-\ln V=\tfrac{\omega^2}{2}\!\int
+S_\Phi|F|^2\)</span>.</li>
+</ul></li>
+<li><p><strong>Controls &amp; nulls</strong></p>
+<ul>
+<li>Shuttered source / cold dump, off-band, time-slides, cable swaps,
+cross-site desyncs.</li>
+</ul></li>
+<li><p><strong>Injections</strong></p>
+<ul>
+<li>Software phase injections (with forced <span
+class="math inline">\(1/r\)</span> ladder); optional safe hardware
+injections; success metrics.</li>
+</ul></li>
+<li><p><strong>Calibration plan</strong></p>
+<ul>
+<li>Power <span class="math inline">\(L(t)\)</span> (traceable meters),
+distance <span class="math inline">\(r\)</span> (survey), timebase,
+neutrino-count→<span class="math inline">\(L_\nu(t)\)</span> mapping (if
+astro).</li>
+</ul></li>
+<li><p><strong>Pass/fail rules</strong></p>
+<ul>
+<li>Exact criteria for “detection-like” template recovery vs “publish
+bound only.”</li>
+</ul></li>
+</ul>
+<h2 id="b.-publish-make-it-reproducible">B. Publish (make it
+reproducible)</h2>
+<ul>
+<li><p><strong>Raw &amp; conditioned data</strong></p>
+<ul>
+<li>Raw time series, conditioning scripts, PSDs, whiteners, measured
+<span class="math inline">\(f(t)\)</span>, computed <span
+class="math inline">\(F(\Omega)\)</span>.</li>
+</ul></li>
+<li><p><strong>Code &amp; environment</strong></p>
+<ul>
+<li>Version-pinned repo, environment file (e.g., lockfile/containers),
+run scripts, checksums.</li>
+</ul></li>
+<li><p><strong>Derived products</strong></p>
+<ul>
+<li>Lever A: <span class="math inline">\(\hat\lambda\)</span> with <span
+class="math inline">\(\mathrm{Var}_{\rm stat}\)</span> and
+<strong>total</strong> variance (incl. calibration/systematics), 1/r
+regression plot, zero-lag cross-corr.</li>
+<li>Lever B: <span class="math inline">\(V(T)\)</span> with errors;
+<strong>two</strong> bounds on <span
+class="math inline">\(S_\Phi\)</span>: Markovian <span
+class="math inline">\(S_\Phi(0)\)</span> and filter-weighted band
+figure.</li>
+</ul></li>
+<li><p><strong>Uncertainty budget</strong></p>
+<ul>
+<li>Table separating statistical, calibration (<span
+class="math inline">\(r,L\)</span>), and model mismatch <span
+class="math inline">\(\Delta_S\)</span>.</li>
+</ul></li>
+<li><p><strong>Sanity figures</strong></p>
+<ul>
+<li>Injection recovery, source-off baseline, noise budget
+(Newt/shot/vacuum), lag scan.</li>
+</ul></li>
+<li><p><strong>Registration proof</strong></p>
+<ul>
+<li>Timestamped prereg doc &amp; hash; DOI (e.g., Zenodo) for the full
+bundle; license.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>Resulting posture: either (i) you recover the template with the
+<em>right sign</em>, <em>zero-lag</em>, and <em>1/r</em> within stated
+errors, or (ii) you publish a bound with every ingredient to let others
+challenge or improve it.</p>
+</blockquote>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 28%" />
+<col style="width: 24%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>Flux→drift gain</td>
+<td><span class="math inline">\(G/(c^4 r)\)</span>; slope in <span
+class="math inline">\(\dot y=-\lambda L\)</span></td>
+<td>Fit with GLS; test 1/r</td>
+<td>“Gear ratio” from light to time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(L(t)\)</span></td>
+<td>Luminosity</td>
+<td>Power crossing sphere at <span class="math inline">\(r\)</span>
+(W)</td>
+<td>Metered lab source or <span class="math inline">\(L_\nu\)</span>
+proxy</td>
+<td>“Brightness push”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>Distance</td>
+<td>Source→clock separation (m)</td>
+<td>Surveyed baseline(s)</td>
+<td>“Lever arm”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>Visibility</td>
+<td>Fringe contrast <span class="math inline">\([0,1]\)</span></td>
+<td>Measured per sequence</td>
+<td>“Stripe sharpness”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(f(t)\)</span>, <span
+class="math inline">\(F(\Omega)\)</span></td>
+<td>Path &amp; filter</td>
+<td>Timing pattern and its FT (s, s²)</td>
+<td>Ramsey/MZ/echo → sinc²</td>
+<td>“Sieve selecting tones”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_\Phi(\Omega)\)</span></td>
+<td>Lapse PSD</td>
+<td>One-sided spectrum of <span
+class="math inline">\(\delta\Phi\)</span> (s)</td>
+<td>Report Markovian &amp; filtered</td>
+<td>“Noise color of time”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(C\)</span></td>
+<td>Noise covariance</td>
+<td>From PSD of data</td>
+<td>Used in GLS/whitening</td>
+<td>“Map of hiss”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta_S\)</span></td>
+<td>Model mismatch</td>
+<td>Residual from PSD/filter errors</td>
+<td>Added to variance</td>
+<td>“Unknowns bucket”</td>
+</tr>
+</tbody>
+</table>
+<p>Ready for <strong>Step 13 — Theoretical backbone recap:</strong> why
+these observables fall straight out of lapse-first GR
+(constraint-projected <span class="math inline">\(\Phi\)</span>, no
+extra DOF) and how the sign-lock emerges.</p>
+
+                <div class="chapter-nav">
+                    <a href="11.html">← Step 11</a>
+                    <a href="13.html">Step 13 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

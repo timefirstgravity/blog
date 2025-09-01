@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 6 - Semiclassical interferometer</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 6</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html" class="active">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1 id="step-6.-practical-estimators-how-to-turn-data-into-bounds">Step
+6. Practical estimators (how to turn data into bounds)</h1>
+<p><strong>Goal:</strong> convert raw measurements (clock frequency
+ratios or interferometer visibilities) into a single number that either
+(a) estimates the flux→drift amplitude or (b) upper-bounds the
+lapse-noise spectrum <span class="math inline">\(S_\Phi\)</span>.</p>
+<hr />
+<h2 id="a.-flux-redshiftdrift-matched-filter-gls">6A. Flux →
+redshift–drift (matched filter / GLS)</h2>
+<p>You measure a time-series of redshift <span
+class="math inline">\(y(t)=\ln(\nu_\infty/\nu_r)\)</span> and estimate
+its derivative <span class="math inline">\(\dot y(t)\)</span> (or fit
+<span class="math inline">\(y\)</span> directly). The model from Step 2
+predicts a template</p>
+<p><span class="math display">\[
+h(t)\;=\;-\frac{G}{c^4}\frac{L(t)}{r}\,,
+\quad\text{so}\quad
+\dot y(t)\;=\;\alpha\,h(t)\;+\;n(t),
+\]</span></p>
+<p>with <span class="math inline">\(\alpha\approx1\)</span> in GR and
+<span class="math inline">\(n\)</span> noise (colored). The
+<strong>generalized least squares (GLS)</strong> / matched-filter
+estimate is</p>
+<p><span class="math display">\[
+\hat\alpha \;=\; \frac{h^\top C^{-1} \dot y}{h^\top C^{-1} h}\,,
+\qquad
+\sigma^2_{\hat\alpha} \;=\; \frac{1}{h^\top C^{-1} h},
+\]</span></p>
+<p>where <span class="math inline">\(C\)</span> is the noise covariance
+(from your clock’s PSD after detrending). <strong>Sign-lock
+test:</strong> outgoing flux implies <span
+class="math inline">\(h(t)&lt;0\Rightarrow \hat\alpha&gt;0\)</span>. A
+negative <span class="math inline">\(\hat\alpha\)</span> is a null-test
+failure (or a pipeline bug). <strong>1/r validation:</strong> repeat at
+two radii <span class="math inline">\(r_1,r_2\)</span>; the best-fit
+amplitudes must scale as <span
+class="math inline">\(\hat\alpha_1/\hat\alpha_2 \approx
+r_2/r_1\)</span>.</p>
+<hr />
+<h2 id="b.-visibility-spectrum-bound-filter-integral">6B. Visibility →
+spectrum bound (filter-integral)</h2>
+<p>From Step 5,</p>
+<p><span class="math display">\[
+-\ln V \;=\; \frac{\omega^2}{2}\!\int_0^\infty
+\frac{d\Omega}{2\pi}\,S_\Phi(\Omega)\,\big|F(\Omega)\big|^2 .
+\]</span></p>
+<p>Two practical routes:</p>
+<ul>
+<li><p><strong>Flat (low-<span class="math inline">\(\Omega\)</span>)
+bound:</strong> if <span class="math inline">\(|F|\)</span> lives at
+<span class="math inline">\(\Omega\!\lesssim\!\Omega_c\)</span> and
+<span class="math inline">\(S_\Phi\!\approx\!S_\Phi(0)\)</span>,</p>
+<p><span class="math display">\[
+S_\Phi(0) \;\lesssim\; \frac{2\,|\ln V|}{\omega^2\,W},\qquad
+W\equiv\int_0^{\infty}\!\frac{d\Omega}{2\pi}\,\big|F(\Omega)\big|^2 .
+\]</span></p>
+<p>Combine several runs <span class="math inline">\(k\)</span> by
+inverse-variance weighting of the individual bounds.</p></li>
+<li><p><strong>Power-law fit:</strong> assume <span
+class="math inline">\(S_\Phi(\Omega)=A(\Omega/\Omega_0)^{-p}\)</span>.
+Then</p>
+<p><span class="math display">\[
+-\ln V_k \;=\; \frac{\omega_k^2}{2}\,A \int_0^\infty
+\frac{d\Omega}{2\pi}\left(\frac{\Omega}{\Omega_0}\right)^{-p}\!\big|F_k(\Omega)\big|^2
+\;\equiv\; A\,\omega_k^2\,\Xi_k(p),
+\]</span></p>
+<p>which is linear in <span class="math inline">\(A\)</span>. Solve
+<span class="math inline">\(A\)</span> by least squares over runs <span
+class="math inline">\(k\)</span>, scanning a few <span
+class="math inline">\(p\)</span> (e.g., <span
+class="math inline">\(0\)</span>–<span
+class="math inline">\(3\)</span>). Quote <span
+class="math inline">\(A(p)\)</span> or turn it into <span
+class="math inline">\(S_\Phi(\Omega)\)</span> at a reference
+band.</p></li>
+</ul>
+<p><strong>Controls &amp; sanity checks:</strong> (i) software
+injections of known <span class="math inline">\(\delta\Phi\)</span>
+phases; (ii) jackknife/time-shift tests; (iii) environmental veto
+channels; (iv) verify the <span class="math inline">\(\omega^2\)</span>
+scaling by comparing two internal lines.</p>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 28%" />
+<col style="width: 25%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(y(t)\)</span></td>
+<td>Log redshift</td>
+<td><span class="math inline">\(\ln(\nu_\infty/\nu_r)\)</span> (–)</td>
+<td>Fit slope <span class="math inline">\(\dot y\)</span> vs
+template</td>
+<td>“Pitch log” of a note</td>
+</tr>
+<tr>
+<td><span class="math inline">\(h(t)\)</span></td>
+<td>Drift template</td>
+<td><span class="math inline">\(-\tfrac{G}{c^4}L(t)/r\)</span> (s<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Set by source flux &amp; distance</td>
+<td>“Predicted tilt of time”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(C\)</span></td>
+<td>Noise covariance</td>
+<td>From clock PSD (var matrix)</td>
+<td>Built after detrending</td>
+<td>“Map of noise wrinkles”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>Visibility</td>
+<td>Fringe contrast <span class="math inline">\([0,1]\)</span></td>
+<td>Measured per run</td>
+<td>“Stripe sharpness”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(F(\Omega)\)</span></td>
+<td>Sequence filter</td>
+<td>FT of path indicator <span class="math inline">\(f\)</span> (s)</td>
+<td>Rectangular ⇒ sinc²</td>
+<td>“Sieve selecting tones”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_\Phi(\Omega)\)</span></td>
+<td>Lapse PSD</td>
+<td>One-sided spectrum (s)</td>
+<td>Bounded via <span class="math inline">\(-\ln V\)</span></td>
+<td>“Noise color of time”</td>
+</tr>
+</tbody>
+</table>
+<p>Ready for <strong>Step 7 — Clock-native null tests &amp; 1/r
+sign-locked templates</strong> (how the paper validates pipelines with
+injections and geometry-driven scaling).</p>
+
+                <div class="chapter-nav">
+                    <a href="5.html">← Step 5</a>
+                    <a href="7.html">Step 7 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

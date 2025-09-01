@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 18 - Why clocks matter</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 18</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html" class="active">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1
+id="step-18.-units-spectra-fourier-conventions-so-nothing-blows-up-dimensionally">Step
+18. Units, spectra &amp; Fourier conventions (so nothing blows up
+dimensionally)</h1>
+<p>Here’s the paper’s bookkeeping so every equation is dimensionally
+honest and reproducible:</p>
+<ul>
+<li><p><strong>Signature &amp; basics.</strong> Metric signature <span
+class="math inline">\((-,+,+,+)\)</span>; <span
+class="math inline">\(c\)</span> (and <span
+class="math inline">\(\hbar\)</span>) are explicit unless momentarily
+set to 1. Areal radius <span class="math inline">\(r\)</span> is defined
+by <span class="math inline">\(4\pi r^2\)</span> area; the measured
+redshift is <span
+class="math inline">\(y\equiv\ln(\nu_\infty/\nu_r)\)</span>. In diagonal
+spherical gauge: <span
+class="math inline">\(ds^2=-e^{2\Phi}dt^2+e^{-2\Phi}dr^2+r^2d\Omega^2,\
+N=e^{\Phi}\)</span>.</p></li>
+<li><p><strong>Field dimensions.</strong> <span
+class="math inline">\(\Phi\)</span> is <strong>dimensionless</strong>
+(it’s <span class="math inline">\(\ln N\)</span>), so <span
+class="math inline">\(\partial_t\Phi\)</span> carries <span
+class="math inline">\([{\rm s}^{-1}]\)</span>. The paper works in SI
+with <span class="math inline">\(c,\hbar\)</span> explicit.</p></li>
+<li><p><strong>One-sided PSD conventions.</strong> For stationary noise
+<span class="math inline">\(C_\Phi(t-t&#39;)\)</span>, use a
+<strong>one-sided</strong> spectrum with <strong>angular
+frequency</strong> <span class="math inline">\(\Omega\)</span> and
+measure <span class="math inline">\(\int_0^\infty
+\frac{d\Omega}{2\pi}\)</span>: <span
+class="math inline">\([S_\Phi(\Omega)]=\text{s}\)</span> and <span
+class="math inline">\([S_y(f)]=\text{Hz}^{-1}\)</span>. Equivalently,
+with ordinary frequency <span class="math inline">\(f\)</span> (Hz) and
+measure <span class="math inline">\(\int_0^\infty df\)</span>, use <span
+class="math inline">\(S_\Phi(f)=S_\Phi(\Omega=2\pi f)/(2\pi)\)</span> so
+<span
+class="math inline">\([S_\Phi(f)]=\text{Hz}^{-1}\)</span>.</p></li>
+<li><p><strong>Visibility kernel dimensions.</strong></p>
+<p><span class="math display">\[
+-\ln
+V=\frac{\omega^2}{2}\!\int_0^\infty\!\frac{d\Omega}{2\pi}\,S_\Phi(\Omega)\,|F(\Omega)|^2
+\]</span></p>
+<p>is <strong>dimensionless</strong> because <span
+class="math inline">\(|F(\Omega)|^2\)</span> has units <span
+class="math inline">\(\text{s}^2\)</span>. For a rectangular
+interrogation of duration <span class="math inline">\(T\)</span>: <span
+class="math inline">\(|F(\Omega)|^2=\big(2\sin(\Omega
+T/2)/\Omega\big)^2\)</span>.</p></li>
+<li><p><strong>Fourier definition used.</strong> <span
+class="math inline">\(F(\Omega)=\int f(t)\,e^{i\Omega t}\,dt\)</span>
+(use the <strong>measured</strong> <span class="math inline">\(f_{\rm
+meas}(t)\)</span> including finite rise/fall when turning visibilities
+into bounds).</p></li>
+<li><p><strong>Markovian shorthand.</strong> In the low-band/white
+limit, <span class="math inline">\(\Gamma_\phi\simeq
+\frac{\omega^2}{2}S_\Phi(0)\)</span>, so over time <span
+class="math inline">\(T\)</span>: <span
+class="math inline">\(S_\Phi(0)\lesssim \dfrac{2|\ln V|}{\omega^2
+T}\)</span>. Example: <span
+class="math inline">\(T=1\,\mathrm{s}\)</span>, <span
+class="math inline">\(\omega/2\pi=10^{15}\,\mathrm{Hz}\)</span>, 1% loss
+<span class="math inline">\(\Rightarrow S_\Phi(0)\lesssim
+5\times10^{-34}\,\mathrm{s}\)</span>.</p></li>
+<li><p><strong>Flux→drift units &amp; constants.</strong> With
+luminosity <span class="math inline">\(L(t)\)</span> (W) at distance
+<span class="math inline">\(r\)</span> (m): <span
+class="math inline">\(\partial_t\Phi\simeq-\dfrac{G}{c^4}\dfrac{L(t)}{r}\)</span>
+has units <span class="math inline">\(\text{s}^{-1}\)</span>. The tiny
+scale <span class="math inline">\(G/c^4=8.262\times10^{-45}\
+\text{s}^2/(\text{kg}\,\text{m})\)</span> sets all amplitudes used in
+the tables/estimates.</p></li>
+<li><p><strong>“Where to find this” pointers.</strong> The paper states
+the conventions at the start of Section 4 and again in Appendix G
+(“Units and conventions”), so readers can check your numbers
+quickly.</p></li>
+</ul>
+<blockquote>
+<p>That’s the bookkeeping capstone. With this, the walkthrough is
+complete—every preceding formula plugs into these conventions without
+surprises.</p>
+</blockquote>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 7%" />
+<col style="width: 29%" />
+<col style="width: 17%" />
+<col style="width: 12%" />
+<col style="width: 11%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>Time potential</td>
+<td>Dimensionless; <span class="math inline">\(\partial_t\Phi\)</span>
+in s<span class="math inline">\(^{-1}\)</span></td>
+<td>Drives redshift drift</td>
+<td>“Altitude of time”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_\Phi(\Omega)\)</span></td>
+<td>Lapse PSD</td>
+<td>One-sided spectrum (s) with <span
+class="math inline">\(d\Omega/2\pi\)</span></td>
+<td>Convert to <span class="math inline">\(S_\Phi(f)\)</span> via <span
+class="math inline">\(2\pi\)</span></td>
+<td>“Noise color of time”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>F()</td>
+<td>^2)</td>
+<td>Filter power</td>
+<td>Weights <span class="math inline">\(S_\Phi\)</span> (s<span
+class="math inline">\(^2\)</span>)</td>
+<td>Rectangular → sinc<span class="math inline">\(^2\)</span></td>
+<td>“Sieve selecting tones”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_y(f)\)</span></td>
+<td>Clock PSD</td>
+<td>One-sided fractional-freq PSD (Hz<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Used to whiten data</td>
+<td>“Noise map of the dial”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(G/c^4\)</span></td>
+<td>Gravity scale</td>
+<td><span class="math inline">\(8.262\times10^{-45}\
+\text{s}^2/(\text{kg}\,\text{m})\)</span></td>
+<td>Appears in flux law</td>
+<td>“Tiny gear ratio”</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="17.html">← Step 17</a>
+                    <a href="19.html">Step 19 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

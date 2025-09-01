@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 2 - Key equations</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 2</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html" class="active">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1 id="step-2.-the-flux-redshift-drift-law-the-classical-anchor">Step
+2. The Flux → Redshift-Drift law (the classical anchor)</h1>
+<p>If energy flows outward through a sphere of radius <span
+class="math inline">\(r\)</span>, think light, neutrinos, any
+luminosity <span class="math inline">\(L(t)\)</span>, then the local
+“clock-rate potential” <span class="math inline">\(\Phi\)</span> at that
+radius <em>must</em> decrease at a rate proportional to that flux, with
+a strict <span class="math inline">\(1/r\)</span> scaling. That decrease
+in <span class="math inline">\(\Phi\)</span> shows up directly as a
+<strong>time-varying gravitational redshift</strong> between a distant
+observer and a clock at <span class="math inline">\(r\)</span>.
+Concretely,</p>
+<p><span class="math display">\[
+\partial_t
+\Phi(t,r)\;\simeq\;-\frac{G}{c^4}\,\frac{L(t)}{r}\quad\text{(outgoing;
+flip sign for ingoing flux).}
+\]</span></p>
+<p>This is the operational law the paper templates against data.</p>
+<p><strong>Why the sign is locked:</strong> Outgoing energy <span
+class="math inline">\(L&gt;0\)</span> increases the exterior mass
+parameter in the Vaidya picture, which <em>reduces</em> <span
+class="math inline">\(A=e^{2\Phi}=1-\tfrac{2Gm}{rc^2}\)</span>. So <span
+class="math inline">\(\Phi\)</span> goes down and <span
+class="math inline">\(\partial_t\Phi&lt;0\)</span>: clocks redshift (run
+slower) as the burst passes. Ingoing flux flips the sign (blueshift). In
+Eddington–Finkelstein (Vaidya) coordinates this appears as <span
+class="math inline">\(L=-c^2\,dm/dv\)</span> and <span
+class="math inline">\(\partial_v\Phi=-(G/c^4)L/r\)</span>, matching the
+law above.</p>
+<p><strong>Directly observable form:</strong> Redshift here is written
+as <span class="math inline">\(y\equiv \ln(\nu_\infty/\nu_r)\)</span>.
+The <em>drift</em> of that redshift equals <span
+class="math inline">\(\partial_t\Phi\)</span>:</p>
+<p><span class="math display">\[
+\frac{d}{dt}\ln\!\left(\frac{\nu_\infty}{\nu_r}\right)=\partial_t\Phi(t,r).
+\]</span></p>
+<p>So the measured time-derivative of a clock-frequency ratio
+<em>is</em> the flux-driven <span class="math inline">\(\Phi\)</span>
+drift.</p>
+<p><strong>Units/scale to keep in mind:</strong> The tiny coupling <span
+class="math inline">\(G/c^4 = 8.262\times10^{-45}\
+\text{s}^2/(\text{kg}\,\text{m})\)</span> sets the scale; that’s why
+everyday lamps are hopelessly small, while rare astrophysical bursts
+(e.g., a Galactic supernova) can scrape into the range of cutting-edge
+clock stability.</p>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 30%" />
+<col style="width: 25%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>Time potential</td>
+<td>Controls proper-time: <span class="math inline">\(d\tau=e^{\Phi}dt\)</span> (dimensionless)</td>
+<td>Set to 0 "today" by convention</td>
+<td>"Altitude" of time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\partial_t\Phi\)</span></td>
+<td>Redshift drift</td>
+<td>Time-rate of <span class="math inline">\(\Phi\)</span> at fixed <span class="math inline">\(r\)</span> <span class="math inline">\([\text{s}^{-1}]\)</span></td>
+<td>Galactic SN: <span class="math inline">\(\partial_t\Phi \sim 8.3\times10^{-20}\ \text{s}^{-1}\)</span></td>
+<td>"Slope" of the time-hill changing in time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(L(t)\)</span></td>
+<td>Luminosity</td>
+<td>Power crossing sphere at <span class="math inline">\(r\)</span> <span class="math inline">\([\text{W}]\)</span></td>
+<td>Lab lamp (10 W <span class="math inline">\(\Rightarrow \partial_t\Phi \sim 8\times10^{-42}\ \text{s}^{-1}\)</span>) (software-injected test)</td>
+<td>"Brightness" pushing on time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>Areal radius</td>
+<td>Defined by <span class="math inline">\(4\pi r^2\)</span> area <span class="math inline">\([\text{m}]\)</span></td>
+<td><span class="math inline">\(1/r\)</span> weakening with distance</td>
+<td>"Distance lever" (farther = weaker effect)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(y=\ln(\nu_\infty/\nu_r)\)</span></td>
+<td>Fractional redshift</td>
+<td>Log frequency ratio (dimensionless)</td>
+<td><span class="math inline">\(\dot y=\partial_t\Phi\)</span> is what we measure</td>
+<td>"Pitch change of a note"</td>
+</tr>
+<tr>
+<td><span class="math inline">\(G/c^4\)</span></td>
+<td>Coupling scale</td>
+<td><span class="math inline">\(8.262\times10^{-45}\ \text{s}^2/(\text{kg}\,\text{m})\)</span></td>
+<td>Sets overall tiny amplitude</td>
+<td>"Ultra-small gear ratio"</td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="1.html">← Step 1</a>
+                    <a href="3.html">Step 3 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

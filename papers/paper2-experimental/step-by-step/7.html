@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 7 - Visibility kernel</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 7</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html" class="active">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1
+id="step-7.-null-tests-pre-registration-and-the-1r-sign-locked-template">Step
+7. Null tests, pre-registration, and the 1/r, sign-locked template</h1>
+<p><strong>Plain English:</strong> before touching data, the paper says
+to lock in a <em>registered</em> analysis and then hammer it with nulls.
+The physics gives you two fingerprints that are hard to fake: (i) the
+<strong>sign</strong> of the drift follows the <strong>sign of the
+flux</strong> (outgoing → negative drift; ingoing → positive), and (ii)
+the amplitude falls off <strong>exactly like 1/r</strong>. The pipeline
+must recover those two features and a <strong>zero-lag</strong> template
+correlation; lab runs are for software-injection <em>validation</em>,
+not detections. </p>
+<p><strong>What to pre-register (flux-template channel):</strong> choose
+the analysis band, vetoes, stacking rule, and a pass/fail defined by
+<strong>sign + strict 1/r scaling</strong> (or, in the visibility
+channel, a pre-set visibility threshold). Then whiten <span
+class="math inline">\(\dot y(t)\)</span> using the measured <span
+class="math inline">\(S_y(f)\)</span>, build <span
+class="math inline">\(s(t)=\int^t L(t&#39;)dt&#39;\)</span> so that
+<span class="math inline">\(s(f)=L(f)/(i2\pi f)\)</span>, and estimate
+the coefficient <span class="math inline">\(\lambda\)</span> with GLS:
+<span class="math inline">\(\dot y(t)=-\lambda L(t)+\dots\)</span> where
+<strong>GR predicts</strong> <span class="math inline">\(\lambda=G/(c^4
+r)\)</span>. </p>
+<p><strong>Core discriminants (how you tell gravity from
+junk):</strong></p>
+<ul>
+<li><strong>Sign-locking:</strong> <span
+class="math inline">\(\mathrm{sgn}\,\dot\Phi=\text{−}\mathrm{sgn}\,L(t)\)</span>
+for outgoing flux. This rejects lots of correlated systematics. </li>
+<li><strong>Distance scaling:</strong> repeat at different <span
+class="math inline">\(r\)</span> (lab: move source; astro: compare
+sources). The coefficient must scale as <span
+class="math inline">\(1/r\)</span>. </li>
+<li><strong>Zero-lag cross-correlation:</strong> the template <span
+class="math inline">\(\langle\dot y,L\rangle\)</span> peaks at
+<strong>zero</strong> lag with <span
+class="math inline">\(\lambda=G/(c^4 r)\)</span>. </li>
+<li><strong>Multiregressor robustness:</strong> fit <span
+class="math inline">\(\dot y(t)=-\lambda L(t)+a_1\dot r_{\rm
+Doppler}+a_2T_{\rm plasma}+a_3\delta f_{\rm inst}+n\)</span> and check
+that the gravitational coefficient survives nuisance subtraction. </li>
+</ul>
+<p><strong>Registered nulls (you should pass all of these):</strong>
+shutter the source with the <em>same</em> drive, use a cold dump, run
+time-slides between sites, and do off-band analyses. Outcome: either
+<span class="math inline">\(\lambda\simeq G/(c^4 r)\)</span> within
+errors, or a clear upper limit; for visibilities, quote a bound on <span
+class="math inline">\(S_\Phi\)</span> (both Markovian and
+filter-weighted). </p>
+<p><strong>What lab runs are (and aren’t):</strong> near-field
+EM/thermal couplings swamp the gravitational signal, so
+<strong>lab</strong> flux runs are <em>pipeline validations</em> using
+<strong>software injections</strong> with strict 1/r scaling;
+<strong>astrophysical</strong> campaigns (e.g., a Galactic SN) are where
+you apply the real template test (sign, zero-lag, and <span
+class="math inline">\(\lambda=G/(c^4 r)\)</span>). </p>
+<p><strong>Practical geometry notes:</strong> define <span
+class="math inline">\(r\)</span> as the straight-line
+source-to-clock-pair distance; keep the two clocks <span
+class="math inline">\(\ll r\)</span> so they see the same <span
+class="math inline">\(L(t)\)</span>; in lab, use <span
+class="math inline">\(r\gtrsim 5\text{–}10\,\mathrm{m}\)</span> to tame
+near-field effects. Demonstrate 1/r by repeating at <span
+class="math inline">\(r=\{5,10,20\}\,\mathrm{m}\)</span>. </p>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 32%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>Flux–drift coefficient</td>
+<td><span class="math inline">\(G/(c^4 r)\)</span> so <span
+class="math inline">\(\dot y=-\lambda L\)</span> (s²·kg<span
+class="math inline">\(^{-1}\)</span>·m<span
+class="math inline">\(^{-2}\)</span>)</td>
+<td><span class="math inline">\(r=10\,\mathrm{m}\Rightarrow
+\lambda\approx8.3\times10^{-46}\)</span></td>
+<td>“Gain knob” from flux to drift</td>
+</tr>
+<tr>
+<td><span class="math inline">\(L(t)\)</span></td>
+<td>Luminosity</td>
+<td>Power crossing sphere at <span class="math inline">\(r\)</span>
+(W)</td>
+<td>Lab pulse or SN neutrino <span
+class="math inline">\(L_\nu(t)\)</span></td>
+<td>“Brightness of the source”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>Areal/straight-line distance</td>
+<td>Sets 1/r falloff (m)</td>
+<td>Move source to test 1/r</td>
+<td>“Distance lever”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\dot y(t)\)</span></td>
+<td>Redshift drift</td>
+<td>Slope of <span class="math inline">\(\ln(\nu_\infty/\nu_r)\)</span>
+(s<span class="math inline">\(^{-1}\)</span>)</td>
+<td>Cross-correlate with <span class="math inline">\(L(t)\)</span> at
+zero lag</td>
+<td>“Pitch change rate”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_y(f)\)</span></td>
+<td>Clock noise PSD</td>
+<td>One-sided fractional-freq spectrum (Hz<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Used to whiten <span class="math inline">\(\dot y\)</span></td>
+<td>“Noise map of the dial”</td>
+</tr>
+</tbody>
+</table>
+<p>Ready for <strong>Step 8 — Lever A in detail: the controlled-flux
+(lab) protocol, estimators, and uncertainty propagation</strong> (the
+nuts and bolts you’d run in code).</p>
+
+                <div class="chapter-nav">
+                    <a href="6.html">← Step 6</a>
+                    <a href="8.html">Step 8 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

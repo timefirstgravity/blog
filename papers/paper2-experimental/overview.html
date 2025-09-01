@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper II: Experimental Signatures Overview</title>
+  <link rel="stylesheet" href="/css/main.css">
+  
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> › 
+  <span>Paper II: Experimental Signatures</span> › 
+  <span>Overview</span>
+</div>
+
+    <div class="view-toggle">
+      <a href="#" class="active">Overview</a>
+      <a href="/papers/paper2-experimental/step-by-step/index.html">Step-by-Step</a>
+    </div>
+    
+<h1>Experimental Signatures of Temporal Geometry</h1>
+
+<div class="highlight info">
+  <p><strong>Big idea:</strong> The lapse-first framework makes testable predictions: <em>only energy flux can change clock rates</em>. This constraint leads to two experimental levers. Flux-driven redshift drift and quantum phase accumulation that could detect temporal geometry effects in atomic clocks and interferometers.</p>
+</div>
+
+<h2>Why experimental signatures matter</h2>
+<p>Paper I showed that treating the lapse \(N=e^{\Phi}\) as primary recovers all of GR while clarifying its structure. But new perspectives need experimental grounding. The flux law \(\partial_t\Phi = -(G/c^4)L/r\) isn't a math trick, it's a sharp prediction about how spacetime responds to energy flow. Every clock becomes a \(\Phi\)-detector, and quantum systems provide unprecedented sensitivity.</p>
+
+<h2>The core observable: time's response to flux</h2>
+<div class="math">\[
+\boxed{\;\frac{d}{dt}\ln\left(\frac{\nu_\infty}{\nu_r}\right) = \partial_t\Phi(t,r) \approx -\frac{G}{c^4}\,\frac{L(t)}{r}\;}
+\]</div>
+<p>When energy flows outward (luminosity \(L > 0\)), exterior clocks slow down.  A direct, measurable redshift drift. The signature is unmistakable: it's locked to the flux direction and scales as \(1/r\). No flux, no drift.</p>
+
+<div class="highlight">
+  <p><strong>Two experimental levers:</strong></p>
+  <ul>
+    <li><strong>Lever A (Classical):</strong> Controlled flux sources drive predictable redshift patterns</li>
+    <li><strong>Lever B (Quantum):</strong> Temporal fluctuations \(\delta\Phi\) cause visibility loss in interferometers</li>
+  </ul>
+</div>
+
+<h2>Lever A: Flux-driven redshift drift</h2>
+<p>Any energy flux that crosses your clock's radius affects its rate. For a source with luminosity \(L(t)\) at distance \(r\):</p>
+<div class="math">\[
+\dot{y}(t) = \partial_t\Phi \approx -\frac{G}{c^4}\,\frac{L(t)}{r}
+\]</div>
+<p>where \(y = \ln(\nu_\infty/\nu_r)\) is the logarithmic frequency ratio. The detection pipeline:</p>
+<ol>
+  <li>Measure the flux \(L(t)\) at the clock location</li>
+  <li>Look for correlated drift in clock frequency</li>
+  <li>Verify the signature: sign-locked to flux direction, \(1/r\) scaling</li>
+  <li>Extract the coupling strength via matched filtering</li>
+</ol>
+
+<h2>Lever B: Quantum phase accumulation</h2>
+<p>Every quantum system accumulates phase according to its worldline:</p>
+<div class="math">\[
+\theta = \frac{E}{\hbar}\int d\tau = \omega\int e^{\Phi}dt
+\]</div>
+<p>Temporal fluctuations \(\delta\Phi\) add phase noise. In an interferometer with interrogation time \(T\):</p>
+<div class="math">\[
+V = \exp\left[-\frac{1}{2}\omega^2 S_\Phi(0)T\right]
+\]</div>
+<p>where \(S_\Phi(0)\) is the zero-frequency spectral density of temporal fluctuations. Higher energy systems (\(\omega^2\) scaling) are more sensitive. Every massive particle is a \(\Phi\)-clock.</p>
+
+<div class="highlight info">
+  <p><strong>Current bounds from atomic interferometry:</strong> For \(\omega/2\pi = 10^{15}\) Hz, \(T = 1\) s, and \(V \geq 0.99\), we get \(S_\Phi(0) \leq 5 \times 10^{-34}\) s. Future improvements scale with \(\omega^2 T\).</p>
+</div>
+
+<h2>Case studies: from lab to cosmos</h2>
+<ul>
+  <li><strong>Lab calibration (1 MJ pulse, 10 m):</strong> \(\partial_t\Phi \sim 10^{-32}\) s\(^{-1}\)—validates pipeline but far below detection</li>
+  <li><strong>Sgr A* flare (\(10^{29}\) W, 8 kpc):</strong> \(\partial_t\Phi \sim 10^{-29}\) s\(^{-1}\)—undetectable with current technology</li>
+  <li><strong>Galactic supernova neutrino burst (\(3 \times 10^{45}\) W, 10 kpc):</strong> \(\partial_t\Phi \sim 10^{-20}\) s\(^{-1}\)—approaching optical clock sensitivity!</li>
+</ul>
+
+<h2>The galactic supernova campaign</h2>
+<p>A core-collapse supernova in our galaxy releases \(\sim 10^{53}\) ergs in neutrinos over ~10 seconds. At 10 kpc:</p>
+<div class="math">\[
+\partial_t\Phi_{\text{peak}} \sim 10^{-20}\text{ s}^{-1}
+\]</div>
+<p>This is within an order of magnitude of current optical clock stability (\(10^{-19}\) at 1000 s). The detection strategy:</p>
+<ol>
+  <li>Trigger on SNEWS 2.0 neutrino alerts</li>
+  <li>Record clock data ±6 hours around burst</li>
+  <li>Cross-correlate network of clocks at different distances</li>
+  <li>Look for the smoking gun: sign-locked drift scaling as \(1/r\)</li>
+</ol>
+
+<h2>Implementation protocols</h2>
+<p><strong>For flux measurements (Lever A):</strong></p>
+<ol>
+  <li>Align timing: account for light-travel delay between source and clock</li>
+  <li>Whiten data by the clock's noise spectrum \(S_y(f)\)</li>
+  <li>Apply matched filter with template \(s(t) = \int L(t')dt'\)</li>
+  <li>Validate with null tests: shuttered sources, time slides</li>
+</ol>
+
+<p><strong>For quantum experiments (Lever B):</strong></p>
+<ol>
+  <li>Choose pulse sequence (Ramsey, Mach-Zehnder)</li>
+  <li>Measure visibility \(V(T)\) vs interrogation time</li>
+  <li>Extract bounds on \(S_\Phi(\Omega)\) from visibility loss</li>
+  <li>Separate gravity-gradient noise from temporal fluctuations</li>
+</ol>
+
+<h2>No new degrees of freedom</h2>
+<p>Important: \(\delta\Phi\) is <em>not</em> a propagating scalar field. In the ADM formalism, the lapse and shift are Lagrange multipliers enforcing constraints. After linearization, only the two transverse-traceless graviton modes propagate. The \(\delta\Phi\) correlator is the constraint-projected \(h_{00}\) component. Same physics, clearer bookkeeping.</p>
+
+<h2>What makes this approach unique</h2>
+<ul>
+  <li><strong>Sharp predictions:</strong> The flux law gives exact formulas, not order-of-magnitude estimates</li>
+  <li><strong>Universal coupling:</strong> Every clock responds to \(\Phi\); heavier clocks are better detectors</li>
+  <li><strong>Clean signatures:</strong> Sign-locked, \(1/r\) scaling distinguishes signal from noise</li>
+  <li><strong>Near-term feasibility:</strong> Galactic supernovae are rare but within reach of current technology</li>
+  <li><strong>Quantum advantage:</strong> Interferometers gain \(\omega^2\) enhancement over classical clocks</li>
+</ul>
+
+<h2>Experimental summary</h2>
+<ol>
+  <li><strong>Classical channel:</strong> Energy flux causes measurable redshift drift in atomic clocks</li>
+  <li><strong>Quantum channel:</strong> Temporal fluctuations reduce interferometer visibility</li>
+  <li><strong>Key formula:</strong> \(\partial_t\Phi = -(G/c^4)L/r\) ties flux to time curvature</li>
+  <li><strong>Best target:</strong> Galactic supernova neutrino burst (~once per century)</li>
+  <li><strong>Current limits:</strong> \(S_\Phi(0) \leq 10^{-33}\) s from atomic interferometry</li>
+</ol>
+
+<h2>Does this violate known physics?</h2>
+<p>No. These are standard GR predictions written in lapse-first variables. The experimental signatures follow directly from Einstein's equations. We're just organizing the calculation differently. What's new is recognizing that modern quantum sensors have the precision to detect these effects for astrophysical sources.</p>
+
+<div class="highlight success">
+  <p><strong>Bottom line:</strong> The flux law \(\partial_t\Phi = -(G/c^4)L/r\) makes testable predictions. A galactic supernova could provide the first direct measurement of how energy flux affects the flow of time. Every atomic clock and quantum interferometer is already a \(\Phi\)-detector, we just need to know what to look for.</p>
+</div>
+
+    <div class="footer">
+      <p><a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 19 - Conclusion</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 19</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html" class="active">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1 id="conclusion-what-this-paper-actually-delivers">Conclusion: what
+this paper actually delivers</h1>
+<p><strong>Thesis (one sentence):</strong> Rewriting GR in
+<strong>lapse-first</strong> variables <span
+class="math inline">\(N=e^{\Phi}\)</span> makes gravity “clock-native,”
+yielding two practical observables—(i) a <strong>sign-locked <span
+class="math inline">\(1/r\)</span></strong> flux→redshift-drift template
+and (ii) a <strong>visibility kernel</strong> that maps interferometer
+contrast into bounds on lapse fluctuations—<strong>without adding new
+degrees of freedom</strong>.</p>
+<p><strong>What is actually testable now (and how):</strong></p>
+<ul>
+<li><strong>Classical lever (flux→drift):</strong> outgoing luminosity
+<span class="math inline">\(L(t)\)</span> at distance <span
+class="math inline">\(r\)</span> enforces <span
+class="math inline">\(\partial_t\Phi\simeq-(G/c^4)\,L/r\)</span>.
+Measure the clock redshift slope <span class="math inline">\(\dot
+y(t)\)</span> and fit <span class="math inline">\(\dot y=-\lambda
+L\)</span> with <span class="math inline">\(\lambda=G/(c^4 r)\)</span>;
+demand <strong>correct sign</strong>, <strong>zero-lag</strong>, and
+<strong>strict <span class="math inline">\(1/r\)</span></strong> across
+baselines.</li>
+<li><strong>Quantum lever (visibility):</strong> any two-path sequence
+with indicator <span class="math inline">\(f(t)\)</span> obeys <span
+class="math inline">\(-\ln V=\dfrac{\omega^2}{2}\!\int_0^\infty
+\dfrac{d\Omega}{2\pi}\,S_{\Phi}(\Omega)\,|F(\Omega)|^2\)</span> (with
+<span class="math inline">\(F\)</span> set by your timing); publish both
+the <strong>filter-weighted</strong> bound and, if used, the
+<strong>Markovian</strong> <span
+class="math inline">\(S_{\Phi}(0)\)</span> bound.</li>
+</ul>
+<p><strong>Protocol &amp; posture (discipline over wishful
+thinking):</strong></p>
+<ul>
+<li><strong>Pre-register</strong> band, vetoes, stacking, and pass/fail;
+release data, filters, code, and all nulls (shuttered source, cold dump,
+time-slides, off-band). Outcomes: either <span
+class="math inline">\(\lambda\simeq G/(c^4 r)\)</span> within errors, or
+a published upper limit; for visibilities, quote both bounds.</li>
+<li><strong>Bounds-first sensitivity:</strong> numbers are <strong>ideal
+analysis limits</strong> using measured <span
+class="math inline">\(S_y(f)\)</span>; lab flux runs are
+<strong>pipeline validations</strong> with software injections (sign +
+strict <span class="math inline">\(1/r\)</span> scaling).
+Target-of-opportunity: <strong>Galactic SN</strong> with SNEWS 2.0
+triggers; Sgr A* flares are sub-threshold today.</li>
+</ul>
+<p><strong>Scope (what this is <em>not</em>):</strong> No extra
+propagating scalar or new polarization: <span
+class="math inline">\(\Phi\)</span> and <span
+class="math inline">\(\omega\)</span> enforce constraints; only the two
+TT modes propagate. The visibility correlator <span
+class="math inline">\(C_{\Phi}\)</span> is the
+<strong>constraint-projected</strong> imprint of linearized
+metric/stress fluctuations on clocks—i.e., standard GR, just
+reorganized.</p>
+<p><strong>Outlook (templates you may explore, carefully
+labeled):</strong> Speculative horizon-phase ideas are provided only as
+<strong>templates</strong> for future analog platforms or exotic
+scenarios—<strong>not</strong> near-term claims.</p>
+<p><strong>One-line takeaway:</strong> This paper turns “gravity as time
+geometry” into two <strong>analysis-ready</strong> tests you can run
+today: a sign-fixed, <span class="math inline">\(1/r\)</span> flux
+template and a general visibility-to-<span
+class="math inline">\(S_{\Phi}\)</span> bound—both strictly within GR
+and packaged with reproducible workflows.</p>
+<hr />
+<h3 id="glossary-conclusion-snapshot">Glossary (conclusion
+snapshot)</h3>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 29%" />
+<col style="width: 24%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(N=e^{\Phi}\)</span></td>
+<td>Lapse</td>
+<td>Proper-time scale, <span class="math inline">\(d\tau=N\,dt\)</span>
+(–)</td>
+<td><span class="math inline">\(N\approx1\)</span> in weak fields</td>
+<td>“Time gear ratio”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>Time potential</td>
+<td><span class="math inline">\(\ln N\)</span>; controls clock rate
+(–)</td>
+<td><span
+class="math inline">\(\partial_t\Phi\simeq-(G/c^4)L/r\)</span></td>
+<td>“Altitude of time”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\omega\)</span></td>
+<td>Shift</td>
+<td>Gravitomagnetic potential (flows/rotation)</td>
+<td>Lives in frame-dragging, not <span
+class="math inline">\(\Phi\)</span></td>
+<td>“River current of space”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(y=\ln(\nu_\infty/\nu_r)\)</span></td>
+<td>Log-redshift</td>
+<td>What clocks report (–)</td>
+<td><span class="math inline">\(\dot y=\partial_t\Phi\)</span></td>
+<td>“Pitch log”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>Visibility</td>
+<td>Fringe contrast <span class="math inline">\([0,1]\)</span> (–)</td>
+<td>Decays with <span class="math inline">\(\Phi\)</span> noise</td>
+<td>“Stripe sharpness”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(F(\Omega)\)</span></td>
+<td>Filter of <span class="math inline">\(f(t)\)</span></td>
+<td>Weights <span class="math inline">\(S_{\Phi}\)</span> in <span
+class="math inline">\(-\ln V\)</span> (s)</td>
+<td>Rectangular → sinc²</td>
+<td>“Sieve for noise tones”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_{\Phi}(\Omega)\)</span></td>
+<td>Lapse PSD</td>
+<td>One-sided spectrum (s)</td>
+<td>Bound via <span class="math inline">\(-\ln V\)</span> integral</td>
+<td>“Noise color of time”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>Flux→drift gain</td>
+<td><span class="math inline">\(G/(c^4 r)\)</span> in <span
+class="math inline">\(\dot y=-\lambda L\)</span></td>
+<td>Test sign, zero-lag, <span class="math inline">\(1/r\)</span></td>
+<td>“Gear from light to time”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(L(t)\)</span></td>
+<td>Luminosity</td>
+<td>Power crossing sphere (W)</td>
+<td>Drives sign-locked drift</td>
+<td>“Brightness push”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>Areal distance</td>
+<td>Source→clock separation (m)</td>
+<td>Exact <span class="math inline">\(1/r\)</span> falloff</td>
+<td>“Lever arm”</td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="18.html">← Step 18</a>
+                    <a href="/papers/paper2-experimental/step-by-step/index.html">Return to Table of Contents →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 9 - Newtonian noise</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 9</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html" class="active">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1
+id="step-9.-lever-b-quantum-visibility-protocol-bounds-on-s_phi">Step 9.
+Lever B (quantum): visibility protocol → bounds on <span
+class="math inline">\(S_\Phi\)</span></h1>
+<p><strong>What you do:</strong> run a two-path interferometer (or any
+phase-coherent sequence) with a known time pattern <span
+class="math inline">\(f(t)\)</span> (Ramsey, Mach–Zehnder, echo).
+Measure the fringe visibility <span class="math inline">\(V(T)\)</span>
+and turn it into a bound on the lapse-fluctuation spectrum <span
+class="math inline">\(S_\Phi(\Omega)\)</span>.</p>
+<p><strong>Core laws</strong> (from Steps 4–5): with Gaussian lapse
+noise and path indicator <span class="math inline">\(f(t)\)</span>,</p>
+<p><span class="math display">\[
+V=\exp\!\Big[-\tfrac12\,\omega^2\!\iint
+f(t)\,C_\Phi(t,t&#39;)\,f(t&#39;)\,dt\,dt&#39;\Big]
+\quad\Rightarrow\quad
+-\ln
+V=\frac{\omega^2}{2}\!\int_{0}^{\infty}\frac{d\Omega}{2\pi}\,S_\Phi(\Omega)\,|F(\Omega)|^2,
+\]</span></p>
+<p>where <span class="math inline">\(F(\Omega)=\int f(t)e^{i\Omega
+t}dt\)</span>. For a rectangular interrogation of duration <span
+class="math inline">\(T\)</span>: <span
+class="math inline">\(|F(\Omega)|^2=\big(2\sin(\Omega
+T/2)/\Omega\big)^2\)</span>.</p>
+<p><strong>Simple (Markovian) bound:</strong> if low frequencies
+dominate, <span class="math inline">\(\Gamma_\phi\simeq
+\tfrac{\omega^2}{2}S_\Phi(0)\)</span> and over time <span
+class="math inline">\(T\)</span>,</p>
+<p><span class="math display">\[
+S_\Phi(0)\;\lesssim\;\frac{2\,|\ln V|}{\omega^2\,T}.
+\]</span></p>
+<p>At <span class="math inline">\(T=1\)</span> s and <span
+class="math inline">\(\omega/2\pi=10^{15}\)</span> Hz, 1% visibility
+loss gives <span
+class="math inline">\(S_\Phi(0)\lesssim5\times10^{-34}\)</span> s.</p>
+<p><strong>Platforms &amp; variants:</strong></p>
+<ul>
+<li><strong>Atom interferometer (MZ/Ramsey):</strong> choose <span
+class="math inline">\(T\)</span>, compute <span
+class="math inline">\(|F|^2\)</span>, constrain <span
+class="math inline">\(S_\Phi\)</span> via the integral above. A driven
+variant places a controlled, shot-noise photon flux at distance <span
+class="math inline">\(r\)</span> to imprint a calculable <span
+class="math inline">\(S_\Phi\)</span> via stress-tensor
+fluctuations.</li>
+<li><strong>Co-located optical clocks:</strong> cross-correlate two
+clocks’ fractional-frequency noise; in quiet operation you bound <span
+class="math inline">\(S_\Phi(0)\)</span> via <span
+class="math inline">\(\Gamma_\phi\)</span>. With a modulated flux you
+test the classical template (Lever A).</li>
+<li><strong>Optomechanical cat states:</strong> off-diagonals decay as
+<span class="math inline">\(\exp[-\Gamma_\phi t]\)</span> with <span
+class="math inline">\(\Gamma_\phi\)</span> from the same <span
+class="math inline">\(\omega^2 S_\Phi(0)/2\)</span> law—purely temporal
+(not spatial) decoherence.</li>
+</ul>
+<p><strong>Reporting + filters (what to publish):</strong> quote <span
+class="math inline">\(V(T)\)</span> with errors, and provide (i) the
+<strong>filter-weighted</strong> bound from the full integral and (ii)
+the <strong>Markovian</strong> <span
+class="math inline">\(S_\Phi(0)\)</span> bound. Use the
+<em>measured</em> <span
+class="math inline">\(f_{\text{meas}}(t)\)</span> to form <span
+class="math inline">\(F(\Omega)\)</span>; finite pulse rise/fall simply
+reshapes <span class="math inline">\(|F|^2\)</span> and the
+matched-filter formulas remain valid.</p>
+<p><strong>Noise budget (why ground labs are hard):</strong> three
+contributors sum into the practical <span
+class="math inline">\(S_\Phi(\Omega)\)</span>: (1) Newtonian
+gravity-gradient from mass density noise (dominant at sub-Hz), (2)
+photon shot/thermal stress-tensor, (3) TT vacuum modes (tiny in lab
+band). Typical hierarchy: at <span class="math inline">\(\sim1\)</span>
+Hz, <span class="math inline">\(S_\Phi\sim10^{-32}\)</span> s from
+Newtonian noise; at <span class="math inline">\(\sim1\)</span> kHz,
+<span class="math inline">\(S_\Phi^{\text{vac}}\sim10^{-45}\)</span> s.
+Always provide a “source-off” baseline.</p>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 29%" />
+<col style="width: 26%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>Visibility</td>
+<td>Fringe contrast <span class="math inline">\([0,1]\)</span> (–)</td>
+<td>Measured vs. <span class="math inline">\(T\)</span></td>
+<td>“Stripe sharpness”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(f(t)\)</span></td>
+<td>Path indicator</td>
+<td>+1/−1 sequence defining arms/pulses</td>
+<td>Ramsey/MZ/echo patterns</td>
+<td>“Which road when”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(F(\Omega)\)</span></td>
+<td>Filter</td>
+<td>FT of <span class="math inline">\(f\)</span>; weights <span
+class="math inline">\(S_\Phi\)</span> (s)</td>
+<td>Rectangular ⇒ sinc²</td>
+<td>“Sieve for noise tones”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_\Phi(\Omega)\)</span></td>
+<td>Lapse PSD</td>
+<td>One-sided spectrum of <span
+class="math inline">\(\delta\Phi\)</span> (s)</td>
+<td>Bound via <span class="math inline">\(-\ln V\)</span></td>
+<td>“Noise color of time”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\omega\)</span></td>
+<td>Clock frequency</td>
+<td>Internal line <span class="math inline">\(E/\hbar\)</span>
+(rad·s<span class="math inline">\(^{-1}\)</span>)</td>
+<td>Optical <span class="math inline">\(\sim 2\pi\times10^{15}\)</span>
+Hz</td>
+<td>“Metronome speed”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(T\)</span></td>
+<td>Interrogation time</td>
+<td>Pulse separation / dwell (s)</td>
+<td>Set by sequence</td>
+<td>“How long you listen”</td>
+</tr>
+</tbody>
+</table>
+<p>Next: <strong>Step 10 — Case study &amp; triggers:</strong> applying
+the template to a Galactic supernova and why Sgr A* flares are
+sub-threshold.</p>
+
+                <div class="chapter-nav">
+                    <a href="8.html">← Step 8</a>
+                    <a href="10.html">Step 10 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

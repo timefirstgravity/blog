@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 10 - Lab platforms</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 10</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html" class="active">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1
+id="step-10-case-study-triggers-sgr-a-flares-vs-a-galactic-supernova">Step
+10 — Case study &amp; triggers: Sgr A* flares vs a Galactic
+supernova</h1>
+<p><strong>What the paper argues (plain English):</strong> Two “natural
+experiments” showcase how the flux→drift template plays out in the
+wild:</p>
+<ol type="1">
+<li><p><strong>Sgr A*</strong> (our Galactic-center black hole)
+occasionally flares with luminosity <span
+class="math inline">\(L\!\sim\!10^{29}\,\text{W}\)</span> lasting <span
+class="math inline">\(\Delta t\!\sim\!10^4\)</span> s. Even for a pulsar
+right there at <span
+class="math inline">\(r\!=\!1.2\times10^{13}\)</span> m, the implied
+time-potential step is only <span
+class="math inline">\(\Delta\Phi\!\sim\!-6.9\times10^{-25}\)</span> —
+<strong>far below</strong> present pulsar-timing sensitivity.
+Conclusion: conceptually clean, but <strong>sub-threshold</strong>
+today.</p></li>
+<li><p><strong>Galactic core-collapse supernova (SN):</strong> the
+neutrino burst is a gigantic outbound flux, <span
+class="math inline">\(L_\nu\!\sim\!3\times10^{45}\,\text{W}\)</span> for
+<span class="math inline">\(\sim10\)</span> s. At a typical Galactic
+distance <span class="math inline">\(r\!\sim\!10\)</span> kpc, this
+gives <span
+class="math inline">\(\Delta\Phi\!\sim\!+8\times10^{-19}\)</span>.
+That’s within roughly an order of current optical-clock stability,
+making it a <strong>promising “target of opportunity.”</strong> The
+strategy: phase-lock your template to the neutrino burst and
+cross-correlate a <strong>network</strong> of precision clocks.</p></li>
+</ol>
+<p><strong>Operational trigger &amp; requirements (how to run
+it):</strong></p>
+<ul>
+<li><strong>Trigger:</strong> use <strong>SNEWS 2.0</strong>; capture
+data in a ±6 h window around the alert at ≥ 1 Hz; map neutrino counts
+into a luminosity proxy <span class="math inline">\(L_\nu(t)\)</span>
+(priors/ranges are acceptable).</li>
+<li><strong>Time transfer &amp; publishing:</strong> each site provides
+UTC/TAI-traceable time transfer (GPSCV, TWSTFT, or stabilized fiber),
+plus the measured clock noise <span
+class="math inline">\(S_y(f)\)</span> and whitening filter used.</li>
+<li><strong>Pre-registered pass/fail:</strong> after alignment, demand
+(i) <strong>correct sign</strong>, (ii) <strong>zero-lag</strong>
+correlation, and (iii) amplitude <span
+class="math inline">\(\lambda=G/(c^4 r)\)</span> <strong>within
+errors</strong>. Otherwise, report a combined constraint.</li>
+</ul>
+<blockquote>
+<p>Quick scaling intuition: integrate the drift law <span
+class="math inline">\(\partial_t\Phi\approx -(G/c^4)\,L(t)/r\)</span>
+over the burst → <span
+class="math inline">\(\Delta\Phi\!\approx\!-(G/c^4)\,E/r\)</span>, where
+<span class="math inline">\(E\)</span> is the radiated energy crossing
+your sphere. The SN simply has the <strong>enormous <span
+class="math inline">\(E\)</span></strong> that Sgr A* flares lack at
+accessible <span class="math inline">\(r\)</span>. (Numbers are those
+quoted above from the paper.)</p>
+</blockquote>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 11%" />
+<col style="width: 30%" />
+<col style="width: 31%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(L(t)\)</span></td>
+<td>Luminosity</td>
+<td>Power crossing a sphere at <span class="math inline">\(r\)</span>
+(W)</td>
+<td>Sgr A*: <span class="math inline">\(10^{29}\)</span> W; SN: <span
+class="math inline">\(3\times10^{45}\)</span> W</td>
+<td>“Brightness push” on time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta\Phi\)</span></td>
+<td>Time-potential step</td>
+<td>Integrated drift from a transient (–)</td>
+<td>Sgr A*: <span class="math inline">\(-6.9\times10^{-25}\)</span>; SN:
+<span class="math inline">\(+8\times10^{-19}\)</span></td>
+<td>“Net nudge of the time-dial”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>Distance (areal)</td>
+<td>Source→clock separation (m)</td>
+<td>Sgr A*: <span class="math inline">\(1.2\times10^{13}\)</span> m; SN:
+<span class="math inline">\(10\)</span> kpc</td>
+<td>“Lever arm” (farther = weaker)</td>
+</tr>
+<tr>
+<td>SNEWS 2.0</td>
+<td>Neutrino trigger</td>
+<td>Multi-detector alert for Galactic SNe</td>
+<td>Use ±6 h, ≥ 1 Hz logging</td>
+<td>“Fire alarm” for the burst</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>Flux→drift gain</td>
+<td>Predicted slope <span class="math inline">\(G/(c^4 r)\)</span>
+(s²·kg<span class="math inline">\(^{-1}\)</span>·m<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Check sign, zero-lag, 1/r</td>
+<td>“Gear ratio” from flux to drift</td>
+</tr>
+</tbody>
+</table>
+<p>Next up: <strong>Step 11 — Sensitivity &amp; feasibility
+(bounds-first): ideal analysis limits, real-world noise, and what you
+actually report.</strong></p>
+
+                <div class="chapter-nav">
+                    <a href="9.html">← Step 9</a>
+                    <a href="11.html">Step 11 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

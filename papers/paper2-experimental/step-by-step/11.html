@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 11 - Frequency stability data</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 11</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html" class="active">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1
+id="step-11.-sensitivity-feasibility-bounds-first-what-you-can-really-claim">Step
+11. Sensitivity &amp; feasibility (bounds-first: what you can really
+claim)</h1>
+<p><strong>Plain English:</strong> The paper is explicit: all numbers
+you quote are <strong>bounds</strong>, not promised detections. There
+are two kinds you should publish:</p>
+<ol type="1">
+<li><strong>Visibility bounds:</strong> if you report a Markovian
+(white-at-low-f) bound on <span
+class="math inline">\(S_{\Phi}(0)\)</span>, you must also report the
+<strong>filter-weighted</strong> bound using your actual <span
+class="math inline">\(|F(\Omega)|^{2}\)</span> so that non-white noise
+is handled honestly:</li>
+</ol>
+<p><span class="math display">\[
+-\ln
+V=\frac{\omega^{2}}{2}\!\int_{0}^{\infty}\frac{d\Omega}{2\pi}\,S_{\Phi}(\Omega)\,|F(\Omega)|^{2}.
+\]</span></p>
+<p>Include both in results.</p>
+<ol start="2" type="1">
+<li><strong>Flux→drift fits:</strong> when fitting <span
+class="math inline">\(\dot y(t)=-\lambda L(t)+\dots\)</span> in the lab,
+publish <strong>both</strong> the statistical variance and the
+<strong>total</strong> variance including calibration and model
+systematics:</li>
+</ol>
+<p><span class="math display">\[
+\mathrm{Var}_{\text{tot}}(\hat\lambda)\approx
+\mathrm{Var}_{\text{stat}}(\hat\lambda)+\hat\lambda^{2}\!\left(\sigma_r^2+\sigma_L^2\right)+\Delta_S,
+\]</span></p>
+<p>with the linearized sensitivity <span
+class="math inline">\(\delta\hat\lambda/\hat\lambda\simeq
+-\epsilon_r-\epsilon_L+O(\epsilon_S)\)</span>. In practice, the
+<strong>calibration</strong> on distance <span
+class="math inline">\(r\)</span> and power <span
+class="math inline">\(L\)</span> dominates.</p>
+<p><strong>Noise budget you must list (visibility channel):</strong>
+three gravitational pieces plus standard lab systematics: •
+<strong>Newtonian gravity-gradient</strong> (seismic/air density),
+typically <strong>dominant &lt; 1 Hz</strong>; • <strong>Stress-tensor
+(shot/thermal)</strong> from radiative fluxes; • <strong>Vacuum TT
+modes</strong> mapped through the constraint kernel (tiny in lab band).
+Always provide a <strong>source-off baseline</strong> and subtract it.
+(The paper even gives typical magnitudes: around 1 Hz, <span
+class="math inline">\(S_{\Phi}\sim10^{-32}\,\text{s}\)</span>; around 1
+kHz, <span
+class="math inline">\(S_{\Phi}^{\mathrm{vac}}\sim10^{-45}\,\text{s}\)</span>.)</p>
+<p><strong>Framing in the paper (why “bounds-first”):</strong> it
+explicitly states that the <strong>sensitivity</strong> numbers assume
+ideal filters with measured <span class="math inline">\(S_y(f)\)</span>;
+real measurements are limited by current tech, and <strong>no detection
+timelines</strong> are claimed.</p>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 6%" />
+<col style="width: 22%" />
+<col style="width: 27%" />
+<col style="width: 12%" />
+<col style="width: 11%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(S_{\Phi}(\Omega)\)</span></td>
+<td>Lapse PSD</td>
+<td>One-sided spectrum of <span
+class="math inline">\(\delta\Phi\)</span> (s)</td>
+<td>Report Markovian and filter-weighted bounds</td>
+<td>“Noise color of time”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>F()</td>
+<td>^{2})</td>
+<td>Filter kernel</td>
+<td>From your sequence <span class="math inline">\(f(t)\)</span>
+(s²)</td>
+<td>sinc² for rectangular windows</td>
+<td>“Sieve for noise tones”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\hat\lambda\)</span></td>
+<td>Flux–drift gain</td>
+<td>Fit slope in <span class="math inline">\(\dot y=-\lambda L\)</span>
+(s²·kg<span class="math inline">\(^{-1}\)</span>·m<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Publish <span
+class="math inline">\(\mathrm{Var}_{\text{stat}}\)</span> and <span
+class="math inline">\(\mathrm{Var}_{\text{tot}}\)</span></td>
+<td>“Gear ratio” from flux to drift</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\sigma_r,\sigma_L\)</span></td>
+<td>Calibrations</td>
+<td>Fractional errors in <span class="math inline">\(r\)</span>, <span
+class="math inline">\(L\)</span> (–)</td>
+<td>Often dominate lab totals</td>
+<td>“Ruler &amp; wattmeter wiggle”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_{\Phi}^{\text{Newt}}\)</span></td>
+<td>Gravity-gradient</td>
+<td>From density/seismic noise (s)</td>
+<td><span class="math inline">\(\sim10^{-32}\,\text{s}\)</span> @ 1
+Hz</td>
+<td>“Breathing of the ground”</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Ready for <strong>Step 12 — Registered workflow &amp; publishing
+checklist</strong> (exact items to pre-register and what every result
+must include).</p>
+
+                <div class="chapter-nav">
+                    <a href="10.html">← Step 10</a>
+                    <a href="12.html">Step 12 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

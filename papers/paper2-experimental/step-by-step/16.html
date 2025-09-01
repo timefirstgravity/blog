@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 16 - Conservative reach</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 16</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html" class="active">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1
+id="step-16.-consistency-check-no-new-dof-its-just-gr-reorganized">Step
+16. Consistency check: no new DOF (it’s just GR, reorganized)</h1>
+<p><strong>Plain English:</strong> This section nails down that the
+paper isn’t adding a new field. In ADM language the lapse <span
+class="math inline">\(N=e^{\Phi}\)</span> and the shift <span
+class="math inline">\(\omega\)</span> are <strong>Lagrange
+multipliers</strong> enforcing constraints; only the two
+<strong>transverse–traceless (TT)</strong> tensor modes propagate. The
+correlator <span class="math inline">\(C_\Phi\)</span> that enters
+visibility is <strong>not</strong> a new scalar degree of freedom — it’s
+the constraint-projected, gauge-fixed imprint of linearized
+metric/stress fluctuations on an observer’s clock. All the signatures
+here are just GR rewritten in “clock-native” variables, which makes them
+easier to compute and test. </p>
+<p><strong>Registered analysis &amp; nulls recapped (how you keep
+yourself honest):</strong> Pre-register band, vetoes, stacking, and
+pass/fail rules (flux channel: sign + strict <span
+class="math inline">\(1/r\)</span>; visibility channel: a preset
+threshold). Then follow the exact steps: whiten <span
+class="math inline">\(\dot y\)</span> by measured <span
+class="math inline">\(S_y(f)\)</span>; build <span
+class="math inline">\(s(t)=\int L\,dt\)</span> so <span
+class="math inline">\(s(f)=L(f)/(i2\pi f)\)</span>; estimate <span
+class="math inline">\(\lambda\)</span> with GLS; quote the variance. Run
+nulls: shuttered source, cold dump, time slides, off-band. Outcome:
+either <span class="math inline">\(\lambda=G/(c^4 r)\)</span> within
+errors, or you publish an upper limit; for visibilities, report bounds
+on <span class="math inline">\(S_\Phi(\Omega)\)</span> (both Markovian
+and filter-weighted). </p>
+<p><strong>Implementation warning (one last time):</strong>
+Controlled-flux lab runs validate pipelines only; EM/thermal near-field
+couplings swamp gravity, and <span
+class="math inline">\(\delta\Phi\)</span> is <em>not</em> a propagating
+scalar (the “effective action” is a noise-kernel model). </p>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 34%" />
+<col style="width: 23%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(N=e^{\Phi}\)</span></td>
+<td>Lapse</td>
+<td>Proper-time scale factor <span
+class="math inline">\(d\tau=N\,dt\)</span> (–)</td>
+<td><span class="math inline">\(N\!\approx\!1\)</span> in weak
+fields</td>
+<td>“Time gear ratio”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\omega\)</span></td>
+<td>Shift</td>
+<td>Gravitomagnetic potential (flows/rotation)</td>
+<td>Nonzero for frame dragging</td>
+<td>“River current of space”</td>
+</tr>
+<tr>
+<td>TT</td>
+<td>Tensor modes</td>
+<td>The two propagating GW polarizations</td>
+<td>Only waves that travel in vacuum</td>
+<td>“Two violin strings of gravity”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(C_\Phi\)</span></td>
+<td>Lapse correlator</td>
+<td><span
+class="math inline">\(\langle\delta\Phi(t)\delta\Phi(t&#39;)\rangle\)</span>
+(–)</td>
+<td>Enters visibility kernel</td>
+<td>“Echo of time ripples”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>Flux→drift gain</td>
+<td>Predicted <span class="math inline">\(G/(c^4 r)\)</span> (s²·kg<span
+class="math inline">\(^{-1}\)</span>·m<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Tested via GLS &amp; <span class="math inline">\(1/r\)</span></td>
+<td>“Gear from flux to drift”</td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="15.html">← Step 15</a>
+                    <a href="17.html">Step 17 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

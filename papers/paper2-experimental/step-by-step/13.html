@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 13 - Visibility bounds</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 13</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html" class="active">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1
+id="step-13-the-theoretical-backbone-why-this-lives-inside-plain-gr">Step
+13 — The theoretical backbone (why this lives inside plain GR)</h1>
+<p><strong>Core point:</strong> the paper’s observables fall straight
+out of <em>lapse-first</em> general relativity and <strong>do
+not</strong> add a new propagating field.</p>
+<ul>
+<li><p><strong>Lapse-first bookkeeping.</strong> We choose the lapse
+<span class="math inline">\(N=e^{\Phi}\)</span> as the “time gear,”
+allow nonzero shift <span class="math inline">\(\omega\)</span> for
+rotation, and let spatial geometry follow from the ADM constraints. This
+makes many observables “clock-native.”</p></li>
+<li><p><strong>No extra DOF.</strong> In ADM, <span
+class="math inline">\(N=e^{\Phi}\)</span> and <span
+class="math inline">\(N^i=\omega^i\)</span> are Lagrange multipliers
+imposing the Hamiltonian/momentum constraints; only the two
+<strong>TT</strong> tensor modes propagate. The correlator <span
+class="math inline">\(C_\Phi\)</span> that appears in visibility is just
+the <strong>constraint-projected</strong> (gauge-fixed) imprint of
+linearized metric/stress fluctuations on an observer’s
+clock—<strong>not</strong> a new scalar wave.</p></li>
+<li><p><strong>Worldline phase → visibility.</strong> Any system’s phase
+is <span class="math inline">\(\theta=\omega\!\int e^{\Phi}dt\)</span>.
+Small lapse fluctuations give <span
+class="math inline">\(\delta\theta\simeq
+\omega\!\int\delta\Phi\,dt\)</span>, and for two paths the Gaussian
+average yields the visibility kernel used for bounds.</p></li>
+<li><p><strong>Flux law (and why the sign is locked).</strong> From
+EF/Vaidya with <span class="math inline">\(m(v)\)</span> one gets the
+far-field law</p>
+<p><span class="math display">\[
+\partial_t\Phi(t,r)\simeq-\frac{G}{c^4}\frac{L(t)}{r},
+\]</span></p>
+<p>with <strong>outgoing</strong> luminosity <span
+class="math inline">\(L&gt;0\)</span> implying <span
+class="math inline">\(\partial_t\Phi&lt;0\)</span> (redshift);
+<strong>ingoing</strong> flux flips the sign. This is the origin of the
+paper’s sign-locked, <span class="math inline">\(1/r\)</span>
+template.</p></li>
+<li><p><strong>Scope reminder.</strong> The phrase “quantum temporal
+geometry” here means <strong>semiclassical</strong> temporal phase
+fluctuations of the lapse, constrained within GR; no beyond-GR mode is
+introduced.</p></li>
+</ul>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 32%" />
+<col style="width: 24%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(N=e^{\Phi}\)</span></td>
+<td>Lapse</td>
+<td>Proper-time scale factor (<span
+class="math inline">\(d\tau=N\,dt\)</span>)</td>
+<td><span class="math inline">\(N\approx1\)</span> in weak fields</td>
+<td>“Time gear ratio”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>Time potential</td>
+<td><span class="math inline">\(\ln N\)</span>; controls clock rate
+(–)</td>
+<td>Set to 0 by convention today</td>
+<td>“Altitude of time”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(C_{\Phi}\)</span></td>
+<td>Lapse correlator</td>
+<td><span
+class="math inline">\(\langle\delta\Phi(t)\delta\Phi(t&#39;)\rangle\)</span>
+(–)</td>
+<td>Constraint-projected GR fluctuations</td>
+<td>“How time ripples echo”</td>
+</tr>
+<tr>
+<td>TT modes</td>
+<td>Propagating DOF</td>
+<td>Two transverse–traceless tensors</td>
+<td>Only waves that travel in vacuum</td>
+<td>“The two violin strings of gravity”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(L(t)\)</span></td>
+<td>Luminosity</td>
+<td>Power crossing sphere at <span class="math inline">\(r\)</span>
+(W)</td>
+<td>Drives <span
+class="math inline">\(\partial_t\Phi\propto-\,L/r\)</span></td>
+<td>“Brightness pushing on time”</td>
+</tr>
+</tbody>
+</table>
+<p>Ready for <strong>Step 14 — Gauge notes (shift/rotation, diagonal vs
+EF/PG, and why “sign-lock” survives gauge moves).</strong></p>
+
+                <div class="chapter-nav">
+                    <a href="12.html">← Step 12</a>
+                    <a href="14.html">Step 14 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

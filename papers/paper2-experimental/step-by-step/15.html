@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper II: Step 15 - Null tests</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> › 
+            <a href="/papers/paper2-experimental/step-by-step/index.html">Paper II: Step-by-Step</a> › 
+            <span>Step 15</span>
+        </div>
+        
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="/papers/paper2-experimental/step-by-step/index.html">Table of Contents</a></li>
+                    <li><a href="1.html">1. What this paper is</a></li>
+                    <li><a href="2.html">2. Key equations</a></li>
+                    <li><a href="3.html">3. What data is analyzed</a></li>
+                    <li><a href="4.html">4. Flux-clock duality</a></li>
+                    <li><a href="5.html">5. Classical flux template</a></li>
+                    <li><a href="6.html">6. Semiclassical interferometer</a></li>
+                    <li><a href="7.html">7. Visibility kernel</a></li>
+                    <li><a href="8.html">8. Statistical estimator</a></li>
+                    <li><a href="9.html">9. Newtonian noise</a></li>
+                    <li><a href="10.html">10. Lab platforms</a></li>
+                    <li><a href="11.html">11. Frequency stability data</a></li>
+                    <li><a href="12.html">12. Stellar systems</a></li>
+                    <li><a href="13.html">13. Visibility bounds</a></li>
+                    <li><a href="14.html">14. Upper limits</a></li>
+                    <li><a href="15.html" class="active">15. Null tests</a></li>
+                    <li><a href="16.html">16. Conservative reach</a></li>
+                    <li><a href="17.html">17. Extensions</a></li>
+                    <li><a href="18.html">18. Why clocks matter</a></li>
+                    <li><a href="19.html">19. Conclusion</a></li>
+
+                </ul>
+            </aside>
+            
+            <div class="step-content">
+<h1
+id="step-15.-the-data-analysis-bones-whitening-matched-filters-and-what-you-actually-compute">Step
+15. The data-analysis bones: whitening, matched filters, and what you
+actually compute</h1>
+<p>Here’s the nuts-and-bolts workflow the paper prescribes for both
+channels, with the exact objects you build and why.</p>
+<h2 id="inputs-units-youll-use">Inputs &amp; units you’ll use</h2>
+<p>You record the fractional frequency series <span
+class="math inline">\(y(t)\equiv \ln(\nu_\infty/\nu_r)\)</span> and
+adopt one-sided PSDs: <span class="math inline">\(S_y(f)\)</span> in
+Hz<span class="math inline">\(^{-1}\)</span> for the clock and <span
+class="math inline">\(S_\Phi(\Omega)\)</span> in seconds for lapse
+noise; Fourier and filter conventions are explicit in the paper.</p>
+<hr />
+<h2 id="a-flux-drift-lever-a-the-matched-filter-recipe">A) Flux → drift
+(Lever A): the matched-filter recipe</h2>
+<ol type="1">
+<li><p><strong>Whiten the slope.</strong> Differentiate and whiten <span
+class="math inline">\(\dot y(t)\)</span> using the measured <span
+class="math inline">\(S_y(f)\)</span> (one-sided).</p></li>
+<li><p><strong>Build the template primitive.</strong> Form</p></li>
+</ol>
+<p><span class="math display">\[
+s(t)=\int^t L(t&#39;)\,dt&#39;,\quad s(f)=\frac{L(f)}{i\,2\pi f},
+\]</span></p>
+<p>so the prediction <span class="math inline">\(\dot y(t) \approx
+-\lambda\,L(t)\)</span> is linear in <span
+class="math inline">\(\lambda=G/(c^4 r)\)</span>.</p>
+<ol start="3" type="1">
+<li><strong>Estimate &amp; quantify uncertainty.</strong> With
+GLS/whitened matched filter,</li>
+</ol>
+<p><span class="math display">\[
+\mathrm{Var}(\hat\lambda)=\Big[\,2\!\int_0^\infty
+\frac{|s(f)|^2}{S_y(f)}\,df\Big]^{-1}.
+\]</span></p>
+<p>Stacking <span class="math inline">\(M\)</span> flares increases the
+integral by <span class="math inline">\(M\)</span> (hence SNR <span
+class="math inline">\(\propto\sqrt{M}\)</span>); two-clock
+cross-correlation earns another <span
+class="math inline">\(\sqrt2\)</span> for uncorrelated noise.</p>
+<ol start="4" type="1">
+<li><strong>Account for systematics.</strong> Linearized nuisances <span
+class="math inline">\(r\to r(1+\epsilon_r),\, L\to
+L(1+\epsilon_L)\)</span> give</li>
+</ol>
+<p><span class="math display">\[
+\frac{\delta\hat\lambda}{\hat\lambda}\simeq-\epsilon_r-\epsilon_L
+\quad\Rightarrow\quad
+\mathrm{Var}_{\rm tot}\!\left(\hat\lambda\right)\approx
+\mathrm{Var}_{\rm stat}\!+\hat\lambda^2(\sigma_r^2+\sigma_L^2)+\Delta_S,
+\]</span></p>
+<p>with <span class="math inline">\(\Delta_S\)</span> from PSD mis-model
+tests; lab runs are typically dominated by <span
+class="math inline">\(r,L\)</span> calibration.</p>
+<ol start="5" type="1">
+<li><strong>Registered checks.</strong> Pre-register band, vetoes,
+stacking; then execute the four-step “exact analysis recipe” (whiten,
+build <span class="math inline">\(s\)</span>, estimate <span
+class="math inline">\(\lambda\)</span>, quote the variance) and require
+<strong>sign-lock, zero-lag, strict <span
+class="math inline">\(1/r\)</span></strong> in your pass/fail.</li>
+</ol>
+<hr />
+<h2
+id="b-visibility-lever-b-build-the-filter-integrate-the-spectrum-publish-two-bounds">B)
+Visibility (Lever B): build the filter, integrate the spectrum, publish
+two bounds</h2>
+<ol type="1">
+<li><strong>Use the measured timing pattern.</strong> Compute</li>
+</ol>
+<p><span class="math display">\[
+F(\Omega)=\int f_{\rm meas}(t)\,e^{i\Omega t}\,dt ,
+\]</span></p>
+<p>noting that finite rise/fall simply reshapes <span
+class="math inline">\(|F(\Omega)|^2\)</span>; the matched-filter
+integral remains valid (no deconvolution needed).</p>
+<ol start="2" type="1">
+<li><strong>Turn visibility into a bound.</strong> Report the
+<strong>filter-weighted</strong> integral</li>
+</ol>
+<p><span class="math display">\[
+-\ln V=\frac{\omega^2}{2}\int_0^\infty \frac{d\Omega}{2\pi}\,
+S_\Phi(\Omega)\,|F(\Omega)|^2 ,
+\]</span></p>
+<p>and—if you also give a white/low-band approximation—add the
+<strong>Markovian</strong> <span
+class="math inline">\(S_\Phi(0)\)</span> bound for the same data.</p>
+<ol start="3" type="1">
+<li><strong>Common filters.</strong> For Ramsey/Mach–Zehnder of duration
+<span class="math inline">\(T\)</span>:</li>
+</ol>
+<p><span class="math display">\[
+|F(\Omega)|^2=\left(\frac{2\sin(\Omega T/2)}{\Omega}\right)^{\!2},
+\]</span></p>
+<p>which sets the sinc² passband used in the integral.</p>
+<ol start="4" type="1">
+<li><strong>Noise budget disclosure.</strong> List gravity-gradient
+(sub-Hz dominant), stress-tensor (shot/thermal), and vacuum TT
+contributions; provide a source-off baseline and subtraction.</li>
+</ol>
+<p>That’s the full “what you compute” picture; next we can walk through
+an example run end-to-end.</p>
+<hr />
+<h3 id="glossary-for-this-step">Glossary (for this step)</h3>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 17%" />
+<col style="width: 14%" />
+<col style="width: 5%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning (units)</th>
+<th>Typical value/example</th>
+<th>Metaphor</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(y(t)\)</span></td>
+<td>Log redshift</td>
+<td><span class="math inline">\(\ln(\nu_\infty/\nu_r)\)</span> (–)</td>
+<td>Clock output you record</td>
+<td>“Pitch log”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_y(f)\)</span></td>
+<td>Clock PSD</td>
+<td>One-sided PSD of <span class="math inline">\(y\)</span> (Hz<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Used for whitening <span class="math inline">\(\dot y\)</span></td>
+<td>“Noise map of the dial”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\dot y(t)\)</span></td>
+<td>Redshift drift</td>
+<td>Time-slope of <span class="math inline">\(y\)</span> (s<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Cross-correlate with <span class="math inline">\(L(t)\)</span></td>
+<td>“Pitch change rate”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(s(t)\)</span></td>
+<td>Flux primitive</td>
+<td><span class="math inline">\(\int^t\!L(t&#39;)dt&#39;\)</span>
+(J)</td>
+<td><span class="math inline">\(s(f)=L(f)/(i2\pi f)\)</span></td>
+<td>“Cumulative push”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>Gain</td>
+<td><span class="math inline">\(G/(c^4 r)\)</span> (s²·kg<span
+class="math inline">\(^{-1}\)</span>·m<span
+class="math inline">\(^{-1}\)</span>)</td>
+<td>Slope in <span class="math inline">\(\dot y=-\lambda L\)</span></td>
+<td>“Gear ratio”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mathrm{Var}(\hat\lambda)\)</span></td>
+<td>Estimator variance</td>
+<td>From <span class="math inline">\(S_y\)</span> and (</td>
+<td>s(f)</td>
+<td>^2)</td>
+<td>Eq. above</td>
+<td>“Error bar size”</td>
+</tr>
+<tr>
+<td><span class="math inline">\(f(t)\)</span></td>
+<td>Path indicator</td>
+<td>+1/−1 timing pattern (–)</td>
+<td>Ramsey/MZ/echo</td>
+<td>“Which road when”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(F(\Omega)\)</span></td>
+<td>Sequence filter</td>
+<td>FT of <span class="math inline">\(f\)</span> (s)</td>
+<td>sinc² for rectangular</td>
+<td>“Sieve selecting tones”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>Visibility</td>
+<td>Fringe contrast <span class="math inline">\([0,1]\)</span> (–)</td>
+<td>Measured per run</td>
+<td>“Stripe sharpness”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="math inline">\(S_\Phi(\Omega)\)</span></td>
+<td>Lapse PSD</td>
+<td>One-sided spectrum (s)</td>
+<td>Bounded via integral</td>
+<td>“Noise color of time”</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="14.html">← Step 14</a>
+                    <a href="16.html">Step 16 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>
