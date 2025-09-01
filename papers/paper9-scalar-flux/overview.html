@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper IX: The Scalar–Flux Law Overview</title>
+  <link rel="stylesheet" href="/css/main.css">
+  
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> › 
+  <span>Paper IX: Scalar–Flux Law</span> › 
+  <span>Overview</span>
+</div>
+
+    <div class="view-toggle">
+      <a href="#" class="active">Overview</a>
+    </div>
+    
+<h1>The Scalar–Flux Law: A Unifying Principle</h1>
+
+<div class="highlight info">
+  <p><strong>The realization:</strong> Disparate theories, electromagnetism, general relativity, quantum mechanics, fluid dynamics, all share the same mathematical skeleton: <em>scalar constraints fix instantaneous structure, flux laws govern charge evolution, and only transverse modes propagate</em>. This universal pattern explains both conceptual unity and algorithmic efficiency across physics.</p>
+</div>
+
+<h2>Why look for unifying principles?</h2>
+<p>Physics appears fragmented: Maxwell's equations for EM, Einstein's field equations for gravity, Schrödinger's equation for quantum mechanics, Navier-Stokes for fluids. But underneath this apparent diversity lies a common mathematical architecture. The Scalar–Flux Law (SFL) reveals that <strong>constraint physics</strong> follows universal rules, making computational algorithms and physical intuition transferable across domains.</p>
+
+<h2>The law in one line</h2>
+<div class="math">\[
+\boxed{\frac{d}{dt} \int_\Omega q \, dV = - \int_{\partial\Omega} \mathbf{F} \cdot \mathbf{n} \, dS}
+\]</div>
+<p>If scalar potential \(\phi\) satisfies elliptic constraint \(L[\phi] = q\) with boundary data, and charge density \(q\) obeys continuity \(\partial_t q + \nabla \cdot \mathbf{F} = 0\), then:</p>
+<ul>
+  <li><strong>Scalar \(\phi\) is determined instantaneously</strong> (elliptic solve)</li>
+  <li><strong>Total charge changes only by boundary flux</strong> (conservation)</li>
+  <li><strong>Propagating content lives in transverse sector</strong> (divergence-free fields)</li>
+</ul>
+
+<div class="highlight">
+  <p><strong>Core pattern (appears everywhere):</strong></p>
+  <div class="math">\[
+  \boxed{\text{Elliptic constraint} + \text{Flux conservation} = \text{Transverse propagation}}
+  \]</div>
+  <p>Only the transverse (divergence-free) components carry causal information. Scalars enforce compatibility constraints.</p>
+</div>
+
+<h2>Electromagnetic example (Coulomb gauge)</h2>
+<p>Setting \(\nabla \cdot \mathbf{A} = 0\) (Coulomb gauge), Maxwell's equations split cleanly:</p>
+<div class="math">\[
+\nabla^2 \phi = -\frac{\rho}{\varepsilon_0}, \qquad
+\Box \mathbf{A}_T = -\mu_0 \mathbf{J}_T
+\]</div>
+<p>The scalar potential \(\phi\) responds instantaneously to charge \(\rho\) via Poisson's equation. Only the transverse vector potential \(\mathbf{A}_T\) propagates electromagnetic waves. Same pattern: <em>scalar constraint + transverse dynamics</em>.</p>
+
+<h2>General relativity (lapse-first)</h2>
+<p>In temporal geometry, the lapse \(N = e^\Phi\) acts as gravitational "scalar potential." The flux law becomes:</p>
+<div class="math">\[
+\partial_t \Phi = -4\pi G r T^t_r
+\]</div>
+<p>Only <em>actual energy flux</em> can evolve the temporal field \(\Phi\). Gravitational waves live in the transverse tensor modes, not the scalar lapse. Same pattern again: <em>elliptic constraint on time + transverse wave propagation</em>.</p>
+
+<h2>Quantum mechanics (Madelung form)</h2>
+<p>Writing \(\psi = \sqrt{\rho} e^{iS/\hbar}\), Schrödinger's equation becomes hydrodynamic:</p>
+<div class="math">\[
+\partial_t \rho + \nabla \cdot (\rho \mathbf{u}) = 0, \qquad
+Q[\rho] = -\frac{\hbar^2}{2m} \frac{\nabla^2 \sqrt{\rho}}{\sqrt{\rho}}
+\]</div>
+<p>The quantum pressure \(Q[\rho]\) is spatial (no time derivatives), acting like a constraint. Probability flux \(\mathbf{J} = \rho \mathbf{u}\) evolves the density, while quantum corrections remain elliptic. Same pattern: <em>spatial constraint + flux evolution</em>.</p>
+
+<h2>"Why does it work?" ≠ "magic"</h2>
+<p>The SFL isn't mysterious coincidence but mathematical necessity. Three ingredients conspire:</p>
+
+<div class="highlight info">
+  <p><strong>Mathematical skeleton:</strong></p>
+  <ul>
+    <li><strong>Gauge symmetry:</strong> Removes instantaneous degrees of freedom</li>
+    <li><strong>Conservation laws:</strong> Connect local sources to global flux</li>
+    <li><strong>Hodge decomposition:</strong> Splits fields into longitudinal (constraint) + transverse (propagating) parts</li>
+  </ul>
+</div>
+
+<h2>Algorithmic blueprint</h2>
+<p>The SFL provides a universal computational strategy:</p>
+<ol>
+  <li><strong>Solve elliptic constraint:</strong> Find scalar potential from sources</li>
+  <li><strong>Project sources:</strong> Helmholtz/Hodge split into longitudinal + transverse</li>
+  <li><strong>Evolve transverse sector:</strong> Wave equation or gradient flow</li>
+  <li><strong>Reconstruct observables:</strong> Combine scalar + transverse contributions</li>
+  <li><strong>Audit boundary flux:</strong> Check global conservation</li>
+</ol>
+<p>Complexity: Poisson solve \(O(N \log N)\), wave step \(O(N)\). This explains why constraint-based algorithms are efficient.</p>
+
+<h2>Universal predictions</h2>
+<ul>
+  <li><strong>Radiation if and only if transverse source:</strong> Only divergence-free currents generate waves</li>
+  <li><strong>Clean energy audits:</strong> Constraint storage versus radiative work separate naturally</li>
+  <li><strong>One-solve-per-timestep:</strong> Single elliptic solve + explicit wave evolution</li>
+  <li><strong>Gradient flows:</strong> Entropy functionals decrease monotonically when applicable</li>
+</ul>
+
+<h2>Where it breaks (and why that's useful)</h2>
+<ul>
+  <li><strong>Klein-Gordon:</strong> Purely hyperbolic, no constraint structure</li>
+  <li><strong>Non-Abelian gauge:</strong> Works classically but quantum ghosts appear</li>
+  <li><strong>Strong coupling:</strong> Elliptic operator may lose well-posedness</li>
+  <li><strong>Multiply connected domains:</strong> Harmonic modes require global data</li>
+</ul>
+<p>Understanding failure modes sharpens the theory's scope and reveals new physics.</p>
+
+<h2>Five theories, one pattern</h2>
+<div class="math">\begin{align}
+\text{EM:} \quad &\nabla^2 \phi = -\rho/\varepsilon_0, \; \text{waves in } \mathbf{A}_T \\
+\text{GR:} \quad &\partial_t \Phi = -4\pi G r T^t_r \\
+\text{QM:} \quad &\partial_t \rho + \nabla \cdot (\rho \mathbf{u}) = 0; \; Q[\rho] \text{ spatial} \\
+\text{Fluids:} \quad &\nabla^2 p = \text{source}; \; \nabla \cdot \mathbf{u} = 0 \\
+\text{Transport:} \quad &\mu = \delta F/\delta \rho, \; \partial_t \rho = \nabla \cdot (\rho \nabla \mu)
+\end{align}</div>
+
+<h2>Does anything change computationally?</h2>
+<p>Yes, dramatically. Recognizing the SFL structure leads to:</p>
+<ul>
+  <li><strong>Faster algorithms:</strong> Separate constraint solve from wave evolution</li>
+  <li><strong>Better conditioning:</strong> Elliptic solvers are robust; hyperbolic schemes preserve the split</li>
+  <li><strong>Cross-domain intuition:</strong> Techniques from EM transfer to GR, fluid methods apply to quantum systems</li>
+  <li><strong>Energy tracking:</strong> Clean separation between "stored" (constraint) and "flowing" (wave) energy</li>
+</ul>
+
+<h2>Machine-readable structure</h2>
+<p>The SFL provides algorithmic templates that work across physics domains. Whether you're solving Maxwell, Einstein, or Schrödinger, the computational pattern is identical: <em>constraint solve → project → evolve → reconstruct</em>. This universality makes the law practically powerful, not just conceptually elegant.</p>
+
+<div class="highlight success">
+  <p><strong>Bottom line:</strong> The Scalar–Flux Law reveals that constraint physics has universal structure. Recognizing this pattern unifies theory, accelerates computation, and transfers intuition across apparently different domains. When you see elliptic constraints plus flux conservation, you're looking at the same mathematical creature wearing different physical clothes.</p>
+</div>
+
+    <div class="footer">
+      <p><a href="/index.html">Return to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>
