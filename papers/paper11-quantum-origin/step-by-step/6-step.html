@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper XI: Step 6 - Physical Consequences - Decoherence and Clock Correlations</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> ›
+            <a href="/papers/paper11-quantum-origin/step-by-step/index.html">Paper XI: Step-by-Step</a> ›
+            <span>Step 6</span>
+        </div>
+
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. What is a Functional?</a></li>
+                    <li><a href="2-step.html">2. The Physical Motivation</a></li>
+                    <li><a href="3-step.html">3. The Coherence Factor</a></li>
+                    <li><a href="4-step.html">4. Assembling the Redundancy Functional</a></li>
+                    <li><a href="5-step.html">5. The Variational Principle</a></li>
+                    <li><a href="6-step.html" class="active">6. Physical Consequences</a></li>
+                    <li><a href="7-step.html">7. The Emergence of Spacetime Geometry</a></li>
+                </ul>
+            </aside>
+
+            <div class="step-content">
+<h1>Step 6: Physical Consequences - Decoherence and Clock Correlations</h1>
+
+<p>The redundancy functional makes concrete, testable predictions about how quantum systems behave in gravitational fields:</p>
+
+<h3>1. Decoherence Rate</h3>
+
+<p>For a quantum system with frequency \(\omega\) and mass \(M\), the redundancy functional predicts a specific decoherence rate:</p>
+\[\Gamma = \alpha \omega^2 M\]
+
+<p>where \(\alpha = \kappa^2/\xi^3\) is determined by the redundancy parameters.</p>
+
+<p>Key features:</p>
+<ul>
+    <li>Scales as \(\omega^2\) (not \(\omega\)) - higher frequency clocks decohere faster</li>
+    <li>Linear in mass \(M\) (not \(M^2\) as in collapse models)</li>
+    <li>The coefficient \(\alpha\) can be measured experimentally</li>
+</ul>
+
+<h3>2. Spatial Correlations</h3>
+
+<p>The CTP relation \(C[\Phi] = \exp(-|\nabla\Phi|^2/\xi^2)\) connects lapse gradients to coherence quality. Through the constraint \(\Xi = C[\Phi]\), this creates correlations between nearby clocks. Two clocks separated by distance \(L\) experience correlated noise with:</p>
+\[C(L) \propto \exp(-L/\xi_{\text{eff}})\]
+
+<p>where the effective correlation length is:</p>
+\[\xi_{\text{eff}} \sim \frac{c}{\sqrt{8\pi G \rho_{\text{ambient}}}}\]
+
+<h3>3. Observable Effects</h3>
+
+<ul>
+    <li><strong>Visibility loss in interferometers:</strong> \(V = \exp\left[-\frac{1}{2}\omega^2 \int\int C_\Phi(t,t') dt dt'\right]\)</li>
+    <li><strong>Clock network correlations:</strong> Nearby optical clocks show correlated frequency noise</li>
+    <li><strong>Direct measurement of G:</strong> Cross-correlations reveal \(G\) without measuring forces</li>
+</ul>
+
+<h3>The profound implication:</h3>
+<p>These effects show that gravity isn't just about forces and curved spacetime - it's fundamentally about the capacity to maintain temporal coherence. Massive objects create lapse gradients that limit how well nearby quantum systems can keep track of time.</p>
+
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+<col style="width: 20%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(\Gamma\)</td>
+<td>decoherence rate</td>
+<td>rate of quantum coherence loss</td>
+<td>1/time</td>
+<td>"Quantum memory decay rate"</td>
+</tr>
+<tr>
+<td>\(\alpha\)</td>
+<td>decoherence coefficient</td>
+<td>\(\kappa^2/\xi^3\)</td>
+<td>mass⁻¹ time⁻³</td>
+<td>"Quantum fragility factor"</td>
+</tr>
+<tr>
+<td>\(M\)</td>
+<td>mass</td>
+<td>mass of quantum system</td>
+<td>mass</td>
+<td>"Clock weight"</td>
+</tr>
+<tr>
+<td>\(C(L)\)</td>
+<td>correlation function</td>
+<td>correlation between separated clocks</td>
+<td>dimensionless</td>
+<td>"Clock synchronization strength"</td>
+</tr>
+<tr>
+<td>\(\xi_{\text{eff}}\)</td>
+<td>effective correlation length</td>
+<td>\(c/\sqrt{8\pi G \rho}\)</td>
+<td>length</td>
+<td>"Correlation reach"</td>
+</tr>
+<tr>
+<td>\(V\)</td>
+<td>visibility</td>
+<td>interferometer fringe visibility</td>
+<td>0 to 1</td>
+<td>"Quantum pattern clarity"</td>
+</tr>
+<tr>
+<td>\(C_\Phi(t,t')\)</td>
+<td>lapse correlator</td>
+<td>temporal field correlations</td>
+<td>dimensionless</td>
+<td>"Time noise memory"</td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="5-step.html">← Step 5: The Variational Principle</a>
+                    <a href="7-step.html">Step 7: The Emergence of Spacetime Geometry →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

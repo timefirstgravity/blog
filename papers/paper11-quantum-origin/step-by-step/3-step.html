@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper XI: Step 3 - The Coherence Factor - How Lapse Gradients Destroy Records</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> ›
+            <a href="/papers/paper11-quantum-origin/step-by-step/index.html">Paper XI: Step-by-Step</a> ›
+            <span>Step 3</span>
+        </div>
+
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. What is a Functional?</a></li>
+                    <li><a href="2-step.html">2. The Physical Motivation</a></li>
+                    <li><a href="3-step.html" class="active">3. The Coherence Factor</a></li>
+                    <li><a href="4-step.html">4. Assembling the Redundancy Functional</a></li>
+                    <li><a href="5-step.html">5. The Variational Principle</a></li>
+                    <li><a href="6-step.html">6. Physical Consequences</a></li>
+                    <li><a href="7-step.html">7. The Emergence of Spacetime Geometry</a></li>
+                </ul>
+            </aside>
+
+            <div class="step-content">
+<h1>Step 3: The Coherence Factor - How Lapse Gradients Destroy Records</h1>
+
+<p>The third ingredient is crucial: <strong>how do spatial variations in \(\Phi\) affect the ability to maintain coherent records?</strong></p>
+
+<p>Consider two nearby quantum systems separated by distance \(\delta x\). They experience slightly different lapses:</p>
+\[\Phi(x) \text{ vs } \Phi(x + \delta x) \approx \Phi(x) + \nabla\Phi \cdot \delta x\]
+
+<p>This means they accumulate phase at different rates, leading to dephasing. The phase difference grows as:</p>
+\[\Delta\theta \propto \omega (\nabla\Phi \cdot \delta x) \Delta t\]
+
+<h3>The coherence time and CTP relation</h3>
+<p>The coherence time - how long the systems remain correlated - is inversely related to \(|\nabla\Phi|\). We define a coherence factor \(\Xi(x)\) as an independent field, with the coherence-time-potential (CTP) relation connecting it to \(\Phi\):</p>
+\[C[\Phi](x) = \exp\left(-\frac{|\nabla\Phi|^2}{\xi^2}\right)\]
+
+<p>The constraint \(\Xi(x) = C[\Phi](x)\) will be imposed separately via a Lagrange multiplier to avoid circular logic. The CTP relation has key properties:</p>
+<ul>
+    <li>\(C[\Phi] = 1\) when \(\nabla\Phi = 0\) (uniform lapse, perfect coherence)</li>
+    <li>\(C[\Phi] \to 0\) when \(|\nabla\Phi| \gg \xi\) (steep gradients, rapid decoherence)</li>
+    <li>Smooth transition over scale \(\xi\)</li>
+</ul>
+
+<h3>Physical interpretation:</h3>
+<p>Regions with large lapse gradients cannot maintain coherent temporal records. During variational optimization, we treat \(\Xi\) as independent from \(\Phi\), then impose the CTP relation \(\Xi = C[\Phi]\) as a separate constraint. This avoids the circular logic of having \(R\) depend on \(\Phi\) while claiming \(\Phi = \delta R/\delta \rho\).</p>
+
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+<col style="width: 20%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(\Xi(x)\)</td>
+<td>coherence factor</td>
+<td>independent field during variation</td>
+<td>0 to 1 (dimensionless)</td>
+<td>"Temporal record quality"</td>
+</tr>
+<tr>
+<td>\(C[\Phi](x)\)</td>
+<td>CTP relation</td>
+<td>coherence-time-potential mapping</td>
+<td>0 to 1 (dimensionless)</td>
+<td>"Environment-coherence converter"</td>
+</tr>
+<tr>
+<td>\(\nabla\Phi\)</td>
+<td>lapse gradient</td>
+<td>spatial variation of time flow</td>
+<td>1/length</td>
+<td>"Steepness of time hill"</td>
+</tr>
+<tr>
+<td>\(\xi\)</td>
+<td>coherence length</td>
+<td>scale over which coherence decays</td>
+<td>length</td>
+<td>"Range of synchronized clocks"</td>
+</tr>
+<tr>
+<td>\(\Delta\theta\)</td>
+<td>phase difference</td>
+<td>relative phase between systems</td>
+<td>radians</td>
+<td>"Clock desynchronization"</td>
+</tr>
+<tr>
+<td>\(\delta x\)</td>
+<td>separation</td>
+<td>distance between quantum systems</td>
+<td>length</td>
+<td>"Clock spacing"</td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="2-step.html">← Step 2: The Physical Motivation</a>
+                    <a href="4-step.html">Step 4: Assembling the Redundancy Functional →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

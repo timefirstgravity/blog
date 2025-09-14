@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper XI: Step 1 - What is a Functional?</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> ›
+            <a href="/papers/paper11-quantum-origin/step-by-step/index.html">Paper XI: Step-by-Step</a> ›
+            <span>Step 1</span>
+        </div>
+
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html" class="active">1. What is a Functional?</a></li>
+                    <li><a href="2-step.html">2. The Physical Motivation</a></li>
+                    <li><a href="3-step.html">3. The Coherence Factor</a></li>
+                    <li><a href="4-step.html">4. Assembling the Redundancy Functional</a></li>
+                    <li><a href="5-step.html">5. The Variational Principle</a></li>
+                    <li><a href="6-step.html">6. Physical Consequences</a></li>
+                    <li><a href="7-step.html">7. The Emergence of Spacetime Geometry</a></li>
+                </ul>
+            </aside>
+
+            <div class="step-content">
+<h1>Step 1: What is a Functional?</h1>
+
+<p>A <strong>functional</strong> is a mapping from functions to numbers. While a regular function takes numbers as input and outputs numbers, a functional takes an entire function (or functions) as input and outputs a single number.</p>
+
+<h3>Examples:</h3>
+<ul>
+    <li>The arc length of a curve \(y(x)\): \[L[y] = \int \sqrt{1 + \left(\frac{dy}{dx}\right)^2} dx\]</li>
+    <li>The action in mechanics: \[S[q(t)] = \int L(q, \dot{q}, t) dt\]</li>
+    <li>The energy of a field configuration: \[E[\varphi] = \int \frac{1}{2}(\nabla\varphi)^2 d^3x\]</li>
+</ul>
+
+<h3>Notation:</h3>
+<p>We write \(R[\rho, \Phi]\) with square brackets to indicate \(R\) is a functional that takes the entire functions \(\rho(x)\) and \(\Phi(x)\) as inputs and returns a single number.</p>
+
+<h3>Key property:</h3>
+<p>Small changes in the input functions lead to variations:</p>
+\[\delta R = \int \frac{\delta R}{\delta \rho} \delta\rho \, d^3x + \int \frac{\delta R}{\delta \Phi} \delta\Phi \, d^3x\]
+<p>where \(\frac{\delta R}{\delta \rho}\) and \(\frac{\delta R}{\delta \Phi}\) are the functional derivatives - they tell us how the output changes when we slightly modify the input functions at each point.</p>
+
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+<col style="width: 20%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(R[\rho, \Phi]\)</td>
+<td>redundancy functional</td>
+<td>mapping from functions to a number</td>
+<td>dimensionless</td>
+<td>"Total information capacity score"</td>
+</tr>
+<tr>
+<td>\(\rho(x)\)</td>
+<td>matter density</td>
+<td>energy density at position x</td>
+<td>energy/volume</td>
+<td>"How much stuff is here"</td>
+</tr>
+<tr>
+<td>\(\Phi(x)\)</td>
+<td>time potential</td>
+<td>logarithm of lapse function</td>
+<td>dimensionless</td>
+<td>"Altitude of time"</td>
+</tr>
+<tr>
+<td>\(\frac{\delta R}{\delta \rho}\)</td>
+<td>functional derivative</td>
+<td>how R changes with local density</td>
+<td>volume/energy</td>
+<td>"Sensitivity to adding matter"</td>
+</tr>
+<tr>
+<td>\(L[y]\), \(S[q]\), \(E[\varphi]\)</td>
+<td>example functionals</td>
+<td>arc length, action, energy</td>
+<td>various</td>
+<td>"Different ways to score functions"</td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="index.html">← Table of Contents</a>
+                    <a href="2-step.html">Step 2: The Physical Motivation →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper XI: Step 4 - Assembling the Redundancy Functional</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        /* Preserve any pandoc-specific styles */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html#faq-scientists" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/index.html">Home</a> ›
+            <a href="/papers/paper11-quantum-origin/step-by-step/index.html">Paper XI: Step-by-Step</a> ›
+            <span>Step 4</span>
+        </div>
+
+        <div class="step-nav-container">
+            <aside class="step-sidebar">
+                <h3>Steps</h3>
+                <ul class="step-list">
+                    <li><a href="index.html">Table of Contents</a></li>
+                    <li><a href="1-step.html">1. What is a Functional?</a></li>
+                    <li><a href="2-step.html">2. The Physical Motivation</a></li>
+                    <li><a href="3-step.html">3. The Coherence Factor</a></li>
+                    <li><a href="4-step.html" class="active">4. Assembling the Redundancy Functional</a></li>
+                    <li><a href="5-step.html">5. The Variational Principle</a></li>
+                    <li><a href="6-step.html">6. Physical Consequences</a></li>
+                    <li><a href="7-step.html">7. The Emergence of Spacetime Geometry</a></li>
+                </ul>
+            </aside>
+
+            <div class="step-content">
+<h1>Step 4: Assembling the Redundancy Functional</h1>
+
+<p>Now we can combine all three ingredients to build \(R[\rho, \Xi]\) using \(\Xi\) as an independent field:</p>
+
+\[R[\rho, \Xi] = \frac{\kappa T}{2E_c} \int \rho(x) \omega^2(x) \Xi(x) \, d^3x\]
+
+<p>Let's understand each part:</p>
+
+<h3>The integrand: \(\rho(x) \omega^2(x) \Xi(x)\)</h3>
+<ul>
+    <li><strong>\(\rho(x)\)</strong>: Amount of matter at location \(x\) (more matter → more capacity)</li>
+    <li><strong>\(\omega^2(x)\)</strong>: Frequency squared of local oscillators (higher frequency → more temporal resolution but also more sensitivity)</li>
+    <li><strong>\(\Xi(x)\)</strong>: Coherence quality factor (treated as independent field during variation)</li>
+</ul>
+
+<h3>The prefactor: \(\kappa T/(2E_c)\)</h3>
+<ul>
+    <li><strong>\(\kappa\)</strong>: Fundamental coupling constant (dimensionless, sets the strength of redundancy effects)</li>
+    <li><strong>\(T\)</strong>: Temperature or characteristic time scale</li>
+    <li><strong>\(E_c\)</strong>: Characteristic energy scale (like \(mc^2\) for particles)</li>
+    <li>This makes \(R\) dimensionless when \(\rho\) has units of energy density</li>
+</ul>
+
+<h3>The integral:</h3>
+<p>We sum over all space because redundancy is a global property - it counts the total capacity of the entire system to maintain temporal records.</p>
+
+<h3>Physical meaning:</h3>
+<p>\(R[\rho, \Xi]\) is large when:</p>
+<ul>
+    <li>Matter is distributed in regions with high coherence quality (high \(\Xi\))</li>
+    <li>The matter has appropriate frequencies (balanced \(\omega^2\))</li>
+    <li>There's sufficient total matter (integral of \(\rho\))</li>
+</ul>
+
+<p>The connection to time geometry comes through the constraint \(\Xi = C[\Phi]\), which will be imposed separately via Lagrange multiplier. This avoids circular dependence while preserving the physical insight that temporal geometry affects information storage capacity.</p>
+
+<h4 id="mini-glossary">Mini-Glossary</h4>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+<col style="width: 20%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Value / Units</th>
+<th>Metaphor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(R[\rho, \Xi]\)</td>
+<td>redundancy functional</td>
+<td>total temporal record capacity</td>
+<td>dimensionless</td>
+<td>"Universe's information score"</td>
+</tr>
+<tr>
+<td>\(\kappa\)</td>
+<td>coupling constant</td>
+<td>strength of redundancy effects</td>
+<td>dimensionless</td>
+<td>"Information storage efficiency"</td>
+</tr>
+<tr>
+<td>\(T\)</td>
+<td>temperature/time scale</td>
+<td>characteristic thermal or temporal scale</td>
+<td>energy or time</td>
+<td>"System temperature"</td>
+</tr>
+<tr>
+<td>\(E_c\)</td>
+<td>characteristic energy</td>
+<td>energy scale (like \(mc^2\))</td>
+<td>energy</td>
+<td>"Natural energy unit"</td>
+</tr>
+<tr>
+<td>\(\omega^2(x)\)</td>
+<td>frequency squared</td>
+<td>oscillation rate squared</td>
+<td>(radians/time)²</td>
+<td>"Clock precision squared"</td>
+</tr>
+<tr>
+<td>\(\Xi(x)\)</td>
+<td>coherence factor</td>
+<td>independent quality field</td>
+<td>0 to 1</td>
+<td>"Record keeping quality"</td>
+</tr>
+</tbody>
+</table>
+
+                <div class="chapter-nav">
+                    <a href="3-step.html">← Step 3: The Coherence Factor</a>
+                    <a href="5-step.html">Step 5: The Variational Principle →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Published via GitHub Pages | <a href="/index.html">Return to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

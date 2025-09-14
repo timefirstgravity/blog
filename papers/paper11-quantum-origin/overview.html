@@ -37,7 +37,8 @@
 </div>
 
     <div class="view-toggle">
-      <a href="#" class="active">Overview</a>
+      <a href="/papers/paper11-quantum-origin/overview.html" class="active">Overview</a>
+      <a href="/papers/paper11-quantum-origin/step-by-step/index.html">Step-by-Step</a>
     </div>
     
 <h1>The Quantum Origin of Classical Spacetime</h1>
@@ -51,31 +52,38 @@
 
 <h2>The redundancy principle</h2>
 <div class="math">\[
-\boxed{F[\rho,\Phi] = E[\rho,\Phi] - R[\rho;\Phi]}
+\boxed{F[\rho,\Phi,\Xi,\Lambda] = E[\rho,\Phi] - \Theta R[\rho;\Xi] + \int d^3x\, \Lambda(x)[\Xi(x) - C[\Phi](x)]}
 \]</div>
-<p>Matter minimizes a variational functional combining energy cost \(E\) and redundancy benefit \(R\). The redundancy functional counts the capacity to form correlated temporal records:</p>
+<p>Matter minimizes a constrained variational functional. To avoid circular logic, we treat the coherence factor \(\Xi\) as an independent field during variation, with the coherence-time-potential (CTP) relation \(\Xi = C[\Phi]\) imposed as a separate constraint via Lagrange multiplier \(\Lambda(x)\).</p>
 <div class="math">\[
-R[\rho; \Phi] = \frac{\kappa T}{2E_c} \int d^3x\, \rho(x) \, \omega^2(x) \, \Xi_{\Phi}(x)
+R[\rho; \Xi] = \frac{\kappa T}{2E_c} \int d^3x\, \rho(x) \, \omega^2(x) \, \Xi(x)
 \]</div>
 <ul>
   <li><strong>\(\rho(x)\):</strong> Matter density</li>
   <li><strong>\(\omega(x)\):</strong> Local clock frequency</li>
-  <li><strong>\(\Xi_{\Phi}(x)\):</strong> Coherence time from lapse fluctuations</li>
+  <li><strong>\(\Xi(x)\):</strong> Coherence factor (independent field during variation)</li>
+  <li><strong>\(C[\Phi](x)\):</strong> CTP relation \(= \exp(-|\nabla\Phi|^2/\xi^2)\)</li>
 </ul>
 
 <div class="highlight">
   <p><strong>Optimality conditions (Einstein's equations emerge):</strong></p>
   <div class="math">\[
-  \frac{\delta F}{\delta \rho} = 0: \quad \Phi = \frac{\delta R}{\delta \rho}
+  \frac{\delta F}{\delta \rho} = 0: \quad \frac{\delta E}{\delta \rho} = \Theta \frac{\delta R}{\delta \rho}
   \]</div>
   <div class="math">\[
   \frac{\delta F}{\delta \Phi} = 0: \quad \nabla^2 \Phi = \frac{8\pi G}{c^4}\rho
   \]</div>
-  <p>The Poisson equation for gravity falls out as the condition for optimal redundancy storage.</p>
+  <div class="math">\[
+  \frac{\delta F}{\delta \Xi} = 0: \quad \Lambda(x) = \Theta \frac{\delta R}{\delta \Xi}
+  \]</div>
+  <div class="math">\[
+  \frac{\delta F}{\delta \Lambda} = 0: \quad \Xi(x) = C[\Phi](x)
+  \]</div>
+  <p>The Poisson equation for gravity emerges from the constrained optimization, avoiding circular dependence.</p>
 </div>
 
 <h2>Quantum lapse fluctuations drive everything</h2>
-<p>In quantum gravity, the lapse \(N = e^{\Phi}\) fluctuates quantum-mechanically. These fluctuations create a noise environment that affects all clocks. The temporal potential \(\Phi\) mediates correlations between quantum clocks, and matter organizes to exploit these correlations for maximum information storage.</p>
+<p>In quantum gravity, the lapse \(N = e^{\Phi}\) fluctuates quantum-mechanically. The quantum thermal bath couples to proper time increments \(\delta\tau_c = N(x)dt\) rather than to \(\Phi\) itself, creating a noise environment that affects all clocks. The temporal potential \(\Phi\) mediates correlations between quantum clocks through the CTP relation \(C[\Phi] = \exp(-|\nabla\Phi|^2/\xi^2)\), and matter organizes to exploit these correlations for maximum information storage.</p>
 
 <h2>The flux law (time evolution)</h2>
 <p>While the Poisson equation gives equilibrium, time evolution follows the flux law from temporal geometry:</p>
