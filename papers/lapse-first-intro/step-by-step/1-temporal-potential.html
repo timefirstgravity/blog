@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1: The Temporal Potential Φ - Lapse-First GR</title>
+  <link rel="stylesheet" href="/css/main.css">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="/papers.html" class="nav-link">Papers</a>
+        </li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> ›
+  <a href="/papers/lapse-first-intro/step-by-step/index.html">Lapse-First Introduction</a> ›
+  <span>Chapter 1</span>
+</div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="/papers/lapse-first-intro/step-by-step/index.html">Table of Contents</a></li>
+          <li class="active"><a href="/papers/lapse-first-intro/step-by-step/1-temporal-potential.html">1. The Temporal Potential Φ</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/2-lapse-to-potential.html">2. From Lapse N to Potential Φ</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/3-adm-decomposition.html">3. The ADM Decomposition</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/4-flux-law.html">4. The Flux Law</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/5-determining-phi.html">5. What Determines Φ?</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/6-applications.html">6. Real-World Applications</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/7-comparisons.html">7. Comparisons and Insights</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 1: The Temporal Potential Φ</h1>
+
+        <div class="highlight info">
+          <p><strong>Core Concept:</strong> The temporal potential Φ is a scalar field that controls the rate of proper time flow relative to coordinate time. It's the fundamental field in lapse-first GR, encoding gravity as temporal geometry.</p>
+        </div>
+
+        <h2>What Does Φ Represent Physically?</h2>
+
+        <p>At every point (t, x, y, z) in spacetime, there's a single number Φ:</p>
+
+        <div class="math">\[
+        \Phi(t, x, y, z) = \text{a real number at each point}
+        \]</div>
+
+        <p>This creates a "temporal landscape" - imagine a 3D contour map where each point has a "time depth" value. The temporal potential Φ controls how fast or slow time flows at each location in space.</p>
+
+        <h3>The Fundamental Relationship</h3>
+
+        <p>The connection between proper time (τ) and coordinate time (t) is:</p>
+
+        <div class="math">\[
+        d\tau = e^{\Phi} dt
+        \]</div>
+
+        <p>This means:</p>
+        <ul>
+          <li>When Φ = 0: Proper time equals coordinate time (normal flow)</li>
+          <li>When Φ < 0: Proper time runs slower than coordinate time</li>
+          <li>When Φ > 0: Proper time runs faster than coordinate time</li>
+        </ul>
+
+        <h2>The Gravitational Well Metaphor</h2>
+
+        <p>Think of Φ as the <strong>depth of a gravitational well</strong>:</p>
+
+        <div class="highlight">
+          <p><strong>Metaphor:</strong> Imagine standing on a landscape where the elevation represents Φ. The deeper you go into a valley (more negative Φ), the slower time runs. At the peaks (less negative or positive Φ), time runs faster.</p>
+        </div>
+
+        <h3>Key Properties of the Well</h3>
+        <ul>
+          <li><strong>At infinity (flat spacetime):</strong> Φ = 0, time runs normally</li>
+          <li><strong>Near a massive object:</strong> Φ < 0, creating a "temporal valley"</li>
+          <li><strong>Deeper in the well:</strong> More negative Φ, slower time flow</li>
+          <li><strong>At a black hole horizon:</strong> Φ → -∞, time stops completely</li>
+        </ul>
+
+        <h2>How Φ Varies in Space</h2>
+
+        <h3>Around a Spherical Mass</h3>
+
+        <p>For a spherical mass M in empty space, the temporal potential follows:</p>
+
+        <div class="math">\[
+        \Phi(r) = \frac{1}{2} \ln\left(1 - \frac{2GM}{c^2 r}\right)
+        \]</div>
+
+        <p>In the weak field limit (far from the mass):</p>
+
+        <div class="math">\[
+        \Phi(r) \approx -\frac{GM}{c^2 r}
+        \]</div>
+
+        <p>Notice that:</p>
+        <ul>
+          <li>Φ becomes more negative as you approach the mass</li>
+          <li>Φ approaches 0 as r → ∞</li>
+          <li>The potential falls off as 1/r, just like Newtonian gravity</li>
+        </ul>
+
+        <h3>Superposition in Weak Fields</h3>
+
+        <p>For multiple masses in the weak field limit, the potentials approximately add:</p>
+
+        <div class="math">\[
+        \Phi_{\text{total}} \approx \Phi_{\text{mass 1}} + \Phi_{\text{mass 2}} + ...
+        \]</div>
+
+        <p>This is similar to how electric potentials add in electrostatics, making calculations much simpler than working with the full tensor formalism.</p>
+
+        <h2>Connection to Time Dilation</h2>
+
+        <p>The famous gravitational time dilation formula emerges naturally from Φ:</p>
+
+        <div class="highlight info">
+          <p><strong>Time Dilation Factor:</strong></p>
+          <div class="math">\[
+          \frac{d\tau}{dt} = e^{\Phi}
+          \]</div>
+          <p>A clock at position with potential Φ runs at rate e^Φ compared to a clock at infinity.</p>
+        </div>
+
+        <h3>Examples</h3>
+
+        <p><strong>Twin Paradox (Gravitational Version):</strong></p>
+        <p>If one twin stays on Earth's surface (Φ ≈ -6.95 × 10^-10) while another goes to deep space (Φ ≈ 0), after many years:</p>
+        <ul>
+          <li>The Earth twin ages slightly less</li>
+          <li>The difference is tiny: about 1 second per 45 years</li>
+          <li>But atomic clocks can measure this difference in just days!</li>
+        </ul>
+
+        <h2>Φ as a Scalar Field</h2>
+
+        <p>Unlike the full metric tensor with 10 components, Φ is just one number at each point. This dramatic simplification is possible because:</p>
+
+        <ol>
+          <li><strong>Spherical symmetry</strong> reduces the degrees of freedom</li>
+          <li><strong>The diagonal gauge</strong> eliminates cross terms</li>
+          <li><strong>The constraint γ_rr = e^(-2Φ)</strong> links space to time</li>
+        </ol>
+
+        <h3>Key Properties of This Scalar Field</h3>
+
+        <ul>
+          <li><strong>Non-local influence:</strong> A mass at one point affects Φ everywhere</li>
+          <li><strong>No shielding:</strong> You can't block gravitational time dilation</li>
+          <li><strong>Always defined:</strong> Even in "empty" space, Φ has a value</li>
+          <li><strong>Continuous:</strong> Φ varies smoothly except at singularities</li>
+        </ul>
+
+        <h2>The Insight: Gravity is Temporal Geometry</h2>
+
+        <p>The lapse-first formulation reveals that gravity is fundamentally about the geography of time:</p>
+
+        <div class="highlight">
+          <p><strong>Key Insight:</strong> Mass doesn't "pull" on objects through a force. Instead, mass creates regions where time flows differently. Objects follow paths through this temporal landscape, which we perceive as gravitational attraction.</p>
+        </div>
+
+        <p>This single scalar field Φ encodes all of gravity's effects in spherical symmetry:</p>
+        <ul>
+          <li>Gravitational redshift: Light frequency shifts by e^Φ</li>
+          <li>Time dilation: Clocks run at rate e^Φ</li>
+          <li>Orbital motion: Objects follow geodesics in the Φ-landscape</li>
+          <li>Event horizons: Where Φ → -∞</li>
+        </ul>
+
+        <h2>Summary</h2>
+
+        <p>The temporal potential Φ is the heart of lapse-first GR. It's a scalar field that:</p>
+        <ul>
+          <li>Controls the flow of proper time at each point in space</li>
+          <li>Acts like the depth of a gravitational well</li>
+          <li>Simplifies gravity from 10 tensor components to 1 scalar</li>
+          <li>Makes the temporal nature of gravity manifest</li>
+        </ul>
+
+        <p>In the next chapter, we'll explore why we use the exponential relationship N = e^Φ and the mathematical benefits this brings.</p>
+
+        <div class="chapter-nav">
+          <a href="/papers/lapse-first-intro/step-by-step/index.html">← Table of Contents</a>
+          <a href="/papers/lapse-first-intro/step-by-step/2-lapse-to-potential.html">Chapter 2 →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

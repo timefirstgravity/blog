@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 5: What Determines Φ? - Lapse-First GR</title>
+  <link rel="stylesheet" href="/css/main.css">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="/papers.html" class="nav-link">Papers</a>
+        </li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> ›
+  <a href="/papers/lapse-first-intro/step-by-step/index.html">Lapse-First Introduction</a> ›
+  <span>Chapter 5</span>
+</div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="/papers/lapse-first-intro/step-by-step/index.html">Table of Contents</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/1-temporal-potential.html">1. The Temporal Potential Φ</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/2-lapse-to-potential.html">2. From Lapse N to Potential Φ</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/3-adm-decomposition.html">3. The ADM Decomposition</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/4-flux-law.html">4. The Flux Law</a></li>
+          <li class="active"><a href="/papers/lapse-first-intro/step-by-step/5-determining-phi.html">5. What Determines Φ?</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/6-applications.html">6. Real-World Applications</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/7-comparisons.html">7. Comparisons and Insights</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 5: What Determines Φ?</h1>
+
+        <div class="highlight info">
+          <p><strong>Key Question:</strong> How do we actually find the value of Φ at any given point in spacetime? The answer involves two contributions: static effects from mass distributions and dynamic effects from energy flows.</p>
+        </div>
+
+        <h2>The Complete Picture</h2>
+
+        <p>The value of the temporal potential Φ at any point is determined by Einstein's equations, which connect geometry to matter and energy. Unlike electromagnetism where you might "choose" the potential, in gravity <strong>Einstein's equations determine Φ</strong> based on:</p>
+
+        <ol>
+          <li><strong>Where the matter/energy is located</strong> (static contribution)</li>
+          <li><strong>How the matter/energy is moving</strong> (dynamic contribution)</li>
+          <li><strong>Boundary conditions</strong> (what happens at infinity or other boundaries)</li>
+        </ol>
+
+        <p>Let's explore each of these systematically.</p>
+
+        <h2>1. Static Contribution: The Poisson Equation</h2>
+
+        <p>When matter is present but not flowing radially, Φ satisfies a Poisson-like equation:</p>
+
+        <div class="math">\[
+        \nabla^2 \Phi = \frac{4\pi G}{c^2} \rho
+        \]</div>
+
+        <p>This is remarkably similar to:</p>
+        <ul>
+          <li><strong>Electrostatics:</strong> ∇²V = -ρₑ/ε₀ (electric potential from charge density)</li>
+          <li><strong>Newtonian gravity:</strong> ∇²φ = 4πGρ (gravitational potential from mass density)</li>
+        </ul>
+
+        <h3>Physical Interpretation</h3>
+
+        <div class="highlight">
+          <p><strong>The Poisson Equation for Φ:</strong> Mass density ρ acts as a "source" for the temporal potential, just like charge density sources electric potential.</p>
+        </div>
+
+        <h3>Solution for Spherical Mass</h3>
+
+        <p>For a spherically symmetric mass M, the solution is:</p>
+
+        <div class="math">\[
+        \Phi(r) = \frac{1}{2} \ln\left(1 - \frac{2GM}{c^2 r}\right)
+        \]</div>
+
+        <p>This is the exact Schwarzschild solution! In the weak field limit (far from the mass):</p>
+
+        <div class="math">\[
+        \Phi(r) \approx -\frac{GM}{c^2 r}
+        \]</div>
+
+        <h4>Key Properties</h4>
+        <ul>
+          <li><strong>Φ → 0 as r → ∞:</strong> Potential vanishes at infinity</li>
+          <li><strong>Φ < 0 everywhere:</strong> Masses create "temporal wells"</li>
+          <li><strong>1/r falloff:</strong> Same as Newtonian gravity</li>
+          <li><strong>Logarithmic divergence:</strong> Φ → -∞ at r = 2GM/c² (Schwarzschild radius)</li>
+        </ul>
+
+        <h3>Superposition in Weak Fields</h3>
+
+        <p>For multiple masses in the weak field limit, potentials approximately add:</p>
+
+        <div class="math">\[
+        \Phi_{\text{total}}(r) \approx -\frac{G}{c^2} \sum_i \frac{M_i}{|\vec{r} - \vec{r}_i|}
+        \]</div>
+
+        <p>This makes calculations much simpler than working with the full nonlinear Einstein equations.</p>
+
+        <h2>2. Dynamic Contribution: The Flux Law</h2>
+
+        <p>When energy flows, Φ changes according to the flux law we learned in Chapter 4:</p>
+
+        <div class="math">\[
+        \frac{\partial \Phi}{\partial t} = -\frac{4\pi G}{c^4} r T^{tr}
+        \]</div>
+
+        <h3>Integration Over Time</h3>
+
+        <p>If we know the energy flux history, we can integrate to find how Φ evolves:</p>
+
+        <div class="math">\[
+        \Phi(t, r) = \Phi(t_0, r) - \frac{4\pi G}{c^4} r \int_{t_0}^t T^{tr}(t', r) dt'
+        \]</div>
+
+        <h3>Physical Examples</h3>
+
+        <h4>Accretion onto Black Hole</h4>
+        <ul>
+          <li><strong>Energy flux:</strong> T^{tr} < 0 (inward flow)</li>
+          <li><strong>Evolution:</strong> ∂_t Φ > 0 (Φ increases)</li>
+          <li><strong>Result:</strong> Black hole mass grows, event horizon expands</li>
+        </ul>
+
+        <h4>Supernova Explosion</h4>
+        <ul>
+          <li><strong>Energy flux:</strong> T^{tr} > 0 (outward flow)</li>
+          <li><strong>Evolution:</strong> ∂_t Φ < 0 (Φ decreases)</li>
+          <li><strong>Result:</strong> Effective mass decreases as energy escapes</li>
+        </ul>
+
+        <h2>3. Boundary Conditions</h2>
+
+        <p>To solve for Φ uniquely, we need boundary conditions. The choice depends on the physical situation:</p>
+
+        <h3>Asymptotic Flatness (Isolated Objects)</h3>
+        <p>For isolated systems like stars or black holes:</p>
+        <div class="math">\[
+        \Phi \to 0 \text{ as } r \to \infty
+        \]</div>
+        <p>This ensures spacetime becomes flat far from the source.</p>
+
+        <h3>Cosmological Setting (Homogeneous Universe)</h3>
+        <p>In cosmology, we typically normalize at the present time:</p>
+        <div class="math">\[
+        \Phi(t_0) = 0 \text{ (today)}
+        \]</div>
+        <p>where t₀ is the present cosmic time.</p>
+
+        <h3>Surface Boundary Conditions</h3>
+        <p>At the surface of a star or other object, Φ must match smoothly to the interior solution.</p>
+
+        <h2>Practical Algorithm to Find Φ</h2>
+
+        <p>Here's a step-by-step approach to determine Φ in any situation:</p>
+
+        <h3>Step 1: Identify Your Setup</h3>
+        <ul>
+          <li><strong>Static mass distribution?</strong> → Use Poisson equation</li>
+          <li><strong>Energy flowing?</strong> → Use flux law</li>
+          <li><strong>Cosmological problem?</strong> → Use scale factor relation</li>
+          <li><strong>Time-dependent masses?</strong> → Combine both approaches</li>
+        </ul>
+
+        <h3>Step 2: Write the Relevant Equation</h3>
+
+        <h4>For Static Problems:</h4>
+        <div class="math">\[
+        \nabla^2 \Phi = \frac{4\pi G}{c^2} \rho
+        \]</div>
+
+        <h4>For Dynamic Problems:</h4>
+        <div class="math">\[
+        \frac{\partial \Phi}{\partial t} = -\frac{4\pi G}{c^4} r T^{tr}
+        \]</div>
+
+        <h4>For Combined Problems:</h4>
+        <p>Solve the Poisson equation at each time slice, then evolve using the flux law.</p>
+
+        <h3>Step 3: Apply Boundary Conditions</h3>
+        <ul>
+          <li>Usually Φ → 0 at infinity for isolated systems</li>
+          <li>Or normalize at some reference point/time</li>
+          <li>Ensure continuity across boundaries</li>
+        </ul>
+
+        <h3>Step 4: Solve</h3>
+        <ul>
+          <li><strong>Analytically:</strong> For simple cases (spherical masses, etc.)</li>
+          <li><strong>Numerically:</strong> For complex matter distributions or time-dependent problems</li>
+        </ul>
+
+        <h2>Specific Solutions</h2>
+
+        <h3>1. Vacuum Around Spherical Mass (Schwarzschild)</h3>
+        <div class="math">\[
+        \Phi(r) = \frac{1}{2} \ln\left(1 - \frac{2GM}{c^2 r}\right)
+        \]</div>
+
+        <h3>2. Weak Field Approximation</h3>
+        <div class="math">\[
+        \Phi(r) \approx -\frac{GM}{c^2 r}
+        \]</div>
+
+        <h3>3. Uniform Density Sphere (Interior)</h3>
+        <p>Inside a uniform density sphere of radius R:</p>
+        <div class="math">\[
+        \Phi(r) = -\frac{2\pi G \rho}{3c^2}(3R^2 - r^2) + \text{constant}
+        \]</div>
+
+        <h3>4. Cosmological (Friedmann Universe)</h3>
+        <p>In an expanding universe with scale factor a(t):</p>
+        <div class="math">\[
+        \Phi = -\ln(a) \text{ or } a = e^{-\Phi}
+        \]</div>
+
+        <h3>5. Vaidya Solution (Null Radiation)</h3>
+        <p>For a mass function M(t) with null radiation:</p>
+        <div class="math">\[
+        \Phi(t,r) = \frac{1}{2} \ln\left(1 - \frac{2GM(t)}{c^2 r}\right)
+        \]</div>
+
+        <h2>The Role of Matter Types</h2>
+
+        <p>Different types of matter contribute differently to Φ:</p>
+
+        <h3>Dust (Pressureless Matter)</h3>
+        <ul>
+          <li><strong>Static contribution:</strong> ρc² in Poisson equation</li>
+          <li><strong>Dynamic contribution:</strong> Only if flowing radially</li>
+          <li><strong>Example:</strong> Dark matter, slow-moving stellar material</li>
+        </ul>
+
+        <h3>Radiation (Photons, Neutrinos)</h3>
+        <ul>
+          <li><strong>Static contribution:</strong> Energy density ρc²</li>
+          <li><strong>Dynamic contribution:</strong> Large T^{tr} for radial propagation</li>
+          <li><strong>Example:</strong> Light from stars, cosmic microwave background</li>
+        </ul>
+
+        <h3>Perfect Fluid</h3>
+        <ul>
+          <li><strong>Static contribution:</strong> (ρ + 3P/c²)c² in general</li>
+          <li><strong>Dynamic contribution:</strong> Depends on flow pattern</li>
+          <li><strong>Example:</strong> Stellar interiors, relativistic gases</li>
+        </ul>
+
+        <h2>Computational Considerations</h2>
+
+        <h3>Numerical Evolution</h3>
+        <p>For complex problems, we can evolve Φ numerically:</p>
+        <ol>
+          <li>Start with initial Φ distribution (from Poisson equation)</li>
+          <li>Compute energy fluxes T^{tr} from matter dynamics</li>
+          <li>Evolve Φ using flux law: Φⁿ⁺¹ = Φⁿ - Δt × (4πG/c⁴) r T^{tr}</li>
+          <li>Update matter dynamics in new gravitational field</li>
+          <li>Repeat</li>
+        </ol>
+
+        <h3>Convergence and Stability</h3>
+        <p>The flux law evolution is generally more stable than full metric evolution because:</p>
+        <ul>
+          <li>It's first-order in time (not second-order like metric evolution)</li>
+          <li>It's linear in Φ (not nonlinear like Einstein equations)</li>
+          <li>Gauge issues are minimized in the diagonal form</li>
+        </ul>
+
+        <h2>Connection to Energy Conservation</h2>
+
+        <p>The determination of Φ respects energy conservation automatically. The continuity equation:</p>
+
+        <div class="math">\[
+        \frac{\partial \rho}{\partial t} + \frac{1}{r^2} \frac{\partial}{\partial r}(r^2 T^{tr}/c^2) = 0
+        \]</div>
+
+        <p>ensures that energy density and energy flux are consistently related. When combined with the flux law, this guarantees that energy is conserved as Φ evolves.</p>
+
+        <h2>Quick Reference: Common Scenarios</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Equation to Use</th>
+              <th>Key Physics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Static star</td>
+              <td>∇²Φ = 4πGρ/c²</td>
+              <td>Mass creates temporal well</td>
+            </tr>
+            <tr>
+              <td>Stellar collapse</td>
+              <td>∂_t Φ = -(4πG/c⁴) r T^{tr}</td>
+              <td>Infall deepens well</td>
+            </tr>
+            <tr>
+              <td>Supernova</td>
+              <td>∂_t Φ = -(4πG/c⁴) r T^{tr}</td>
+              <td>Outflow shallows well</td>
+            </tr>
+            <tr>
+              <td>Black hole accretion</td>
+              <td>Both equations</td>
+              <td>Growing mass + infall</td>
+            </tr>
+            <tr>
+              <td>Expanding universe</td>
+              <td>Φ = -ln(a)</td>
+              <td>Scale factor evolution</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>The Key Insight</h2>
+
+        <div class="highlight">
+          <p><strong>Fundamental Point:</strong> You don't choose Φ arbitrarily. Einstein's equations determine it uniquely based on the matter and energy distribution, just like Maxwell's equations determine the electric potential from the charge distribution.</p>
+        </div>
+
+        <p>The beautiful thing about the lapse-first approach is that this determination becomes much more transparent:</p>
+        <ul>
+          <li><strong>Static matter:</strong> Solve one Poisson equation</li>
+          <li><strong>Energy flow:</strong> Integrate one flux law equation</li>
+          <li><strong>Combined:</strong> Use both equations together</li>
+        </ul>
+
+        <p>Compare this to solving 10 coupled nonlinear Einstein field equations!</p>
+
+        <h2>Summary</h2>
+
+        <p>The value of Φ is determined by a combination of:</p>
+
+        <ul>
+          <li><strong>Static contribution:</strong> Mass distributions via ∇²Φ = 4πGρ/c²</li>
+          <li><strong>Dynamic contribution:</strong> Energy flows via ∂_t Φ = -(4πG/c⁴) r T^{tr}</li>
+          <li><strong>Boundary conditions:</strong> Usually Φ → 0 at infinity</li>
+        </ul>
+
+        <p>The resulting temporal potential then determines all gravitational effects: time dilation, redshift, orbital dynamics, and event horizons. This makes Φ the central quantity that encodes gravity as temporal geometry.</p>
+
+        <p>In the next chapter, we'll see how these principles work out in real-world applications, from GPS satellites to neutron stars to cosmology.</p>
+
+        <div class="chapter-nav">
+          <a href="/papers/lapse-first-intro/step-by-step/4-flux-law.html">← Chapter 4</a>
+          <a href="/papers/lapse-first-intro/step-by-step/6-applications.html">Chapter 6 →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

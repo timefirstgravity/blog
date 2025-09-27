@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 4: The Flux Law - Lapse-First GR</title>
+  <link rel="stylesheet" href="/css/main.css">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="/papers.html" class="nav-link">Papers</a>
+        </li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> ›
+  <a href="/papers/lapse-first-intro/step-by-step/index.html">Lapse-First Introduction</a> ›
+  <span>Chapter 4</span>
+</div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="/papers/lapse-first-intro/step-by-step/index.html">Table of Contents</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/1-temporal-potential.html">1. The Temporal Potential Φ</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/2-lapse-to-potential.html">2. From Lapse N to Potential Φ</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/3-adm-decomposition.html">3. The ADM Decomposition</a></li>
+          <li class="active"><a href="/papers/lapse-first-intro/step-by-step/4-flux-law.html">4. The Flux Law</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/5-determining-phi.html">5. What Determines Φ?</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/6-applications.html">6. Real-World Applications</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/7-comparisons.html">7. Comparisons and Insights</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 4: The Flux Law</h1>
+
+        <div class="highlight info">
+          <p><strong>The Heart of Lapse-First GR:</strong> The flux law connects energy flow to temporal evolution. It tells us that only actual energy flux can change the flow of time, making the temporal nature of gravity explicit.</p>
+        </div>
+
+        <h2>The Fundamental Equation</h2>
+
+        <p>At the core of lapse-first GR lies a beautiful and simple equation:</p>
+
+        <div class="math">\[
+        \boxed{\partial_t \Phi = -\frac{4\pi G}{c^4} r T^{tr}}
+        \]</div>
+
+        <p>This is the <strong>flux law</strong>. Let's understand what each piece means and why this equation is so profound.</p>
+
+        <h2>Breaking Down the Equation</h2>
+
+        <h3>Left Side: ∂_t Φ</h3>
+        <p><strong>∂_t Φ</strong> = Rate of change of the temporal potential with time</p>
+        <ul>
+          <li>How fast the "temporal landscape" is changing</li>
+          <li>Positive: Temporal potential increasing (gravity weakening)</li>
+          <li>Negative: Temporal potential decreasing (gravity strengthening)</li>
+          <li>Zero: No change (static spacetime)</li>
+        </ul>
+
+        <h3>Right Side Components</h3>
+
+        <h4>The Constants: -4πG/c⁴</h4>
+        <ul>
+          <li><strong>G:</strong> Newton's gravitational constant</li>
+          <li><strong>c:</strong> Speed of light</li>
+          <li><strong>4π:</strong> Geometric factor from spherical geometry</li>
+          <li><strong>Minus sign:</strong> Ensures correct physical behavior</li>
+        </ul>
+
+        <h4>The Radius: r</h4>
+        <p>The areal radius - defined so spheres have area 4πr². This factor accounts for the spherical geometry.</p>
+
+        <h4>The Energy Flux: T^{tr}</h4>
+        <p><strong>T^{tr}</strong> = Radial energy flux density</p>
+
+        <div class="highlight">
+          <p><strong>Physical Meaning of T^{tr}:</strong></p>
+          <p>T^{tr} measures the flow of energy through spherical surfaces at radius r. It's the amount of energy crossing unit area per unit time in the radial direction.</p>
+        </div>
+
+        <ul>
+          <li><strong>T^{tr} > 0:</strong> Energy flowing outward (radiation, explosion)</li>
+          <li><strong>T^{tr} < 0:</strong> Energy flowing inward (accretion, collapse)</li>
+          <li><strong>T^{tr} = 0:</strong> No radial energy flow (static or purely tangential motion)</li>
+        </ul>
+
+        <h2>Physical Interpretation</h2>
+
+        <p>The flux law tells us something profound about the nature of gravity:</p>
+
+        <div class="highlight info">
+          <p><strong>Core Insight:</strong> Only actual energy flow can change the temporal potential. Static matter, no matter how dense, cannot cause ∂_t Φ ≠ 0.</p>
+        </div>
+
+        <h3>What This Means</h3>
+
+        <h4>1. Energy Flow Sculpts Time</h4>
+        <p>Think of the temporal potential Φ as a landscape. Energy flux acts like water flow that actively carves and reshapes this landscape:</p>
+        <ul>
+          <li><strong>Outward energy flow:</strong> "Erodes" the temporal well (makes Φ less negative)</li>
+          <li><strong>Inward energy flow:</strong> "Deepens" the temporal well (makes Φ more negative)</li>
+          <li><strong>No flow:</strong> Landscape remains unchanged</li>
+        </ul>
+
+        <h4>2. Birkhoff's Theorem Emerges</h4>
+        <p>In vacuum (T^{tr} = 0), we get ∂_t Φ = 0:</p>
+        <div class="math">\[
+        T^{tr} = 0 \Rightarrow \partial_t \Phi = 0 \Rightarrow \Phi = \Phi(r) \text{ only}
+        \]</div>
+        <p>This is Birkhoff's theorem: spherically symmetric vacuum spacetimes must be static (in this gauge).</p>
+
+        <h4>3. Causality and Information Flow</h4>
+        <p>The flux law is local - the change in Φ at radius r depends only on the energy flux through that specific radius. Information about energy flow propagates at the speed of light.</p>
+
+        <h2>Examples and Applications</h2>
+
+        <h3>Example 1: Spherical Star Collapse</h3>
+
+        <p>Consider a collapsing star with matter falling inward:</p>
+        <ul>
+          <li><strong>Energy flow:</strong> T^{tr} < 0 (inward)</li>
+          <li><strong>Flux law:</strong> ∂_t Φ > 0</li>
+          <li><strong>Physical result:</strong> Temporal potential increases, gravity strengthens</li>
+          <li><strong>Observable effect:</strong> Time dilation increases as collapse proceeds</li>
+        </ul>
+
+        <h3>Example 2: Supernova Explosion</h3>
+
+        <p>During a supernova explosion:</p>
+        <ul>
+          <li><strong>Energy flow:</strong> T^{tr} > 0 (outward)</li>
+          <li><strong>Flux law:</strong> ∂_t Φ < 0</li>
+          <li><strong>Physical result:</strong> Temporal potential decreases, gravity weakens</li>
+          <li><strong>Observable effect:</strong> Time dilation decreases as energy escapes</li>
+        </ul>
+
+        <h3>Example 3: Static Neutron Star</h3>
+
+        <p>For a perfectly static neutron star:</p>
+        <ul>
+          <li><strong>Energy flow:</strong> T^{tr} = 0 (no radial energy transport)</li>
+          <li><strong>Flux law:</strong> ∂_t Φ = 0</li>
+          <li><strong>Physical result:</strong> Temporal potential constant in time</li>
+          <li><strong>Observable effect:</strong> Gravitational redshift remains constant</li>
+        </ul>
+
+        <h2>Derivation Outline</h2>
+
+        <p>The flux law emerges from Einstein's field equations through the ADM formalism. Here's the conceptual derivation:</p>
+
+        <h3>Step 1: Start with Einstein's Equations</h3>
+        <div class="math">\[
+        G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}
+        \]</div>
+
+        <h3>Step 2: Focus on Mixed Component</h3>
+        <p>In our diagonal gauge, the key equation is the mixed component:</p>
+        <div class="math">\[
+        G^t_r = \frac{8\pi G}{c^4} T^t_r
+        \]</div>
+
+        <h3>Step 3: Compute Left Side Geometrically</h3>
+        <p>Using our metric with Φ, the Einstein tensor component gives:</p>
+        <div class="math">\[
+        G^t_r = \frac{2}{r} \partial_t \Phi
+        \]</div>
+
+        <h3>Step 4: Equate and Solve</h3>
+        <div class="math">\[
+        \frac{2}{r} \partial_t \Phi = \frac{8\pi G}{c^4} T^{tr}
+        \]</div>
+
+        <p>Solving for ∂_t Φ:</p>
+        <div class="math">\[
+        \partial_t \Phi = \frac{4\pi G}{c^4} r T^{tr}
+        \]</div>
+
+        <p>The minus sign in our final form comes from index conventions (T^{tr} vs T^t_r).</p>
+
+        <h2>Connection to Other Formulations</h2>
+
+        <h3>Relationship to Mass Function</h3>
+        <p>The flux law can be rewritten in terms of a mass function m(t,r):</p>
+        <div class="math">\[
+        \frac{\partial m}{\partial t} = -4\pi r^2 T^{tr}
+        \]</div>
+        <p>This shows that energy flux changes the "mass within radius r."</p>
+
+        <h3>Connection to Vaidya Solution</h3>
+        <p>The famous Vaidya solution for null radiation corresponds to:</p>
+        <div class="math">\[
+        T^{tr} = \frac{\dot{M}(v)}{4\pi r^2}
+        \]</div>
+        <p>where v is advanced time and M(v) is the time-dependent mass.</p>
+
+        <h2>Why the Flux Law is Remarkable</h2>
+
+        <h3>1. Simplicity</h3>
+        <p>Compare the flux law to the full Einstein field equations (10 coupled nonlinear PDEs). The flux law is just one linear PDE relating energy flow to temporal evolution.</p>
+
+        <h3>2. Physical Transparency</h3>
+        <p>The equation directly connects cause (energy flux) to effect (change in time flow). No complicated tensor manipulations needed to see the physics.</p>
+
+        <h3>3. Computational Efficiency</h3>
+        <p>Numerical simulations can evolve Φ using this simple equation rather than dealing with the full metric tensor evolution.</p>
+
+        <h3>4. Conceptual Clarity</h3>
+        <p>It makes manifest that gravity is fundamentally about temporal geometry - the flow of time itself responds to energy flow.</p>
+
+        <h2>Limitations and Scope</h2>
+
+        <h3>Spherical Symmetry Required</h3>
+        <p>The flux law in this simple form applies only to spherically symmetric situations. For general spacetimes, we need the full tensor formalism.</p>
+
+        <h3>Diagonal Gauge Assumption</h3>
+        <p>We've assumed zero shift (N^i = 0). Rotation and frame-dragging require including the shift vector evolution.</p>
+
+        <h3>The γ_rr = e^{-2Φ} Constraint</h3>
+        <p>This links radial space to time. For some matter types, this constraint might not be maintainable, requiring a more general approach.</p>
+
+        <h2>Energy Conservation and the Flux Law</h2>
+
+        <p>The flux law is intimately connected to energy conservation. In the weak field limit:</p>
+
+        <div class="math">\[
+        \frac{\partial}{\partial t}\left(\rho c^2\right) + \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 T^{tr}\right) = 0
+        \]</div>
+
+        <p>This is the continuity equation for energy density. Combined with the flux law, it ensures that energy is neither created nor destroyed - only transported.</p>
+
+        <h2>The Intuitive Picture</h2>
+
+        <p>Here's the big picture that the flux law reveals:</p>
+
+        <div class="highlight">
+          <p><strong>Intuitive Understanding:</strong></p>
+          <p>Gravity isn't a force pulling on objects. Instead, energy flow actively sculpts the rate at which time passes. Objects then follow the "natural" paths through this dynamically evolving temporal landscape, which we perceive as gravitational attraction.</p>
+        </div>
+
+        <p>The flux law makes this precise: ∂_t Φ tells us how fast the temporal landscape is changing, and T^{tr} tells us what's causing that change.</p>
+
+        <h2>Summary</h2>
+
+        <p>The flux law ∂_t Φ = -(4πG/c⁴) r T^{tr} is the heart of lapse-first GR because it:</p>
+
+        <ul>
+          <li><strong>Connects energy flow to temporal evolution</strong> in the simplest possible way</li>
+          <li><strong>Makes Birkhoff's theorem automatic</strong> (no flux → no evolution)</li>
+          <li><strong>Provides computational advantages</strong> over full tensor equations</li>
+          <li><strong>Offers physical intuition</strong> about how gravity works</li>
+          <li><strong>Emerges directly from Einstein's equations</strong> - it's not approximate</li>
+        </ul>
+
+        <p>In the next chapter, we'll explore how the value of Φ is determined in different physical situations, combining both static contributions from mass distributions and dynamic contributions from the flux law.</p>
+
+        <div class="chapter-nav">
+          <a href="/papers/lapse-first-intro/step-by-step/3-adm-decomposition.html">← Chapter 3</a>
+          <a href="/papers/lapse-first-intro/step-by-step/5-determining-phi.html">Chapter 5 →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

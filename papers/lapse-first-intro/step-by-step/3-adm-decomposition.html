@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: The ADM Decomposition - Lapse-First GR</title>
+  <link rel="stylesheet" href="/css/main.css">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="/papers.html" class="nav-link">Papers</a>
+        </li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> ›
+  <a href="/papers/lapse-first-intro/step-by-step/index.html">Lapse-First Introduction</a> ›
+  <span>Chapter 3</span>
+</div>
+
+    <div class="step-nav-container">
+      <aside class="step-sidebar">
+        <h3>Chapters</h3>
+        <ul class="step-list">
+          <li><a href="/papers/lapse-first-intro/step-by-step/index.html">Table of Contents</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/1-temporal-potential.html">1. The Temporal Potential Φ</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/2-lapse-to-potential.html">2. From Lapse N to Potential Φ</a></li>
+          <li class="active"><a href="/papers/lapse-first-intro/step-by-step/3-adm-decomposition.html">3. The ADM Decomposition</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/4-flux-law.html">4. The Flux Law</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/5-determining-phi.html">5. What Determines Φ?</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/6-applications.html">6. Real-World Applications</a></li>
+          <li><a href="/papers/lapse-first-intro/step-by-step/7-comparisons.html">7. Comparisons and Insights</a></li>
+        </ul>
+      </aside>
+
+      <div class="step-content">
+        <h1>Chapter 3: The ADM Decomposition</h1>
+
+        <div class="highlight info">
+          <p><strong>Key Concept:</strong> The ADM (Arnowitt-Deser-Misner) formalism splits 4D spacetime into 3D space evolving in time. This "3+1" decomposition introduces three crucial components: the lapse function N, the shift vector N^i, and the spatial 3-metric γ_ij.</p>
+        </div>
+
+        <h2>Breaking Spacetime Into Space + Time</h2>
+
+        <p>Einstein's General Relativity naturally describes 4-dimensional spacetime as a unified whole. But for practical calculations and physical intuition, we often want to separate space and time. The ADM decomposition does exactly this.</p>
+
+        <h3>The Fundamental Idea</h3>
+
+        <p>Imagine slicing 4D spacetime like a loaf of bread. Each slice is a 3D spatial surface at a particular time. The ADM decomposition tells us:</p>
+        <ul>
+          <li>How the geometry of each slice is described (the 3-metric γ_ij)</li>
+          <li>How much proper time elapses between slices (the lapse function N)</li>
+          <li>How the spatial coordinates shift between slices (the shift vector N^i)</li>
+        </ul>
+
+        <h2>The General ADM Line Element</h2>
+
+        <p>Any 4D spacetime metric can be written in ADM form as:</p>
+
+        <div class="math">\[
+        ds^2 = -N^2 dt^2 + \gamma_{ij}(dx^i + N^i dt)(dx^j + N^j dt)
+        \]</div>
+
+        <p>This looks complicated, but let's break it down piece by piece.</p>
+
+        <h2>The Three Components</h2>
+
+        <h3>1. The Lapse Function N</h3>
+
+        <p><strong>Physical meaning:</strong> Controls how much proper time passes between spatial slices</p>
+
+        <div class="highlight">
+          <p><strong>The Lapse Function N:</strong></p>
+          <div class="math">\[
+          d\tau = N \, dt
+          \]</div>
+          <p>Where d\tau is proper time and dt is coordinate time.</p>
+        </div>
+
+        <p><strong>Metaphor:</strong> Think of N as the <strong>speed setting on a cosmic clock</strong>:</p>
+        <ul>
+          <li><strong>N = 1:</strong> Normal speed (far from any mass)</li>
+          <li><strong>N > 1:</strong> Fast-forward (negative gravity - rarely occurs naturally)</li>
+          <li><strong>N < 1:</strong> Slow motion (near massive objects)</li>
+          <li><strong>N → 0:</strong> Time nearly stops (near black hole horizon)</li>
+        </ul>
+
+        <h4>Examples</h4>
+        <ul>
+          <li><strong>GPS satellite:</strong> N ≈ 1.0000000002 (time runs slightly faster than Earth surface)</li>
+          <li><strong>Earth surface:</strong> N ≈ 0.9999999993 (relative to infinity)</li>
+          <li><strong>Neutron star surface:</strong> N ≈ 0.86 (time runs 14% slower)</li>
+        </ul>
+
+        <h3>2. The Shift Vector N^i</h3>
+
+        <p><strong>Physical meaning:</strong> How spatial coordinates "slip" or "drag" between time slices</p>
+
+        <div class="highlight">
+          <p><strong>The Shift Vector N^i:</strong> Encodes frame-dragging and the rotation of spacetime itself.</p>
+        </div>
+
+        <p><strong>Metaphor:</strong> Like a <strong>conveyor belt in space</strong>. Even if you're standing still in coordinates, spacetime itself can be dragging you along.</p>
+
+        <h4>Key Properties</h4>
+        <ul>
+          <li><strong>Zero shift (N^i = 0):</strong> Spatial coordinates don't drag between time slices</li>
+          <li><strong>Non-zero shift:</strong> Space itself is "flowing" or rotating</li>
+          <li><strong>Near rotating objects:</strong> Space gets dragged around (frame-dragging effect)</li>
+        </ul>
+
+        <h4>Real-World Examples</h4>
+        <ul>
+          <li><strong>Around Earth:</strong> Tiny frame-dragging measured by Gravity Probe B</li>
+          <li><strong>Around rotating black hole:</strong> Space whirls like water going down a drain</li>
+          <li><strong>In our formulation:</strong> We set N^i = 0 for simplicity (diagonal gauge)</li>
+        </ul>
+
+        <h3>3. The Spatial 3-Metric γ_ij</h3>
+
+        <p><strong>Physical meaning:</strong> Describes the geometry of each spatial slice</p>
+
+        <p>The 3-metric tells us distances within each spatial slice:</p>
+        <div class="math">\[
+        dl^2 = \gamma_{ij} dx^i dx^j
+        \]</div>
+
+        <p>In our spherical case:</p>
+        <div class="math">\[
+        \gamma_{ij} = \text{diag}(e^{-2\Phi}, r^2, r^2\sin^2\theta)
+        \]</div>
+
+        <h4>Components Explained</h4>
+        <ul>
+          <li><strong>γ_rr = e^{-2Φ}:</strong> Radial distances are modified by the temporal potential</li>
+          <li><strong>γ_θθ = r^2:</strong> Standard spherical geometry in θ direction</li>
+          <li><strong>γ_φφ = r^2sin^2θ:</strong> Standard spherical geometry in φ direction</li>
+        </ul>
+
+        <h2>Our Specific Choice: Diagonal Gauge</h2>
+
+        <p>In the lapse-first formulation, we make specific choices to simplify the mathematics:</p>
+
+        <h3>1. Zero Shift Vector</h3>
+        <div class="math">\[
+        N^i = 0
+        \]</div>
+        <p>This means spatial coordinates don't drag between time slices. We're using a "diagonal" gauge where space and time are orthogonal.</p>
+
+        <h3>2. Areal Radius Condition</h3>
+        <div class="math">\[
+        \gamma_{\theta\theta} = r^2, \quad \gamma_{\phi\phi} = r^2\sin^2\theta
+        \]</div>
+        <p>This ensures that spheres of radius r have area 4πr², making r the "areal radius."</p>
+
+        <h3>3. The Key Constraint</h3>
+        <div class="math">\[
+        \gamma_{rr} = N^{-2} = e^{-2\Phi}
+        \]</div>
+        <p>This links the radial metric component directly to the lapse function. This is the heart of the lapse-first approach!</p>
+
+        <h2>The Resulting Metric</h2>
+
+        <p>With these choices, our spacetime metric becomes:</p>
+
+        <div class="math">\[
+        ds^2 = -e^{2\Phi} dt^2 + e^{-2\Phi} dr^2 + r^2 d\theta^2 + r^2\sin^2\theta d\phi^2
+        \]</div>
+
+        <p>This is elegantly simple: just one function Φ(t,r) controls both time and radial space!</p>
+
+        <h2>Physical Interpretation of Each Component</h2>
+
+        <h3>Time Component: -e^{2Φ} dt²</h3>
+        <ul>
+          <li>Controls gravitational time dilation</li>
+          <li>When Φ < 0: Time runs slower (gravitational redshift)</li>
+          <li>When Φ = 0: Normal time flow</li>
+        </ul>
+
+        <h3>Radial Component: e^{-2Φ} dr²</h3>
+        <ul>
+          <li>Controls radial distances</li>
+          <li>When Φ < 0: Radial distances are stretched</li>
+          <li>This "compensates" for the time dilation to maintain consistency</li>
+        </ul>
+
+        <h3>Angular Components: r² dΩ²</h3>
+        <ul>
+          <li>Standard spherical geometry</li>
+          <li>Ensures spheres have area 4πr²</li>
+          <li>Unchanged by gravity in spherical symmetry</li>
+        </ul>
+
+        <h2>Why This Decomposition Matters</h2>
+
+        <h3>1. Computational Advantages</h3>
+        <ul>
+          <li><strong>10 metric components → 1 function</strong> (in spherical symmetry)</li>
+          <li>Equations become much simpler</li>
+          <li>Numerical evolution is more stable</li>
+        </ul>
+
+        <h3>2. Physical Clarity</h3>
+        <ul>
+          <li>Separates "what happens to time" from "what happens to space"</li>
+          <li>Makes the temporal nature of gravity manifest</li>
+          <li>Connects directly to what we measure (clock rates)</li>
+        </ul>
+
+        <h3>3. Connection to Newtonian Intuition</h3>
+        <p>In the weak field limit:</p>
+        <div class="math">\[
+        \Phi \approx -\frac{GM}{c^2 r}
+        \]</div>
+        <p>This looks exactly like the Newtonian gravitational potential (up to factors of c²)!</p>
+
+        <h2>Constraint vs. Dynamical Variables</h2>
+
+        <p>An important distinction in the ADM formalism:</p>
+
+        <h3>Constraint Variables (Non-Dynamical)</h3>
+        <ul>
+          <li><strong>Lapse N = e^Φ:</strong> Lagrange multiplier, not evolved</li>
+          <li><strong>Shift N^i:</strong> Lagrange multiplier, not evolved</li>
+          <li>These are determined by constraints at each moment</li>
+        </ul>
+
+        <h3>Dynamical Variables</h3>
+        <ul>
+          <li><strong>Spatial metric γ_ij:</strong> Evolves according to Einstein's equations</li>
+          <li>In our case: only γ_rr = e^{-2Φ} is dynamical</li>
+          <li>Evolution driven by matter and energy</li>
+        </ul>
+
+        <h2>Frame-Dragging and Rotation</h2>
+
+        <p>An important note about what's missing in our diagonal gauge:</p>
+
+        <div class="highlight">
+          <p><strong>Important:</strong> Rotation and frame-dragging effects enter through the shift vector N^i, not through ∂_t Φ. In our diagonal gauge (N^i = 0), we don't see these effects directly.</p>
+        </div>
+
+        <h3>Where Rotation Lives</h3>
+        <p>In the weak-field limit, the gravitational field splits like electromagnetism:</p>
+        <ul>
+          <li><strong>Gravitoelectric field ∼ ∇Φ:</strong> Like electric field from charges</li>
+          <li><strong>Gravitomagnetic field ∼ ∇ × N^i:</strong> Like magnetic field from currents</li>
+        </ul>
+
+        <p>Frame dragging is the "curl" of the shift, just like magnetism is the curl of the vector potential.</p>
+
+        <h2>Connection to Other Formulations</h2>
+
+        <p>Our diagonal gauge is related to other common forms by coordinate transformations:</p>
+
+        <h3>Eddington-Finkelstein Form</h3>
+        <p>In advanced/retarded coordinates, the metric has g_tr ≠ 0 terms. Our gauge removes these cross-terms through a time redefinition.</p>
+
+        <h3>Painlevé-Gullstrand Form</h3>
+        <p>Uses "flowing space" coordinates where space itself falls into black holes. Related to our form by changing the slicing.</p>
+
+        <h3>Isotropic Coordinates</h3>
+        <p>Uses different radial coordinate to make spatial part conformally flat. All describe the same physics with different coordinate choices.</p>
+
+        <h2>Summary</h2>
+
+        <p>The ADM decomposition provides the framework for lapse-first GR:</p>
+
+        <ul>
+          <li><strong>Lapse N = e^Φ:</strong> Controls time flow (our primary variable)</li>
+          <li><strong>Shift N^i:</strong> Controls spatial dragging (set to zero in our gauge)</li>
+          <li><strong>3-metric γ_ij:</strong> Controls spatial geometry (linked to Φ)</li>
+        </ul>
+
+        <p>In spherical symmetry with our gauge choice, everything reduces to understanding one function Φ(t,r). This dramatic simplification makes gravity much more tractable while preserving all the physics.</p>
+
+        <p>Next, we'll see how energy flow drives the evolution of this temporal potential through the famous flux law.</p>
+
+        <div class="chapter-nav">
+          <a href="/papers/lapse-first-intro/step-by-step/2-lapse-to-potential.html">← Chapter 2</a>
+          <a href="/papers/lapse-first-intro/step-by-step/4-flux-law.html">Chapter 4 →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
