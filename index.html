@@ -1,432 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Gravity Might Be Time: A Fresh Look at an Old Theory</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        /* Page-specific styles for Zenodo paper links */
-        .paper-link {
-            background-color: white;
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid #e1e8ed;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s ease;
-            display: block;
-        }
-        .paper-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border-color: #3498db;
-        }
-        .paper-title {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 8px;
-            font-size: 0.95em;
-            line-height: 1.3;
-        }
-        .paper-description {
-            font-size: 0.9em;
-            color: #555;
-            line-height: 1.4;
-        }
-        .papers-section {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 30px 0;
-            border-left: 4px solid #3498db;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Lapse-First GR: Gravity Through the Lens of Time</title>
+  <link rel="stylesheet" href="/css/main.css">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/index.html" class="nav-brand">Time-First Gravity</a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="/index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/papers.html" class="nav-link">Papers</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#faq-scientists" class="nav-link">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
-    <div class="container">
-        <h1>Why Gravity Might Be Time: A Fresh Look at an Old Theory</h1>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-brand">Time-First Gravity</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="/papers.html" class="nav-link">Papers</a>
+        </li>
+        <li class="nav-item"><a href="/index.html#faq-scientists" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="highlight" style="border-left-color:#3498db;">
-        <p><strong>TL;DR for physicists.</strong> The heart of this approach is the flux law: <strong>∂<sub>t</sub>Φ = 4πG r T<sub>t</sub><sup>r</sup></strong>. Energy flux through boundaries directly changes temporal geometry. We reorganize Einstein's gravity so <em>time</em> (the lapse <span class="math">N=e<sup>Φ</sup></span>) is the primary dial, and space follows from constraints. Schwarzschild emerges when flux = 0. Cosmology maps via <span class="math">a=e<sup>-Φ</sup></span> and <span class="math">H=-Φ'</span>, reproducing standard FRW. Same physics, but the flux law makes the mechanism transparent.</p>
+  <div class="container">
+
+<div class="breadcrumbs">
+  <a href="/index.html">Home</a> ›
+  <span>Lapse-First Introduction</span> ›
+  <span>Overview</span>
+</div>
+
+    <div class="view-toggle">
+      <a href="#" class="active">Overview</a>
+      <a href="/papers/lapse-first-intro/step-by-step/index.html">Step-by-Step</a>
     </div>
 
-    <p>When physicists hear about yet another "reformulation" of general relativity, skepticism is natural. Einstein's geometric theory works perfectly well. Why fix what isn't broken? Sometimes reorganizing familiar physics reveals hidden structures that change how we understand reality itself.</p>
+<h1>Understanding Temporal Geometry (Lapse-First General Relativity)</h1>
+
+<div class="highlight info">
+  <p><strong>Core Insight:</strong> In lapse-first GR, we treat the temporal potential \(\Phi\) as the fundamental field, with the lapse function \(N = e^{\Phi}\). This makes gravity fundamentally about the "depth" of time - mass creates temporal wells where clocks run slower.</p>
+</div>
+
+<h2>What is the Lapse Function?</h2>
+
+<p>In General Relativity's ADM formalism, spacetime is split into space + time. The <strong>lapse function</strong> \(N\) tells us how proper time relates to coordinate time:</p>
+
+<div class="math">\[
+d\tau = N \, dt = e^{\Phi} dt
+\]</div>
+
+<p>Think of it as the <strong>speed setting on a cosmic clock</strong>:</p>
+<ul>
+  <li>\(N = 1\): Normal speed (far from any mass)</li>
+  <li>\(N < 1\): Slow motion (deep in a gravity well)</li>
+  <li>\(N \to 0\): Time nearly stops (approaching a black hole horizon)</li>
+</ul>
+
+<div class="highlight">
+  <p><strong>The Temporal Potential \(\Phi\):</strong> Like the depth of a gravitational well. Deeper in the well (more positive \(\Phi\) in some conventions, more negative in others), time runs slower. At infinity (\(\Phi = 0\)), clocks run at their natural rate.</p>
+</div>
+
+<h2>Historical Context: The ADM Formalism</h2>
+
+<p>The notation "N" for the lapse function comes from the ADM (Arnowitt-Deser-Misner) formalism developed in the 1960s. When splitting spacetime into space + time, they needed to describe:</p>
+<ul>
+  <li><strong>N</strong> = "Normal" lapse (how much proper time elapses normal to spatial slices)</li>
+  <li><strong>N^i</strong> = shift vector (how coordinates shift within slices)</li>
+</ul>
+
+<p>This 3+1 decomposition was revolutionary because it allowed physicists to think about gravity as the evolution of spatial geometry through time, rather than as a static 4D spacetime. The lapse-first approach builds on this foundation but makes the temporal aspect even more fundamental.</p>
+
+<h2>Why Switch from N to Φ?</h2>
+
+<p>Traditional GR uses the lapse \(N\) directly. The lapse-first approach uses \(\Phi = \ln(N)\) as the primary variable. This logarithmic transform provides several key advantages:</p>
+
+<h3>1. Cleaner Physics</h3>
+<p>The flux law becomes beautifully linear in \(\Phi\):</p>
+<div class="math">\[
+\boxed{\partial_t \Phi = -\frac{4\pi G}{c^4} r T^{tr}}
+\]</div>
+<p>Compare this to using \(N\) directly: \(\frac{\partial_t N}{N} = -\frac{4\pi G}{c^4} r T^{tr}\), which is more cumbersome.</p>
+
+<h3>2. No Positivity Constraints</h3>
+<ul>
+  <li>\(N\) must always be positive (time can't run backwards)</li>
+  <li>\(\Phi\) can be any real number - no constraints!</li>
+  <li>Singularities become \(\Phi \to \pm\infty\) rather than \(N \to 0\) or \(N \to \infty\)</li>
+</ul>
+
+<h3>3. Natural for Cosmology</h3>
+<p>The scale factor directly relates to \(\Phi\):</p>
+<div class="math">\[
+a = e^{-\Phi}
+\]</div>
+
+<h3>4. Chemical Potential Analogy</h3>
+<p>For physicists familiar with thermodynamics, \(\Phi\) behaves remarkably like a chemical potential:</p>
+<ul>
+  <li><strong>Both drive flows:</strong> Chemical potential drives particle flow, \(\Phi\) drives temporal evolution</li>
+  <li><strong>Both appear linearly in transport equations:</strong> Fick's law is linear in μ, the flux law is linear in \(\Phi\)</li>
+  <li><strong>Both can be negative:</strong> Unlike their exponential counterparts (particle density, lapse N)</li>
+  <li><strong>Both are what actually matter:</strong> It's gradients in μ that drive diffusion, gradients in \(\Phi\) that create gravitational effects</li>
+</ul>
+
+<div class="highlight">
+  <p><strong>Think of it this way:</strong> Just as chemical potential tells you the "energetic cost" of adding a particle at that point, \(\Phi\) tells you the "temporal cost" of spending time at that point in spacetime.</p>
+</div>
+
+<h2>ADM Structure and Constraints</h2>
+
+<p>A crucial conceptual point: In the ADM formalism, the lapse N and shift N^i are <strong>Lagrange multipliers</strong>, not dynamical fields like electromagnetic or scalar fields. This means:</p>
+
+<ul>
+  <li><strong>No propagation:</strong> \(\Phi\) doesn't satisfy a wave equation - it's determined instantaneously</li>
+  <li><strong>Constraint enforcement:</strong> N and N^i enforce the Hamiltonian and momentum constraints</li>
+  <li><strong>Non-dynamic evolution:</strong> Unlike matter fields, the lapse responds immediately to changes in energy distribution</li>
+</ul>
+
+<div class="highlight info">
+  <p><strong>Key Insight:</strong> This is why gravity is so different from other forces. The gravitational "field" (encoded in \(\Phi\)) doesn't propagate independently - it adjusts instantly to maintain the constraint that spacetime geometry is consistent with energy-momentum distribution.</p>
+</div>
+
+<h2>The Flux Law: How Energy Flow Changes Time</h2>
+
+<p>The heart of lapse-first GR is the <strong>flux law</strong>, which connects energy flow to temporal evolution:</p>
+
+<div class="highlight info">
+  <p><strong>The Flux Law:</strong></p>
+  <div class="math">\[
+  \partial_t \Phi = -\frac{4\pi G}{c^4} r T^{tr}
+  \]</div>
+  <p>Where \(T^{tr}\) is the radial energy flux - the flow of energy through spherical surfaces.</p>
+</div>
+
+<p>This equation tells us:</p>
+<ul>
+  <li><strong>Only energy flux drives time evolution</strong> - static matter doesn't change \(\Phi\)</li>
+  <li><strong>Inward flux</strong> (\(T^{tr} < 0\)): \(\Phi\) decreases, gravity strengthens</li>
+  <li><strong>Outward flux</strong> (\(T^{tr} > 0\)): \(\Phi\) increases, gravity weakens</li>
+  <li><strong>No flux</strong> (\(T^{tr} = 0\)): \(\partial_t \Phi = 0\) (Birkhoff's theorem)</li>
+</ul>
+
+<h2>Special Properties of Φ</h2>
+
+<p>The temporal potential \(\Phi\) has several remarkable properties that distinguish it from other physical fields:</p>
+
+<h3>No Shielding</h3>
+<p>Unlike electromagnetic fields, there's no gravitational equivalent of a Faraday cage. You cannot "block" or "shield" gravitational time dilation:</p>
+<ul>
+  <li><strong>Electric fields:</strong> Metal cage blocks the field inside</li>
+  <li><strong>Gravitational fields:</strong> No material can prevent time dilation effects</li>
+  <li><strong>Fundamental reason:</strong> Gravity couples to energy-momentum, which includes the "shielding" material itself</li>
+</ul>
+
+<h3>Natural Boundary Behavior</h3>
+<p>The logarithmic formulation \(N = e^{\Phi}\) allows \(\Phi\) to extend naturally through extreme physical situations where the lapse itself becomes problematic:</p>
+
+<div class="math">\[
+\begin{align}
+\text{Big Bang:} &\quad a \to 0 \Rightarrow \Phi \to +\infty \quad \text{(since } a = e^{-\Phi}\text{)} \\
+\text{Event Horizons:} &\quad N \to 0 \Rightarrow \Phi \to -\infty \quad \text{(but physics well-defined)} \\
+\text{Asymptotic Infinity:} &\quad N \to 1 \Rightarrow \Phi \to 0 \quad \text{(natural normalization)}
+\end{align}
+\]</div>
+
+<p>This exponential map keeps the physics well-defined even when \(\Phi\) itself becomes infinite, making numerical calculations more robust.</p>
+
+<h3>Non-Local Influence</h3>
+<p>Like gravitational potential energy, \(\Phi\) exhibits:</p>
+<ul>
+  <li><strong>Superposition:</strong> Multiple masses contribute additively (in weak field): \(\Phi_{\text{total}} = \Phi_{\text{mass 1}} + \Phi_{\text{mass 2}} + ...\)</li>
+  <li><strong>Long-range effects:</strong> Distant masses affect local time flow (falls off as 1/r)</li>
+  <li><strong>Global consistency:</strong> Changes anywhere must be consistent with Einstein's equations everywhere</li>
+</ul>
+
+<h2>Physical Analogies</h2>
+
+<h3>Time as Honey</h3>
+<p>Imagine the universe where:</p>
+<ul>
+  <li>Time is like <strong>honey with varying thickness</strong> (\(\Phi\) controls viscosity)</li>
+  <li>Clocks run at different rates depending on location (\(N\) is the local speed)</li>
+  <li>Energy flowing past makes time run slower (the flux law)</li>
+</ul>
+
+<h3>The Temporal Landscape</h3>
+<p>Think of it as a <strong>3D contour map</strong> where each point has a "time depth" value:</p>
+<ul>
+  <li>Contour height = value of \(\Phi\) (the temporal potential)</li>
+  <li>Masses create permanent valleys (temporal wells) in the landscape</li>
+  <li>Energy flows actively reshape the landscape over time</li>
+  <li>Your clock rate at any point = \(e^{\text{Φ at that point}}\)</li>
+</ul>
+
+<h3>Compound Interest Analogy</h3>
+<p>The exponential relationship \(N = e^{\Phi}\) is like compound interest:</p>
+<ul>
+  <li>\(\Phi\) is like the interest rate</li>
+  <li>\(N = e^{\Phi}\) is like the growth factor</li>
+  <li>Just as money grows exponentially with interest, proper time "grows" exponentially with the temporal potential</li>
+</ul>
+
+<h2>Real-World Examples</h2>
+
+<h3>GPS Satellites</h3>
+<p>At altitude ~26,600 km from Earth's center:</p>
+<div class="math">\[
+\Phi \approx -1.6 \times 10^{-10}
+\]</div>
+<p>This tiny difference means GPS clocks run faster than Earth surface clocks by about 45 microseconds per day. GPS must correct for this!</p>
+
+<h3>Earth's Surface</h3>
+<p>At Earth's surface:</p>
+<div class="math">\[
+\Phi \approx -6.95 \times 10^{-10}
+\]</div>
+<p>So small we don't notice time dilation in daily life, but atomic clocks can measure it.</p>
+
+<h3>Neutron Star Surface</h3>
+<p>For a typical neutron star (M ≈ 1.4 M☉, r ≈ 10 km):</p>
+<div class="math">\[
+\Phi \approx -0.15, \quad N \approx 0.86
+\]</div>
+<p>Time runs about 14% slower at the surface compared to infinity!</p>
+
+<h3>Black Hole Horizon</h3>
+<p>As we approach the event horizon:</p>
+<div class="math">\[
+\Phi \to -\infty, \quad N \to 0
+\]</div>
+<p>Time stops completely from an outside observer's perspective.</p>
+
+<h2>What Determines Φ?</h2>
+
+<p>The value of \(\Phi\) at any point is determined by two contributions:</p>
+
+<h3>1. Static Contribution (from nearby masses)</h3>
+<p>Satisfies a Poisson-like equation:</p>
+<div class="math">\[
+\nabla^2 \Phi = \frac{4\pi G}{c^2} \rho
+\]</div>
+<p>For a spherical mass M:</p>
+<div class="math">\[
+\Phi(r) \approx -\frac{GM}{c^2 r} \quad \text{(weak field)}
+\]</div>
+
+<h3>2. Dynamic Contribution (from energy flows)</h3>
+<p>Changes according to the flux law:</p>
+<div class="math">\[
+\frac{\partial \Phi}{\partial t} = -\frac{4\pi G}{c^4} r T^{tr}
+\]</div>
+
+<h2>The Complete Picture</h2>
+
+<p>Traditional GR thinks of gravity as "curved spacetime geometry" - a complicated tensor field with 10 components. The lapse-first approach shows that <strong>the essence is just this one scalar field \(\Phi\)</strong> that controls time flow, with space curvature following as a consequence.</p>
+
+<div class="highlight info">
+  <p><strong>Key Insight:</strong> Gravity is fundamentally about the geography of time. Mass bends time; space adjusts to maintain consistency. Energy flow sculpts the temporal landscape, and we experience this sculpting as gravitational dynamics.</p>
+</div>
+
+<h2>Connection to Standard GR</h2>
+
+<p>This isn't a new theory - it's a reformulation of Einstein's General Relativity. The spherically symmetric metric:</p>
+<div class="math">\[
+ds^2 = -e^{2\Phi} dt^2 + e^{-2\Phi} dr^2 + r^2 d\Omega^2
+\]</div>
+<p>solves Einstein's equations exactly. The flux law emerges from the mixed Einstein equation component \(G^t_r\), and all standard results (Schwarzschild, cosmology, gravitational waves) follow naturally.</p>
+
+<h2>Why This Matters</h2>
+
+<p>The lapse-first formulation offers:</p>
+<ul>
+  <li><strong>Conceptual clarity:</strong> One scalar field instead of 10 tensor components</li>
+  <li><strong>Mathematical simplicity:</strong> Linear equations instead of nonlinear ones</li>
+  <li><strong>Physical intuition:</strong> Time is what we measure; space follows</li>
+  <li><strong>Computational advantages:</strong> Easier numerical evolution</li>
+  <li><strong>Quantum hints:</strong> Scalar fields are easier to quantize than tensor fields</li>
+</ul>
+
+<h3>Quantum Theory Benefits</h3>
+<p>The lapse-first formulation offers significant advantages for quantum gravity research:</p>
+
+<div class="math">\[
+[\delta\Phi(x), \pi_\Phi(y)] = i\hbar \delta^3(x-y)
+\]</div>
+
+<p>This canonical commutation relation shows that \(\Phi\) behaves like a proper scalar field, making it much more natural to quantize than the original lapse function N = e^{\Phi}. Key quantum advantages:</p>
+
+<ul>
+  <li><strong>Standard field theory:</strong> \(\Phi\) fits into the familiar framework of quantum field theory</li>
+  <li><strong>No exponential constraints:</strong> Quantizing e^{\Phi} would require handling complex exponential operator ordering</li>
+  <li><strong>Linear equations:</strong> The flux law's linearity in \(\Phi\) simplifies quantum dynamics</li>
+  <li><strong>Path integral friendly:</strong> \(\Phi\) can range over all real numbers in path integrals</li>
+</ul>
+
+<div class="highlight">
+  <p><strong>Looking ahead:</strong> This suggests that quantum gravity might be fundamentally about quantizing the temporal geometry (encoded in \(\Phi\)), with spatial quantum geometry emerging as a derived consequence.</p>
+</div>
+
+<div class="chapter-nav">
+  <div class="placeholder"></div>
+  <a href="/papers/lapse-first-intro/step-by-step/index.html">
+    Explore Step-by-Step →
+  </a>
+</div>
+
+  </div>
 
-    <p>This framework recasts gravity not as curved spacetime, but as the geometry of time. Before dismissing this as mere mathematical shuffling, consider what the mathematics actually reveals.</p>
-
-    <h2>Why Reorganize GR?</h2>
-
-    <p>If you already know general relativity, you might wonder why another formulation matters. Einstein's theory works perfectly. But consider these conceptual gaps that plague even advanced students:</p>
-
-    <div class="highlight" style="border-left-color:#e74c3c;">
-        <p><strong>Time is Buried:</strong> Students manipulate g<sub>00</sub> = -(1 + 2Φ/c²) algebraically without connecting to physical time flow. The proper time formula dτ² = -g<sub>μν</sub> dx<sup>μ</sup> dx<sup>ν</sup> becomes abstract manipulation rather than "how fast do clocks tick here?"</p>
-    </div>
-
-    <div class="highlight" style="border-left-color:#f39c12;">
-        <p><strong>Constraints vs Dynamics Unclear:</strong> Einstein's equations have 10 components, leading students to think there are 10 degrees of freedom. Reality: 4 are constraints, 4 are gauge freedom, only 2 actually propagate. This count is explicit in lapse-first: Φ and ω<sub>i</sub> are Lagrange multipliers enforcing constraints.</p>
-    </div>
-
-    <div class="highlight" style="border-left-color:#9b59b6;">
-        <p><strong>Energy-Momentum Coupling Opaque:</strong> "T<sub>μν</sub> goes on the right side" tells students nothing about <em>how</em> energy bends spacetime. Why does T<sub>00</sub> affect time curvature? How does energy <em>flow</em> differ from energy <em>density</em>? The flux law ∂<sub>t</sub>Φ = 4πG r T<sub>tr</sub> makes this transparent: only energy flux through boundaries changes geometry.</p>
-    </div>
-
-    <p><strong>Lapse-first discipline:</strong> Start with proper time as primary (dτ = e<sup>Φ</sup> dt), treat spatial curvature as following from constraints, and maintain clear separation between Φ evolution (physical) and coordinate labels (gauge). Students think "How fast do clocks tick here?" not "What's g<sub>00</sub>?"</p>
-
-    <h2>The Core Insight: Space Follows Time</h2>
-
-    <p><strong>Scope (clear and testable).</strong> In <em>spherical symmetry with zero shift</em>, the entire spatial geometry is algebraically determined by a single temporal function Φ (the logarithm of the lapse): <span class="math">g<sub>rr</sub>=e<sup>-2Φ</sup>=1/g<sub>tt</sub></span>. In that regime, space carries no independent degrees of freedom—the radial constraint enslaves it to Φ. Outside spherical symmetry or in time-dependent settings, we allow a nonzero shift (Painlevé–Gullstrand / Eddington–Finkelstein gauges) while keeping Φ primary.</p>
-
-    <p>This isn't just a coordinate trick valid only in one gauge. While the exact algebraic relation holds in the diagonal gauge, the broader principle extends everywhere: given the lapse Φ and matter content, the constraints determine spatial curvature. We can choose coordinates where time's flow is all in the lapse (static problems) or distributed into shift (flowing-space view) - the physics remains the same. The framework handles Painlevé-Gullstrand and Eddington-Finkelstein coordinates just as naturally.</p>
-
-    <div class="highlight" style="border-left-color:#2ecc71">
-        <p><strong>Equivalence (classical):</strong> Given fields <em>(Φ, ω<sub>i</sub>, γ<sub>ij</sub>)</em> that satisfy the ADM constraints, the constructed metric solves Einstein's equations; conversely any GR solution can be written in this lapse-first form. No extra degrees of freedom are introduced.</p>
-    </div>
-
-    <h2>The Heart of GATG: The Flux Law</h2>
-
-    <p>Everything in lapse-first gravity follows from one central insight. Here's the concise derivation:</p>
-
-    <section>
-        <h3>Derivation in Four Steps</h3>
-
-        <div class="highlight" style="border-left-color:#e74c3c;">
-            <p><strong>Start with:</strong> Spherically symmetric, diagonal metric in lapse-first form</p>
-            <div class="math">ds² = -e<sup>2Φ</sup>dt² + e<sup>-2Φ</sup>dr² + r²dΩ²</div>
-        </div>
-
-        <div class="highlight" style="border-left-color:#f39c12;">
-            <p><strong>Key Einstein equation component:</strong> The mixed (time,radial) component</p>
-            <div class="math">G<sub>t</sub><sup>r</sup> = 8πG T<sub>t</sub><sup>r</sup></div>
-        </div>
-
-        <div class="highlight" style="border-left-color:#3498db;">
-            <p><strong>Calculate G<sub>t</sub><sup>r</sup>:</strong> From the metric, this gives</p>
-            <div class="math">G<sub>t</sub><sup>r</sup> = (2/r)∂<sub>t</sub>Φ</div>
-        </div>
-
-        <div class="highlight" style="border-left-color:#27ae60;">
-            <p><strong>The flux law emerges:</strong> Combining the Einstein equation</p>
-            <div class="math">∂<sub>t</sub>Φ = 4πG r T<sub>t</sub><sup>r</sup></div>
-        </div>
-
-        <p><strong>Physical meaning:</strong> Energy flux through radius r directly changes the temporal field Φ. This is the engine that drives all of gravitational dynamics.</p>
-    </section>
-
-    <section>
-        <h2 style="margin-top:32px">A Three-Equation Tour</h2>
-
-        <div class="highlight" style="border-left-color:#3498db;">
-            <p><strong>Standard GR approach:</strong> Write general spherically symmetric metric (4 unknown functions) → Calculate Christoffel symbols (pages of algebra) → Compute Ricci tensor → Solve R<sub>μν</sub> = 0 → Apply boundary conditions → Hours later, get the metric.</p>
-            <p><strong>Lapse-first approach:</strong> Three equations capture the essential physics immediately.</p>
-        </div>
-
-        <ol>
-            <li><strong>Flux drives time (spherical, dynamical):</strong>
-                <div class="math">∂<sub>t</sub>Φ = 4πG r T<sub>t</sub><sup>r</sup></div>
-                <p>Only real energy flux changes the temporal field <span class="math">Φ</span>. This is the fundamental driver.</p>
-                <p><em>Contrast with "T<sub>μν</sub> on the right side":</em> This shows exactly how energy flow bends spacetime. Energy crossing radius r at rate P changes time as ∂<sub>t</sub>Φ ∝ P/r. Direct operational meaning: power flow → clock rate changes. No flux → Birkhoff's theorem (∂<sub>t</sub>Φ = 0).</p>
-            </li>
-            <li><strong>Schwarzschild emerges (static case):</strong>
-                <div class="math">∂<sub>r</sub>Φ = (1 − e<sup>2Φ</sup>) / (2 r e<sup>2Φ</sup>)</div>
-                <p>When flux law gives ∂<sub>t</sub>Φ = 0, integrates to <span class="math">e<sup>2Φ</sup> = 1 − 2GM/r</span>, with <span class="math">g<sub>rr</sub> = 1/g<sub>tt</sub></span>.</p>
-                <p><em>Why it works:</em> Static mass → no energy flux → temporal field doesn't evolve → only spatial constraint needed. Near mass → Φ < 0 → clocks run slow. At horizon → Φ → -∞ → time stops. Students see the solution emerge from the flux law, not from hours of calculation.</p>
-            </li>
-            <li><strong>Cosmology bridge:</strong>
-                <div class="math">dτ = e<sup>Φ</sup> dt, &nbsp;&nbsp; a = e<sup>−Φ</sup>, &nbsp;&nbsp; H = −Φ'(τ)</div>
-                <p>This mapping reproduces the standard FRW equations exactly.</p>
-                <p><em>Pedagogical win:</em> Instead of Schwarzschild (static curved space) → ??? → FRW (expanding space), students see Schwarzschild (spatial Φ variation from flux law) → FRW (temporal Φ variation from flux law). Same physics, same field, same governing equation. Universe expansion = cosmic time diverging.</p>
-            </li>
-        </ol>
-    </section>
-
-    <h2>Implications of the Flux Law</h2>
-
-    <p><strong>Birkhoff's theorem reimagined.</strong> With no flux, ∂<sub>t</sub>Φ = 0 in this gauge. The temporal field doesn't evolve—this is Birkhoff's theorem in time-first clothing. Static mass configurations produce time gradients but no temporal dynamics.</p>
-
-    <p><strong>Vaidya correspondence.</strong> For time-dependent inflow/outflow, this law is equivalent to the usual Vaidya picture after a coordinate change—same physics, different bookkeeping of lapse vs. shift. The flux law makes the physics transparent: energy crossing boundaries changes temporal geometry.</p>
-
-    <p>Rotation and frame-dragging live in the gravitomagnetic <em>shift</em> ω, sourced by mass currents. In the linearized limit, <span class="math">∇²ω = −16πG J</span> and <span class="math">B<sub>g</sub> = ∇×ω</span> reproduces Lense–Thirring. The scalar <span class="math">Φ</span> does not itself generate frame-dragging; currents do.</p>
-
-    <h2>Everything Is a Clock</h2>
-
-    <p>Every system with an internal frequency <span class="math">ω=E/ℏ</span> is a clock. If <span class="math">Φ</span> fluctuates quantum-mechanically, proper-time phases inherit those fluctuations. For an interferometer, the visibility reduces by a universal <span class="math">ω<sup>2</sup></span> factor set by the two-point function of <span class="math">δΦ</span>:</p>
-
-    <div class="math">V = exp[-½ω² ∫∫ f(t)f(t')C<sub>Φ</sub>(t,t')dtdt']</div>
-
-    <p>This universal ω² scaling means heavier objects lose quantum coherence faster because they're better clocks. Gravitationally-mediated entanglement would be direct evidence that Φ is a quantum field. Current experiments searching for mesoscopic superpositions are unknowingly probing temporal coherence.</p>
-
-    <p>Crucially, this doesn't add new particles to physics. The ADM analysis confirms that Φ and ω are Lagrange multipliers enforcing constraints - only the two standard gravitational wave polarizations propagate. We're not sneaking in a scalar graviton; this is exactly Einstein's theory, reorganized.</p>
-
-    <p class="highlight" style="border-left-color:#2ecc71;"><strong>Degrees of freedom check.</strong> In ADM form, <span class="math">Φ</span> (lapse) and <span class="math">ω<sub>i</sub></span> (shift) are non-dynamical multipliers enforcing constraints. Linearizing shows only the two tensor polarizations propagate—no extra scalar graviton is introduced.</p>
-
-    <h2>Cosmic Expansion as Temporal Divergence</h2>
-
-    <p>The cosmological mapping a = e<sup>(-Φ)</sup> recasts the expanding universe in temporal terms. The universe doesn't expand "through" time - it expands as time itself diverges. Early universe conditions correspond to large positive Φ (rapid time flow), evolving toward negative Φ (slower time) in the future.</p>
-
-    <p>This reframing offers two interpretations of dark energy: either a constant "temporal vacuum pressure" or a potential V(Φ) that slowly rolls. Both reproduce ΛCDM-like results but suggest the acceleration stems from time's inherent dynamics. The Big Bang becomes temporal vacuum decay - the universe born from tunneling of Φ from a high-energy state. At the opposite extreme, Φ → -∞ represents a true end of evolution, avoiding eternal heat death.</p>
-    <p style="margin-top:10px;"><em>Mathematically,</em> inserting <span class="math">a=e<sup>-Φ</sup></span> and <span class="math">H=-Φ'</span> into Einstein's equations reproduces the standard FRW pair exactly, so the background expansion history is identical once you specify the same stress–energy.</p>
-
-    <section>
-        <h2>FRW in Two Lines</h2>
-        <p>Define cosmic time by <span class="math">dτ = e<sup>Φ</sup> dt</span> and set <span class="math">a = e<sup>−Φ</sup></span>. Then <span class="math">H = −Φ'(τ)</span> and the standard Friedmann pair follows exactly.</p>
-        <div class="math">H<sup>2</sup> + k/a<sup>2</sup> = (8πG/3) ρ, &nbsp;&nbsp; dH/dτ = −4πG(ρ + p) + k/a<sup>2</sup></div>
-    </section>
-
-    <h2>Black Holes as Temporal Boundaries</h2>
-
-    <p>At the Schwarzschild radius, the lapse function N = e<sup>Φ</sup> vanishes. This isn't where "space becomes infinitely curved" but where time stops flowing for external observers. The horizon is fundamentally a temporal phenomenon. A boundary in phase space rather than physical space.</p>
-
-    <p>This perspective reframes the information paradix: if information is encoded in temporal phase correlations, then understanding phase coherence near horizons might resolve the puzzle without exotic modifications.</p>
-
-    <section>
-        <h2>Schwarzschild, Time-First</h2>
-        <p>In the static, spherically symmetric ansatz <span class="math">ds<sup>2</sup> = -e<sup>2Φ(r)</sup>dt<sup>2</sup> + e<sup>-2Φ(r)</sup>dr<sup>2</sup> + r<sup>2</sup> dΩ<sup>2</sup></span>, Einstein's equations collapse to a single separable ODE:</p>
-        <div class="math">∂<sub>r</sub>Φ = (1 − e<sup>2Φ</sup>) / (2 r e<sup>2Φ</sup>)</div>
-        <p>Integrating gives <span class="math">e<sup>2Φ(r)</sup> = 1 − 2GM/r</span>. The spatial factor follows algebraically, <span class="math">g<sub>rr</sub> = 1/g<sub>tt</sub></span>. space follows time.</p>
-    </section>
-
-    <h2>For Physicists Who Know GR</h2>
-
-    <p>Familiar results emerge naturally when you think "Φ controls time" rather than juggling metric components:</p>
-
-    <section>
-        <h3>The Classic Tests Unified</h3>
-        <p><strong>Standard approach:</strong> Four separate calculations with different techniques (geodesics, null rays, perturbation theory, integration).</p>
-        <p><strong>Lapse-first insight:</strong> All four manifestations of the same principle.  Time curvature near mass.</p>
-
-        <ul>
-            <li><strong>Gravitational redshift:</strong> Direct from dτ = e<sup>Φ</sup> dt → ν<sub>∞</sub>/ν<sub>r</sub> = e<sup>(Φ<sub>∞</sub> - Φ<sub>r</sub>)</sup> = √(1 - r<sub>s</sub>/r). "Deeper clocks run slower" , no geodesic calculation.</li>
-
-            <li><strong>Light bending:</strong> Light follows gradients of Φ → deflection angle δφ ≈ 4GM/(bc²). "Light bends toward regions of slower time."</li>
-
-            <li><strong>Perihelion precession:</strong> Time gradient creates effective potential modification → extra precession 6πGM/(ac²(1-e²)) per orbit. "Orbits precess because inner parts experience more time dilation."</li>
-
-            <li><strong>Shapiro delay:</strong> Light slows in regions of curved time → extra delay Δt ≈ (2GM/c³)ln(4r<sub>E</sub>r<sub>P</sub>/b²). "Signals delayed passing through regions of slow time."</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Advanced Topics as Variations on One Theme</h3>
-        <p><strong>Standard challenge:</strong> Black holes, gravitational waves, and cosmology feel like three separate subjects requiring different mathematical frameworks.</p>
-        <p><strong>Lapse-first unification:</strong> Everything stays in the same framework.  Time (Φ) is always primary.</p>
-
-        <div class="highlight" style="border-left-color:#8e44ad;">
-            <p><strong>Black holes/Kerr:</strong> Still primary field Φ, but add shift ω<sub>i</sub> for rotation. Frame dragging lives in shift: ω<sub>φ</sub> = -2J/r³. Black hole = temporal boundary (Φ → -∞). Rotation is "twisted time."</p>
-
-            <p><strong>Gravitational waves:</strong> Constraint analysis shows only 2 TT modes propagate. Φ and ω<sub>i</sub> are non-dynamical Lagrange multipliers. Waves = transverse perturbations, not Φ oscillations. Clear separation: constraints vs propagating modes.</p>
-
-            <p><strong>ADM formalism:</strong> We've been using N = e<sup>Φ</sup> all along. Shift ω<sub>i</sub> was always there for rotation. Constraints explicit from the start. No "restart" needed.</p>
-        </div>
-
-        <p><strong>The pedagogical advantage:</strong> Students see advanced topics as variations on one theme rather than new subjects requiring new mathematics. Same flux law throughout: ∂<sub>t</sub>Φ = 4πG r T<sub>tr</sub>.</p>
-    </section>
-
-    <h2>Quantum Time: How to Actually Look for It</h2>
-
-    <p>The framework predicts distinctive quantum signatures that connect to ongoing quantum-gravity experiments:</p>
-
-    <ul>
-        <li><strong>Time-entanglement</strong>: Universal ω² scaling of visibility loss in interferometers through temporal decoherence</li>
-        <li><strong>Gravitationally-mediated entanglement</strong>: Direct evidence that Φ is a quantum field</li>
-        <li><strong>Temporal coherence</strong>: Mesoscopic superpositions of lapse profiles</li>
-    </ul>
-
-    <p>These aren't abstract predictions. They're testable with current atomic interferometry and quantum sensing technology.</p>
-
-    <section>
-        <h2>Flux Leaves a Clock-Trackable Signature</h2>
-        <p>For an ingoing luminosity pulse <em>L(t)</em> at radius <em>r</em> (approximately null and radial):</p>
-        <div class="math">T<sub>tr</sub>(t,r) ≈ − L(t) / (4π r<sup>2</sup> c<sup>2</sup>)</div>
-        <div class="math">∂<sub>t</sub>Φ(t,r) ≈ + (G L(t))/(c<sup>2</sup> r)</div>
-        <p>So outside the source, clocks <em>slow</em> during the pulse by a predictable, sign-definite amount that scales like <span class="math">L(t)/r</span>. This is the clean target for clock networks.</p>
-    </section>
-
-    <h2>Experimental Consequences</h2>
-
-    <p>While mathematically equivalent to GR classically, this framework makes experimental predictions particularly transparent:</p>
-
-    <ol>
-        <li><strong>Controlled flux experiments</strong>: Modulating a distant energy source should produce correlated, sign-definite redshift drift in optical clock networks, phase-locked to the flux pattern.</li>
-        <li><strong>Gravitational decoherence</strong>: Quantum superpositions decohere through temporal phase noise, with visibility loss scaling as ω² - heavier objects lose coherence faster because they're better clocks.</li>
-        <li><strong>Clock network signatures</strong>: During astrophysical events like supernovae, global clock networks should detect correlated temporal phase patterns directly tracking energy flux.</li>
-        <li><strong>Quantum temporal entanglement</strong>: Gravitationally-mediated entanglement between separated clocks would confirm Φ's quantum nature.</li>
-    </ol>
-
-    <h2>Concrete Applications: Making the Physics Immediate</h2>
-
-    <p>The lapse-first perspective transforms abstract concepts into operational insights:</p>
-
-    <section>
-        <h3>Near Earth's Surface</h3>
-        <div class="highlight" style="border-left-color:#27ae60;">
-            <p><strong>Standard GR:</strong> "Earth's mass curves spacetime via the stress-energy tensor."</p>
-            <p><strong>Lapse-first:</strong> "Earth creates a time gradient. Deeper clocks run slower by factor √(1 - 2GM/rc²). This time gradient creates what we perceive as gravitational acceleration."</p>
-        </div>
-        <p><em>Practical insight:</em> GPS satellites must account for running ~38 microseconds per day faster than ground clocks. This isn't a relativistic correction to an otherwise Newtonian effect, it <em>is</em> gravity.</p>
-    </section>
-
-    <section>
-        <h3>Binary Pulsar Systems</h3>
-        <div class="highlight" style="border-left-color:#e67e22;">
-            <p><strong>Observable:</strong> Pulsar timing shows orbital decay precisely matching gravitational wave energy loss predictions.</p>
-            <p><strong>Lapse-first interpretation:</strong> Accelerating masses create oscillating Φ fields. Energy carried away by tensor waves (the only propagating modes) causes the temporal geometry to decay, shrinking orbits.</p>
-        </div>
-        <p><em>Practical insight:</em> The "waves" in gravitational waves aren't ripples in space, they're oscillations in the constraints that determine how space follows time.</p>
-    </section>
-
-    <section>
-        <h3>Cosmological Observations</h3>
-        <div class="highlight" style="border-left-color:#3498db;">
-            <p><strong>Dark energy puzzle:</strong> Why is cosmic expansion accelerating?</p>
-            <p><strong>Lapse-first reframe:</strong> Universe expansion = cosmic time divergence. Early universe: rapid Φ decrease (fast time flow). Now: slower decrease (decelerated divergence). "Dark energy" = temporal vacuum pressure or Φ potential dynamics.</p>
-        </div>
-        <p><em>Practical insight:</em> CMB temperature variations map primordial Φ fluctuations. Large-scale structure formation follows temporal gradients, not just spatial density contrasts.</p>
-    </section>
-
-    <section>
-        <h3>Laboratory Experiments</h3>
-        <div class="highlight" style="border-left-color:#9b59b6;">
-            <p><strong>Clock network tests:</strong> Energy flux from a controlled source should produce correlated redshift drift in optical clocks, scaling as L(t)/r with the correct sign.</p>
-            <p><strong>Quantum interferometry:</strong> Superpositions decohere through temporal phase noise. Heavier objects lose coherence faster because they're better clocks (universal ω² scaling).</p>
-        </div>
-        <p><em>Practical insight:</em> Current experiments searching for mesoscopic superpositions are unknowingly probing temporal coherence, the quantum nature of time itself.</p>
-    </section>
-
-    <h2>Why This Matters</h2>
-
-    <p>This framework suggests reality is primarily about causal relationships and temporal ordering rather than spatial embedding. Space emerges as consistency conditions on temporal flow. The universe isn't a 3D space evolving in time, but a self-consistent pattern of temporal phases that we perceive as spatial when we demand simultaneity.</p>
-
-    <p>Whether this temporal view represents gravity's "true nature" or simply a powerful alternative perspective remains to be determined. But by making gravity's effects directly measurable through humanity's most precise instruments, atomic clocks and interferometers, it transforms gravitational physics into experimental temporal metrology. The deepest questions about black holes, dark energy, and quantum gravity become questions about time itself.</p>
-
-    <section>
-        <h2>Micro-Glossary</h2>
-        <ul>
-            <li><strong>Lapse</strong> <span class="math">N = e<sup>Φ</sup></span> converts coordinate time <span class="math">t</span> to proper time <span class="math">τ</span> via <span class="math">dτ = N dt</span>.</li>
-            <li><strong>Shift</strong> <span class="math">ω<sub>i</sub></span> gravitomagnetic potential carrying rotation/frame-dragging.</li>
-            <li><strong>"Space follows time"</strong> constraints fix spatial geometry once <span class="math">Φ</span> (and sources) are specified.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Same Physics, Different Slices</h3>
-        <p>Static <span class="math">A(r)=e<sup>2Φ(r)</sup></span> can be written in Painlevé–Gullstrand (<em>flat slices, unit lapse</em>) or Eddington–Finkelstein (<em>null-adapted</em>) coordinates; the mass-flux statements match Vaidya's <span class="math">dm/dv</span> balance exactly after converting components.</p>
-    </section>
-
-    <h2>The Pedagogical Insights</h2>
-
-    <p>This reorganization transforms how we teach and think about gravity:</p>
-
-    <div class="highlight" style="border-left-color:#2ecc71;">
-        <p><strong>For students:</strong> Instead of weeks manipulating tensor indices before seeing physics, they immediately understand "Φ controls clock rates" and "∇Φ creates gravitational force." The four classic tests become one principle. Advanced topics become variations on a theme.</p>
-    </div>
-
-    <div class="highlight" style="border-left-color:#3498db;">
-        <p><strong>For researchers:</strong> Experimental gravitation becomes temporal metrology. Quantum gravity signatures appear in interferometer visibility scaling. Dark energy maps to temporal vacuum dynamics. The deepest questions about spacetime become questions about time.</p>
-    </div>
-
-    <div class="highlight" style="border-left-color:#e74c3c;">
-        <p><strong>For the field:</strong> We recover the conceptual clarity that made Newton's theory so powerful — one principle (time curvature) explains diverse phenomena — while preserving Einstein's mathematical sophistication. It's still GR, but with the physics transparent rather than buried.</p>
-    </div>
-
-    <div class="highlight">
-        <p><strong>Sometimes the most profound advances come not from new theories but from recognizing what was in front of us all along.</strong></p>
-    </div>
-
-    <section class="papers-section" style="background-color: #f0f8ff; border-left-color: #3498db;">
-        <h2 style="margin-top:0; color:#2c3e50; border-left:none; padding-left:0;">New: Learn Lapse-First GR Step-by-Step</h2>
-        <p style="margin-bottom:20px;">Want to understand temporal geometry from first principles? We've created a comprehensive tutorial that takes you from basic concepts to real-world applications.</p>
-
-        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-            <a href="/papers/lapse-first-intro/overview.html" class="btn btn-primary">Quick Overview</a>
-            <a href="/papers/lapse-first-intro/step-by-step/index.html" class="btn btn-secondary">Complete Tutorial</a>
-            <a href="/papers.html" class="btn btn-secondary">All Papers</a>
-        </div>
-
-        <p style="margin-top:15px; font-size:0.9em; color:#666;">
-            <strong>What you'll learn:</strong> The temporal potential Φ, why N = e^Φ simplifies everything, the flux law that drives gravity, real GPS corrections, neutron star physics, and why this approach might unlock quantum gravity.
-        </p>
-    </section>
-
-    <section id="faq-scientists" class="papers-section">
-        <h2 style="margin-top:0; color:#2c3e50; border-left:none; padding-left:0;">FAQ for Scientists</h2>
-        <p style="font-style:italic; margin-bottom:16px;">Recurring technical questions, answered tersely with pointers to the math used on this site.</p>
-
-        <details>
-            <summary><strong>Is this just a coordinate choice?</strong></summary>
-            <p>We work <em>lapse-first</em>: choose <span class="math">N=e<sup>Φ</sup></span> as primary and allow shift when needed. In spherical symmetry with zero shift, the constraints give <span class="math">g<sub>rr</sub>=1/g<sub>tt</sub></span>. For dynamics or rotation we use nonzero shift (Painlevé–Gullstrand / Eddington–Finkelstein) and recover the same physics.</p>
-        </details>
-
-        <details>
-            <summary><strong>Do you add a scalar graviton?</strong></summary>
-            <p>No. In ADM, <span class="math">Φ</span> and <span class="math">ω<sub>i</sub></span> are Lagrange multipliers enforcing the Hamiltonian and momentum constraints; linearization leaves only the two TT modes.</p>
-        </details>
-
-        <details>
-            <summary><strong>What actually evolves <em>Φ</em> in spherical symmetry?</strong></summary>
-            <p>A local flux law: <span class="math">∂<sub>t</sub>Φ = 4πG r T<sub>tr</sub></span>. No radial energy flux ⇒ <span class="math">∂<sub>t</sub>Φ=0</span> in this gauge (Birkhoff). With flux, a change of variables matches the Vaidya description (<span class="math">dm/dv</span>).</p>
-        </details>
-
-        <details>
-            <summary><strong>How do frame dragging and rotation appear?</strong></summary>
-            <p>In the gravitomagnetic shift <span class="math">ω<sub>i</sub></span>, sourced by mass currents <span class="math">T<sub>ti</sub></span>. The linearized solution reproduces Lense–Thirring and the Kerr <span class="math">g<sub>tφ</sub></span> term. Oscillating <span class="math">Φ</span> alone doesn't produce frame dragging.</p>
-        </details>
-
-        <details>
-            <summary><strong>How do you recover standard cosmology?</strong></summary>
-            <p>Use <span class="math">dτ=e<sup>Φ</sup>dt</span>, <span class="math">a=e<sup>-Φ</sup></span>, <span class="math">H=-Φ'</span>. Plugging into Einstein's equations gives the usual FRW pair exactly; observational pipelines (distances, growth) carry over unchanged.</p>
-        </details>
-
-        <details>
-            <summary><strong>What's the "origin of time" claim?</strong></summary>
-            <p>We frame the Big Bang as a boundary plus <em>temporal vacuum decay</em>: nucleation from very large <span class="math">+Φ</span> (where <span class="math">a→0</span>) to finite <span class="math">Φ</span>, followed by roll. The <span class="math">Φ→−∞</span> limit is a degenerate "no-time" boundary, not a parent vacuum.</p>
-        </details>
-
-        <details>
-            <summary><strong>Any falsifiable predictions?</strong></summary>
-            <p>Yes—two tracks. <em>Laboratory:</em> clock-network tests of the flux law and universal <span class="math">ω<sup>2</sup></span> dephasing in quantum-clock interferometry. <em>Cosmology:</em> the framework suggests concrete signatures (e.g., curvature floor and specific non-Gaussian relations) that next-gen surveys can probe; we detail these in Paper IV.2.</p>
-        </details>
-
-        <details>
-            <summary><strong>Does this break diffeomorphism invariance?</strong></summary>
-            <p>No. It's a re-parameterization. The constraint algebra (hypersurface deformation) is unchanged; we're choosing variables and gauges that make certain structures manifest.</p>
-        </details>
-
-        <details>
-            <summary><strong>Relation to Vaidya, PG/EF coordinates?</strong></summary>
-            <p>They are different slices of the same physics. Ingoing null flux in EF (Vaidya) maps to the spherical flux law here via a simple tensor relation between <span class="math">T<sub>vv</sub></span> and <span class="math">T<sub>tr</sub></span>.</p>
-        </details>
-
-        <details>
-            <summary><strong>Are there extra wave polarizations?</strong></summary>
-            <p>No. Rotation lives in the shift sector, but in GR radiation remains the usual tensor <span class="math">+</span> and <span class="math">×</span> modes; no additional vector/scalar modes are introduced by treating the lapse as primary.</p>
-        </details>
-    </section>
-
-    </div>
-    
-    <div class="footer">
-        <p>Published via GitHub Pages</p>
-    </div>
 </body>
 </html>
